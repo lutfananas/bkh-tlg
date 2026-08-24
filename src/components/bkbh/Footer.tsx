@@ -31,7 +31,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed max-w-md">
               Biro Konsultasi dan Bantuan Hukum Kartini — posko bantuan hukum
               pro bono untuk fakir miskin, perempuan, dan anak di Kabupaten
-              Trenggalek. Berdiri sejak 2016, sudah menangani 1.200+ kasus di
+              Trenggalek. Berdiri sejak 2016, sudah menangani 100+ kasus di
               45+ desa.
             </p>
             <div className="mt-5 flex items-center gap-3">

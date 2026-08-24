@@ -46,8 +46,8 @@ export const HERO_SLIDES = [
 
 export const STATS = [
   {
-    target: 76,
-    suffix: "",
+    target: 100,
+    suffix: "+",
     label: "Kasus Selesai",
     description:
       "Mulai dari perceraian, KDRT, sengketa tanah, hingga kasus pidana ringan — semuanya didampingi gratis dari awal hingga putusan.",

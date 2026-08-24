@@ -34,7 +34,7 @@ export default function About() {
               mahasiswa Fakultas Hukum asli Trenggalek yang resah melihat
               warga kurang mampu dianiaya sistem peradilan karena tidak mampu
               menyewa pengacara. Sejak itu, kami sudah menangani lebih dari
-              1.200 kasus di seluruh kecamatan Trenggalek.
+              100+ kasus di seluruh kecamatan Trenggalek.
             </p>
             <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               Fokus kami tiga kelompok paling rentan:{" "}

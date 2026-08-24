@@ -159,7 +159,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <Scale className="w-5 h-5 text-amber-300" />
-              <span className="text-sm">1.200+ Kasus Selesai</span>
+              <span className="text-sm">100+ Kasus Selesai</span>
             </div>
           </motion.div>
         </div>
