@@ -283,3 +283,31 @@ Stage Summary:
 - ✅ Berita pers AM sudah benar-benar hilang dari live site.
 - ✅ Kisah Ibu Uyin Wulandari sudah menjadi berita utama di section #berita pada https://bkhkartini.pages.dev.
 - ✅ CDN Cloudflare mungkin masih cache versi lama sampai ~5 menit, tapi konten fresh sudah tersedia di edge.
+
+---
+Task ID: 10
+Agent: Super Z (main)
+Task: Hapus duplikat Ibu Uyin dari section Testimoni — biar cuma muncul 1x di section Berita.
+
+Work Log:
+- Hapus FEATURED_TESTIMONIAL export dari data.ts (sudah tak terpakai).
+- Hapus entry Uyin Wulandari dari array TESTIMONIALS (posisi #2 sebelumnya).
+- Update Testimonials.tsx:
+  * hapus import FEATURED_TESTIMONIAL, Star, BadgeCheck (tak terpakai)
+  * hapus seluruh blok <motion.div> FeaturedTestimonial di body section
+  * hapus function FeaturedTestimonial() (195 baris)
+  * ganti description dari "Identitas klien utama ditampilkan apa adanya..." jadi "Setiap kisah di bawah diambil dari arsip kasus nyata BKH Kartini. Identitas klien dilindungi dengan inisial..."
+  * fix type error: "photo" in t && t.photo -> "photo" in t && typeof t.photo === "string" (Uyin satu-satunya yang punya field photo, setelah dihapus TS complain)
+- Verifikasi HTML output:
+  * Ibu Uyin: 7x (semua di section Berita — dateline, headline, lead, body, pullQuote, source) ✅
+  * Testimoni Utama: 0 ✅ (featured card hilang)
+  * Foto Ibu Uyin Wulandari (alt): 0 ✅
+  * 11 Kisah Nyata heading: tetap 1 (jumlah testimoni sekarang 11 = sesuai heading, lucky coincidence karena sebelumnya ada 12 entry dengan heading "11")
+  * Klien BKH Kartini: 1x (di source line BERITA_PERS) — correct, di Berita section
+- Build sukses (0 error TypeScript, 4 static pages).
+
+Stage Summary:
+- ✅ Ibu Uyin Wulandari sekarang CUMA muncul 1x di section Berita sebagai berita utama.
+- ✅ Section Testimoni hanya berisi marquee 11 kartu (AM, Ibu M., Bapak T., Ibu S., Bapak R., Ibu W., Saudara A., Ibu N., Bapak K., Ibu D., Bapak M.) — semua pakai inisial.
+- ✅ Heading section Testimoni tetap "11 Kisah Nyata dari Warga Trenggalek".
+- ✅ Build sukses, siap push ke GitHub (auto-deploy Cloudflare via GitHub Actions).

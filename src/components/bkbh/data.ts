@@ -144,21 +144,10 @@ export const SKTM_STEPS = [
   },
 ] as const;
 
-// Testimoni — Ibu Uyin Wulandari sebagai klien utama (foto asli disertakan)
-export const FEATURED_TESTIMONIAL = {
-  initials: "UW",
-  name: "Ibu Uyin Wulandari",
-  role: "Warga Pesisir Trenggalek",
-  location: "Ds. Ngembel, Kec. Watulimo, Trenggalek",
-  case: "Bantuan Hukum Gratis",
-  photo: "/uploads/testimoni-uyin.jpeg",
-  color: "from-red-500 to-rose-700",
-  quote:
-    "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
-};
-
+// Testimoni — Ibu Uyin Wulandari kini menjadi berita utama di section #berita,
+// jadi tidak perlu muncul lagi di section testimoni untuk hindari duplikat.
 export const TESTIMONIALS = [
-  // Testimoni #1 — AM (paling atas, sumber: berita pers Pemkab Trenggalek)
+  // Testimoni #1 — AM (paling atas, sumber: arsip kasus BKH Kartini)
   {
     initials: "AM",
     name: "Bapak AM",
@@ -168,19 +157,6 @@ export const TESTIMONIALS = [
     color: "from-red-600 to-rose-800",
     quote:
       "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
-  },
-  // Testimoni #2 — Uyin Wulandari (foto asli, klien utama BKH Kartini)
-  {
-    initials: "UW",
-    name: "Ibu Uyin Wulandari",
-    role: "Warga Pesisir Trenggalek",
-    location: "Ds. Ngembel, Kec. Watulimo, Trenggalek",
-    case: "Bantuan Hukum Gratis",
-    photo: "/uploads/testimoni-uyin.jpeg",
-    color: "from-red-500 to-rose-700",
-    quote:
-      "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Selamanya saya berutang budi.",
-    isFeatured: true,
   },
   {
     initials: "IM",
