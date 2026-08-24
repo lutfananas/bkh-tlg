@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, Scale } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_MENU, WHATSAPP_LINK } from "./data";
+import { NAV_MENU, WHATSAPP_LINK, LOGO_SRC } from "./data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +20,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-primary text-primary-foreground shadow-xl shadow-emerald-900/20"
+          ? "bg-primary text-primary-foreground shadow-xl shadow-red-950/30"
           : "bg-transparent text-white"
       }`}
     >
@@ -29,21 +29,26 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#beranda" className="flex items-center gap-3 group">
             <div
-              className={`relative w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-all duration-500 ${
+              className={`relative w-11 h-11 md:w-14 md:h-14 rounded-xl overflow-hidden flex items-center justify-center transition-all duration-500 ${
                 scrolled
-                  ? "bg-amber-gold/20 ring-2 ring-amber-gold/40"
-                  : "bg-white/15 ring-2 ring-white/30 backdrop-blur"
+                  ? "bg-white ring-2 ring-gold-accent/50"
+                  : "bg-white/90 ring-2 ring-white/50 backdrop-blur"
               }`}
             >
-              <Scale className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.2} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={LOGO_SRC}
+                alt="Logo BKH Kartini Tulungagung"
+                className="w-full h-full object-contain p-0.5"
+              />
             </div>
             <div className="leading-tight">
               <div className="font-heading text-base md:text-xl font-bold tracking-tight">
-                BKBH Kartini
+                BKH Kartini
               </div>
               <div
                 className={`text-[10px] md:text-xs font-medium uppercase tracking-widest ${
-                  scrolled ? "text-amber-gold" : "text-amber-200"
+                  scrolled ? "text-gold-accent" : "text-amber-200"
                 }`}
               >
                 Tulungagung
@@ -77,8 +82,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 animate-cta-glow ${
                 scrolled
-                  ? "bg-amber-gold text-charcoal hover:brightness-110"
-                  : "bg-amber-400 text-charcoal hover:bg-amber-300"
+                  ? "bg-gold-accent text-charcoal hover:brightness-110"
+                  : "bg-gold-accent text-charcoal hover:brightness-110"
               }`}
             >
               <Phone className="w-4 h-4" />
@@ -128,7 +133,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
-                  className="mt-2 inline-flex items-center justify-center gap-2 w-full px-4 py-3 rounded-full bg-amber-gold text-charcoal font-semibold"
+                  className="mt-2 inline-flex items-center justify-center gap-2 w-full px-4 py-3 rounded-full bg-gold-accent text-charcoal font-semibold"
                 >
                   <Phone className="w-4 h-4" />
                   Hubungi Posbakum

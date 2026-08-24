@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, FileText, ChevronDown, Scale, Heart, Users } from "lucide-react";
-import { HERO_SLIDES, WHATSAPP_LINK } from "./data";
+import { MessageCircle, FileText, ChevronDown, Heart, Users, Scale } from "lucide-react";
+import { HERO_SLIDES, WHATSAPP_LINK, LOGO_SRC } from "./data";
 
 // Komponen teks dengan reveal kata-per-kata
 function RevealWords({ text, className }: { text: string; className?: string }) {
@@ -67,12 +67,12 @@ export default function Hero() {
         </AnimatePresence>
 
         {/* Layer gelap untuk readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/85 via-emerald-900/75 to-emerald-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-red-950/85 via-red-900/75 to-red-950/90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(245,158,11,0.18),transparent_50%)]" />
 
         {/* Blobs ambient */}
         <div className="absolute -top-32 -left-20 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl animate-float-blob" />
-        <div className="absolute -bottom-32 -right-20 w-[28rem] h-[28rem] bg-emerald-400/15 rounded-full blur-3xl animate-float-blob" style={{ animationDelay: "4s" }} />
+        <div className="absolute -bottom-32 -right-20 w-[28rem] h-[28rem] bg-red-400/15 rounded-full blur-3xl animate-float-blob" style={{ animationDelay: "4s" }} />
       </div>
 
       {/* Konten */}
@@ -83,10 +83,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-amber-400/15 ring-1 ring-amber-300/30 px-4 py-1.5 mb-6 backdrop-blur"
+            className="inline-flex items-center gap-2.5 rounded-full bg-white/15 ring-1 ring-gold-accent/40 px-3 py-1.5 md:px-4 mb-6 backdrop-blur"
           >
-            <Scale className="w-4 h-4 text-amber-300" />
-            <span className="text-xs md:text-sm font-semibold text-amber-100 uppercase tracking-wider">
+            <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white overflow-hidden flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={LOGO_SRC} alt="Logo BKH Kartini" className="w-full h-full object-contain" />
+            </div>
+            <span className="text-[10px] md:text-xs font-semibold text-gold-accent uppercase tracking-wider">
               Pro Bono · Untuk Fakir Miskin, Perempuan & Anak
             </span>
           </motion.div>
@@ -105,7 +108,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-6 text-base md:text-lg text-emerald-50/90 leading-relaxed max-w-2xl"
+            className="mt-6 text-base md:text-lg text-red-50/90 leading-relaxed max-w-2xl"
           >
             Posko bantuan hukum kami menyediakan pendampingan gratis untuk perempuan
             korban KDRT, anak yang berhadapan dengan hukum, dan warga kurang mampu di
@@ -144,7 +147,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.5 }}
-            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-emerald-50"
+            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-red-50"
           >
             <div className="flex items-center gap-2">
               <Heart className="w-5 h-5 text-amber-300" />
@@ -172,7 +175,7 @@ export default function Hero() {
             onClick={() => setActiveSlide(idx)}
             className={`h-1.5 rounded-full transition-all duration-500 ${
               activeSlide === idx
-                ? "w-8 bg-amber-gold"
+                ? "w-8 bg-gold-accent"
                 : "w-3 bg-white/50 hover:bg-white/80"
             }`}
           />
@@ -191,7 +194,7 @@ export default function Hero() {
             className="text-right"
           >
             <div className="text-[10px] uppercase tracking-widest text-amber-200">
-              Posko BKBH Kartini
+              Posko BKH Kartini
             </div>
             <div className="text-sm font-medium text-white">
               {HERO_SLIDES[activeSlide].caption}

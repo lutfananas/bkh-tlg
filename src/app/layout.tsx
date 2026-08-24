@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BKBH Kartini Tulungagung — Bantuan Hukum Gratis untuk Warga Kurang Mampu",
+  title: "BKH Kartini Tulungagung — Bantuan Hukum Gratis untuk Warga Kurang Mampu",
   description:
-    "Biro Konsultasi dan Bantuan Hukum (BKBH) Kartini Tulungagung: posko bantuan hukum pro bono bagi fakir miskin, perempuan, dan anak. Pendampingan kasus pidana, perdata, KDRT, dan sengketa pertanahan tanpa biaya sepeser pun.",
+    "Biro Konsultasi dan Bantuan Hukum (BKH) Kartini Tulungagung: posko bantuan hukum pro bono bagi fakir miskin, perempuan, dan anak. Pendampingan kasus pidana, perdata, KDRT, dan sengketa pertanahan tanpa biaya sepeser pun.",
   keywords: [
-    "BKBH Kartini",
+    "BKH Kartini",
     "Bantuan Hukum Gratis Tulungagung",
     "Posbakum Tulungagung",
     "Pro Bono Indonesia",
@@ -31,21 +31,21 @@ export const metadata: Metadata = {
     "Restorative Justice",
     "Mediasi Non-Litigasi",
   ],
-  authors: [{ name: "BKBH Kartini Tulungagung" }],
+  authors: [{ name: "BKH Kartini Tulungagung" }],
   icons: {
     icon: "/logo.svg",
   },
   openGraph: {
-    title: "BKBH Kartini Tulungagung — Keadilan untuk Semua",
+    title: "BKH Kartini Tulungagung — Keadilan untuk Semua",
     description:
       "Bantuan hukum gratis (pro bono) bagi fakir miskin, perempuan, dan anak di Kabupaten Tulungagung. Litigasi, non-litigasi, dan penyuluhan hukum desa.",
-    siteName: "BKBH Kartini Tulungagung",
+    siteName: "BKH Kartini Tulungagung",
     type: "website",
     locale: "id_ID",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BKBH Kartini Tulungagung",
+    title: "BKH Kartini Tulungagung",
     description: "Bantuan hukum gratis untuk warga kurang mampu Tulungagung.",
   },
   robots: {

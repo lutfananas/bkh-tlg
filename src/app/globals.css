@@ -37,8 +37,10 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-emerald-deep: var(--emerald-deep);
-  --color-amber-gold: var(--amber-gold);
+  --color-justice-red: var(--justice-red);
+  --color-justice-deep: var(--justice-deep);
+  --color-justice-maroon: var(--justice-maroon);
+  --color-gold-accent: var(--gold-accent);
   --color-charcoal: var(--charcoal);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -49,74 +51,77 @@
 :root {
   --radius: 0.625rem;
 
-  /* Base neutral palette */
-  --background: oklch(0.99 0.002 120);
-  --foreground: oklch(0.18 0.01 150);
+  /* === Tema Keadilan Merah-Putih === */
+  /* Background: putih bersih */
+  --background: oklch(0.995 0.002 15);
+  --foreground: oklch(0.18 0.02 15);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 150);
+  --card-foreground: oklch(0.18 0.02 15);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 150);
+  --popover-foreground: oklch(0.18 0.02 15);
 
-  /* Primary = Emerald Green (Justice, law, growth) */
-  --primary: oklch(0.45 0.13 155);
-  --primary-foreground: oklch(0.99 0.005 120);
+  /* Primary = Deep Crimson Red (Keadilan, keberanian, bendera RI) */
+  --primary: oklch(0.42 0.18 18);
+  --primary-foreground: oklch(0.99 0.005 90);
 
-  /* Secondary = Charcoal */
-  --secondary: oklch(0.21 0.005 150);
-  --secondary-foreground: oklch(0.99 0.005 120);
+  /* Secondary = Maroon pekat untuk panel gelap */
+  --secondary: oklch(0.20 0.05 15);
+  --secondary-foreground: oklch(0.99 0.005 90);
 
-  --muted: oklch(0.96 0.005 120);
-  --muted-foreground: oklch(0.45 0.01 150);
+  --muted: oklch(0.96 0.005 15);
+  --muted-foreground: oklch(0.42 0.02 15);
 
-  /* Accent = Warm Amber Gold */
-  --accent: oklch(0.78 0.15 85);
-  --accent-foreground: oklch(0.21 0.01 150);
+  /* Accent = Warm Gold (untuk CTA prioritas tinggi) */
+  --accent: oklch(0.78 0.13 80);
+  --accent-foreground: oklch(0.18 0.02 15);
 
   --destructive: oklch(0.55 0.22 27);
-  --border: oklch(0.9 0.01 150);
-  --input: oklch(0.9 0.01 150);
-  --ring: oklch(0.45 0.13 155);
+  --border: oklch(0.90 0.01 15);
+  --input: oklch(0.90 0.01 15);
+  --ring: oklch(0.42 0.18 18);
 
   /* Brand extension colors */
-  --emerald-deep: oklch(0.35 0.10 155);
-  --amber-gold: oklch(0.78 0.15 85);
-  --charcoal: oklch(0.21 0.005 150);
+  --justice-red: oklch(0.42 0.18 18);
+  --justice-deep: oklch(0.32 0.13 15);
+  --justice-maroon: oklch(0.22 0.07 15);
+  --gold-accent: oklch(0.78 0.13 80);
+  --charcoal: oklch(0.18 0.02 15);
 
-  --chart-1: oklch(0.45 0.13 155);
-  --chart-2: oklch(0.78 0.15 85);
-  --chart-3: oklch(0.55 0.10 180);
-  --chart-4: oklch(0.40 0.08 120);
-  --chart-5: oklch(0.65 0.10 50);
+  --chart-1: oklch(0.42 0.18 18);
+  --chart-2: oklch(0.78 0.13 80);
+  --chart-3: oklch(0.55 0.10 15);
+  --chart-4: oklch(0.65 0.10 30);
+  --chart-5: oklch(0.50 0.13 355);
 
-  --sidebar: oklch(0.99 0.005 120);
-  --sidebar-foreground: oklch(0.18 0.01 150);
-  --sidebar-primary: oklch(0.45 0.13 155);
-  --sidebar-primary-foreground: oklch(0.99 0.005 120);
-  --sidebar-accent: oklch(0.96 0.01 120);
-  --sidebar-accent-foreground: oklch(0.21 0.01 150);
-  --sidebar-border: oklch(0.9 0.01 150);
-  --sidebar-ring: oklch(0.45 0.13 155);
+  --sidebar: oklch(0.99 0.005 15);
+  --sidebar-foreground: oklch(0.18 0.02 15);
+  --sidebar-primary: oklch(0.42 0.18 18);
+  --sidebar-primary-foreground: oklch(0.99 0.005 90);
+  --sidebar-accent: oklch(0.96 0.005 15);
+  --sidebar-accent-foreground: oklch(0.20 0.05 15);
+  --sidebar-border: oklch(0.90 0.01 15);
+  --sidebar-ring: oklch(0.42 0.18 18);
 }
 
 .dark {
-  --background: oklch(0.16 0.01 150);
-  --foreground: oklch(0.97 0.005 120);
-  --card: oklch(0.20 0.01 150);
-  --card-foreground: oklch(0.97 0.005 120);
-  --popover: oklch(0.20 0.01 150);
-  --popover-foreground: oklch(0.97 0.005 120);
-  --primary: oklch(0.65 0.13 155);
-  --primary-foreground: oklch(0.16 0.01 150);
-  --secondary: oklch(0.27 0.01 150);
-  --secondary-foreground: oklch(0.97 0.005 120);
-  --muted: oklch(0.27 0.01 150);
-  --muted-foreground: oklch(0.70 0.01 150);
-  --accent: oklch(0.78 0.15 85);
-  --accent-foreground: oklch(0.21 0.01 150);
+  --background: oklch(0.17 0.04 15);
+  --foreground: oklch(0.97 0.005 90);
+  --card: oklch(0.22 0.05 15);
+  --card-foreground: oklch(0.97 0.005 90);
+  --popover: oklch(0.22 0.05 15);
+  --popover-foreground: oklch(0.97 0.005 90);
+  --primary: oklch(0.62 0.18 18);
+  --primary-foreground: oklch(0.99 0.005 90);
+  --secondary: oklch(0.27 0.05 15);
+  --secondary-foreground: oklch(0.97 0.005 90);
+  --muted: oklch(0.27 0.05 15);
+  --muted-foreground: oklch(0.70 0.02 15);
+  --accent: oklch(0.78 0.13 80);
+  --accent-foreground: oklch(0.18 0.02 15);
   --destructive: oklch(0.70 0.19 22);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.65 0.13 155);
+  --ring: oklch(0.62 0.18 18);
 }
 
 @layer base {
@@ -132,20 +137,20 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar dengan warna keadilan */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.96 0.005 120);
+  background: oklch(0.96 0.01 15);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.45 0.13 155);
+  background: var(--justice-red);
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.35 0.10 155);
+  background: var(--justice-deep);
 }
 
 /* Marquee animations */
@@ -184,7 +189,7 @@
   animation: float-blob 22s ease-in-out infinite;
 }
 
-/* CTA glow */
+/* CTA glow — emas */
 @keyframes cta-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.55); }
   50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
@@ -215,7 +220,7 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* Base input style for BKBH intake form */
+/* Base input style */
 .input-base {
   width: 100%;
   border-radius: 0.5rem;
@@ -229,8 +234,19 @@ html {
 }
 .input-base:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
 }
 .input-base::placeholder {
-  color: oklch(0.55 0.01 150);
+  color: oklch(0.55 0.02 15);
+}
+
+/* Garis merah-putih dekoratif (garis keadilan) */
+.justice-bar {
+  background: linear-gradient(
+    to right,
+    var(--justice-red) 0%,
+    var(--justice-red) 50%,
+    white 50%,
+    white 100%
+  );
 }

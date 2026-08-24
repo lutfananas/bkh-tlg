@@ -45,7 +45,7 @@ export default function Stats() {
   return (
     <section className="relative -mt-10 md:-mt-16 z-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl md:rounded-3xl bg-secondary text-secondary-foreground shadow-2xl shadow-emerald-900/20 overflow-hidden">
+        <div className="rounded-2xl md:rounded-3xl bg-secondary text-secondary-foreground shadow-2xl shadow-red-950/30 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {STATS.map((stat, i) => {
               const Icon = ICONS[i];
@@ -59,17 +59,17 @@ export default function Stats() {
                   className="group relative p-6 md:p-10 hover:bg-white/5 transition-colors duration-500"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl bg-amber-gold/20 ring-1 ring-amber-gold/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-amber-gold" />
+                    <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gold-accent/20 ring-1 ring-gold-accent/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-gold-accent" />
                     </div>
                     <div className="flex-1">
                       <div className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
                         <Counter target={stat.target} suffix={stat.suffix} />
                       </div>
-                      <div className="mt-1 text-sm md:text-base font-semibold text-amber-gold uppercase tracking-wider">
+                      <div className="mt-1 text-sm md:text-base font-semibold text-gold-accent uppercase tracking-wider">
                         {stat.label}
                       </div>
-                      <p className="mt-2 text-xs md:text-sm text-emerald-50/70 leading-relaxed">
+                      <p className="mt-2 text-xs md:text-sm text-red-50/70 leading-relaxed">
                         {stat.description}
                       </p>
                     </div>

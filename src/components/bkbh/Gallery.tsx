@@ -91,7 +91,7 @@ export default function Gallery() {
               {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 text-left">
                 <div className="text-[10px] uppercase tracking-wider text-amber-300 font-semibold mb-0.5">
-                  BKBH Kartini
+                  BKH Kartini
                 </div>
                 <div className="text-xs md:text-sm font-semibold text-white leading-tight">
                   {photo.caption}

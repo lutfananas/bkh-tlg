@@ -69,7 +69,7 @@ export default function IntakeForm() {
     setTimeout(() => {
       // Reset & juga bisa kirim ke WhatsApp untuk konfirmasi cepat
       const waText = encodeURIComponent(
-        `Assalamualaikum BKBH Kartini,\n\nNama: ${form.name}\nHP: ${form.phone}\nAlamat: ${form.address}\nKategori: ${form.category}\nPeristiwa: ${form.caseDate}\n\nKronologi:\n${form.description}\n\nDokumen: ${form.fileName || "belum ada"}`
+        `Assalamualaikum BKH Kartini,\n\nNama: ${form.name}\nHP: ${form.phone}\nAlamat: ${form.address}\nKategori: ${form.category}\nPeristiwa: ${form.caseDate}\n\nKronologi:\n${form.description}\n\nDokumen: ${form.fileName || "belum ada"}`
       );
       window.open(`https://wa.me/${CONTACTS.whatsapp.match(/wa\.me\/(\d+)/)?.[1] ?? "6281331922614"}?text=${waText}`, "_blank");
       setSubmitted(false);
@@ -265,7 +265,7 @@ export default function IntakeForm() {
             <button
               type="submit"
               disabled={submitted}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-full bg-primary text-primary-foreground hover:bg-emerald-700 disabled:opacity-70 px-7 py-3.5 font-semibold transition-colors shadow-lg shadow-emerald-700/30"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-full bg-primary text-primary-foreground hover:bg-red-700 disabled:opacity-70 px-7 py-3.5 font-semibold transition-colors shadow-lg shadow-red-800/40"
             >
               {submitted ? (
                 <>
@@ -291,7 +291,7 @@ export default function IntakeForm() {
           >
             {/* Map placeholder */}
             <div className="rounded-2xl overflow-hidden ring-1 ring-border bg-card">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-emerald-100 to-emerald-50 flex items-center justify-center">
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
                 {/* Stylized map */}
                 <div
                   className="absolute inset-0 opacity-30"
@@ -302,12 +302,12 @@ export default function IntakeForm() {
                 />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-emerald-700/40 animate-wa-pulse">
+                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-red-800/50 animate-wa-pulse">
                       <MapPin className="w-6 h-6" />
                     </div>
                   </div>
                   <div className="mt-3 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur text-xs font-semibold text-charcoal ring-1 ring-border shadow">
-                    Posbakum BKBH Kartini
+                    Posbakum BKH Kartini
                   </div>
                 </div>
                 <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur text-[10px] font-semibold text-charcoal ring-1 ring-border">
@@ -370,21 +370,21 @@ export default function IntakeForm() {
                   href={CONTACTS.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-emerald-50 hover:text-amber-gold transition-colors"
+                  className="flex items-center gap-3 text-red-50 hover:text-gold-accent transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-amber-gold" />
+                  <Phone className="w-4 h-4 text-gold-accent" />
                   {CONTACTS.phone}
                 </a>
                 <a
                   href={`mailto:${CONTACTS.email}`}
-                  className="flex items-center gap-3 text-emerald-50 hover:text-amber-gold transition-colors"
+                  className="flex items-center gap-3 text-red-50 hover:text-gold-accent transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-amber-gold" />
+                  <Mail className="w-4 h-4 text-gold-accent" />
                   {CONTACTS.email}
                 </a>
               </div>
               <div className="mt-4 p-3 rounded-lg bg-amber-400/15 ring-1 ring-amber-400/30 text-xs text-amber-100 leading-relaxed">
-                <strong className="text-amber-gold">Kasus Darurat:</strong>{" "}
+                <strong className="text-gold-accent">Kasus Darurat:</strong>{" "}
                 penangkapan, ancaman kekerasan, atau teror Pinjol — hubungi kami
                 24 jam via WhatsApp.
               </div>

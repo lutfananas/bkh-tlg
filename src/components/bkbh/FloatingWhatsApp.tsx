@@ -37,7 +37,7 @@ export default function FloatingWhatsApp() {
               </div>
               <div>
                 <div className="font-semibold text-charcoal text-sm">
-                  Posbakum BKBH Kartini
+                  Posbakum BKH Kartini
                 </div>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
                   Ada masalah hukum? Kami siap mendampingi gratis. Klik chat

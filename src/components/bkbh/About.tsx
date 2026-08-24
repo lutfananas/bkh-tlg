@@ -26,7 +26,7 @@ export default function About() {
               Tulungagung yang Kurang Mampu
             </h2>
             <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-              BKBH Kartini adalah singkatan dari{" "}
+              BKH Kartini adalah singkatan dari{" "}
               <strong className="text-charcoal">
                 Biro Konsultasi dan Bantuan Hukum Kartini
               </strong>
@@ -54,7 +54,7 @@ export default function About() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#syarat"
-                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground hover:bg-emerald-700 px-6 py-3 text-sm font-semibold transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground hover:bg-red-700 px-6 py-3 text-sm font-semibold transition-colors"
               >
                 <BookOpen className="w-4 h-4" />
                 Lihat Cara Mendapatkan Pendampingan
@@ -63,7 +63,7 @@ export default function About() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-amber-gold text-charcoal hover:brightness-110 px-6 py-3 text-sm font-semibold transition"
+                className="inline-flex items-center gap-2 rounded-full bg-gold-accent text-charcoal hover:brightness-110 px-6 py-3 text-sm font-semibold transition"
               >
                 Konsultasi Langsung
               </a>
@@ -122,14 +122,14 @@ export default function About() {
 
             {/* Quote block */}
             <div className="col-span-2 rounded-2xl bg-secondary text-secondary-foreground p-6 md:p-7 relative overflow-hidden">
-              <Quote className="absolute -top-2 -left-2 w-16 h-16 text-amber-gold/15 -rotate-12" />
-              <p className="relative font-heading text-base md:text-lg italic leading-relaxed text-emerald-50">
+              <Quote className="absolute -top-2 -left-2 w-16 h-16 text-gold-accent/15 -rotate-12" />
+              <p className="relative font-heading text-base md:text-lg italic leading-relaxed text-red-50">
                 &ldquo;Hukum seharusnya tidak mengenal kasta. Sebesar apa pun
                 gugatan, sekecil apa pun warga, kami berdiri di sisi mereka yang
                 benar.&rdquo;
               </p>
               <div className="mt-4 text-xs text-amber-200 font-semibold uppercase tracking-wider">
-                — Pernyataan Pendiri BKBH Kartini
+                — Pernyataan Pendiri BKH Kartini
               </div>
             </div>
           </motion.div>

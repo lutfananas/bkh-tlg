@@ -86,7 +86,7 @@ export default function Services() {
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal"
           >
             Tiga Pilar Pendampingan{" "}
-            <span className="text-primary">BKBH Kartini</span>
+            <span className="text-primary">BKH Kartini</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ export default function Services() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
               >
-                <TiltCard className="h-full rounded-2xl bg-card ring-1 ring-border hover:ring-primary/40 hover:shadow-2xl hover:shadow-emerald-900/15 transition-shadow p-7 md:p-8">
+                <TiltCard className="h-full rounded-2xl bg-card ring-1 ring-border hover:ring-primary/40 hover:shadow-2xl hover:shadow-red-950/20 transition-shadow p-7 md:p-8">
                   <div
                     className="flex items-center justify-center w-14 h-14 rounded-xl mb-5"
                     style={{
