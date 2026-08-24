@@ -38,7 +38,7 @@ export default function Navbar() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={LOGO_SRC}
-                alt="Logo BKH Kartini Tulungagung"
+                alt="Logo BKH Kartini Trenggalek"
                 className="w-full h-full object-contain p-0.5"
               />
             </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
                   scrolled ? "text-gold-accent" : "text-amber-200"
                 }`}
               >
-                Tulungagung
+                Trenggalek
               </div>
             </div>
           </a>

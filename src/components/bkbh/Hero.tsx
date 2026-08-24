@@ -99,7 +99,7 @@ export default function Hero() {
             <RevealWords text="Keadilan untuk Semua:" />
             <br />
             <span className="text-amber-300">
-              <RevealWords text="Bantuan Hukum Gratis Warga Kurang Mampu Tulungagung" />
+              <RevealWords text="Bantuan Hukum Gratis Warga Kurang Mampu Trenggalek" />
             </span>
           </h1>
 
@@ -112,7 +112,7 @@ export default function Hero() {
           >
             Posko bantuan hukum kami menyediakan pendampingan gratis untuk perempuan
             korban KDRT, anak yang berhadapan dengan hukum, dan warga kurang mampu di
-            seluruh Kabupaten Tulungagung. Tanpa biaya pendaftaran, tanpa upeti, tanpa
+            seluruh Kabupaten Trenggalek. Tanpa biaya pendaftaran, tanpa upeti, tanpa
             pungutan. Cukup datang dengan KTP dan SKTM — sisanya biar kami yang
             urus.
           </motion.p>

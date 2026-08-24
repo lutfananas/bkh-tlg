@@ -1,4 +1,4 @@
-// Data terpusat untuk seluruh konten BKH Kartini Tulungagung
+// Data terpusat untuk seluruh konten BKH Kartini Trenggalek
 // Semua teks ditulis dalam Bahasa Indonesia yang autentik.
 // Tema: Keadilan Merah-Putih · Logo & foto asli BKH Kartini.
 
@@ -11,12 +11,13 @@ export const LOGO_SRC = "/uploads/logo-bkh.png";
 
 export const NAV_MENU = [
   { label: "Beranda", href: "#beranda" },
+  { label: "Berita", href: "#berita" },
+  { label: "Testimoni", href: "#testimoni" },
+  { label: "Pendaftaran", href: "#kontak" },
   { label: "Tentang Kami", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
   { label: "Syarat SKTM", href: "#syarat" },
   { label: "Galeri", href: "#galeri" },
-  { label: "Berita", href: "#berita" },
-  { label: "Testimoni", href: "#testimoni" },
 ] as const;
 
 // Slider Hero — foto kegiatan aktual BKH Kartini
@@ -56,7 +57,7 @@ export const STATS = [
     suffix: "+",
     label: "Desa Penyuluhan",
     description:
-      "Tim advokad kita nyaba ke desa-desa di Tulungagung: Boyolangu, Kauman, Ngunut, Sumbergempol, sampai Rejotangan dan Gondang.",
+      "Tim advokad kita nyaba ke desa-desa di Trenggalek: Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan.",
   },
   {
     target: 100,
@@ -147,8 +148,8 @@ export const SKTM_STEPS = [
 export const FEATURED_TESTIMONIAL = {
   initials: "UW",
   name: "Ibu Uyin Wulandari",
-  role: "Warga Pesisir",
-  location: "Ds. Ngembel, Kec. Watulimo",
+  role: "Warga Pesisir Trenggalek",
+  location: "Ds. Ngembel, Kec. Watulimo, Trenggalek",
   case: "Bantuan Hukum Gratis",
   photo: "/uploads/testimoni-uyin.jpeg",
   color: "from-red-500 to-rose-700",
@@ -157,20 +158,7 @@ export const FEATURED_TESTIMONIAL = {
 };
 
 export const TESTIMONIALS = [
-  // Testimoni #1 — Uyin Wulandari (foto asli, jadikan kartu utama di carousel)
-  {
-    initials: "UW",
-    name: "Ibu Uyin Wulandari",
-    role: "Warga Pesisir",
-    location: "Ds. Ngembel, Kec. Watulimo",
-    case: "Bantuan Hukum Gratis",
-    photo: "/uploads/testimoni-uyin.jpeg",
-    color: "from-red-500 to-rose-700",
-    quote:
-      "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Selamanya saya berutang budi.",
-    isFeatured: true,
-  },
-  // Testimoni AM — warga Trenggalek, dirilis via berita Pemkab Trenggalek
+  // Testimoni #1 — AM (paling atas, sumber: berita pers Pemkab Trenggalek)
   {
     initials: "AM",
     name: "Bapak AM",
@@ -181,11 +169,24 @@ export const TESTIMONIALS = [
     quote:
       "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
   },
+  // Testimoni #2 — Uyin Wulandari (foto asli, klien utama BKH Kartini)
+  {
+    initials: "UW",
+    name: "Ibu Uyin Wulandari",
+    role: "Warga Pesisir Trenggalek",
+    location: "Ds. Ngembel, Kec. Watulimo, Trenggalek",
+    case: "Bantuan Hukum Gratis",
+    photo: "/uploads/testimoni-uyin.jpeg",
+    color: "from-red-500 to-rose-700",
+    quote:
+      "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Selamanya saya berutang budi.",
+    isFeatured: true,
+  },
   {
     initials: "IM",
     name: "Ibu M.",
     role: "Buruh Cuci",
-    location: "Boyolangu, Tulungagung",
+    location: "Boyolangu, Trenggalek",
     case: "KDRT & Perceraian",
     color: "from-red-500 to-rose-700",
     quote:
@@ -195,7 +196,7 @@ export const TESTIMONIALS = [
     initials: "BT",
     name: "Bapak T.",
     role: "Petani Penggarap",
-    location: "Kauman, Tulungagung",
+    location: "Kauman, Trenggalek",
     case: "Sengketa Tanah Waris",
     color: "from-amber-500 to-orange-600",
     quote:
@@ -205,7 +206,7 @@ export const TESTIMONIALS = [
     initials: "IS",
     name: "Ibu S.",
     role: "Penjual Gorengan",
-    location: "Ngunut, Tulungagung",
+    location: "Ngunut, Trenggalek",
     case: "Restorative Justice Anak",
     color: "from-rose-500 to-pink-600",
     quote:
@@ -215,7 +216,7 @@ export const TESTIMONIALS = [
     initials: "BR",
     name: "Bapak R.",
     role: "Kuli Bangunan",
-    location: "Tulungagung Kota",
+    location: "Trenggalek Kota",
     case: "Penahanan Upah",
     color: "from-red-600 to-red-800",
     quote:
@@ -225,7 +226,7 @@ export const TESTIMONIALS = [
     initials: "IW",
     name: "Ibu W.",
     role: "Pedagang Sayur",
-    location: "Sumbergempol, Tulungagung",
+    location: "Sumbergempol, Trenggalek",
     case: "Teror Pinjol Ilegal",
     color: "from-amber-600 to-yellow-700",
     quote:
@@ -235,7 +236,7 @@ export const TESTIMONIALS = [
     initials: "SA",
     name: "Saudara A.",
     role: "Yatim Piatu, Serabutan",
-    location: "Rejotangan, Tulungagung",
+    location: "Rejotangan, Trenggalek",
     case: "Pembelaan Pidana",
     color: "from-red-500 to-rose-700",
     quote:
@@ -245,7 +246,7 @@ export const TESTIMONIALS = [
     initials: "IN",
     name: "Ibu N.",
     role: "Mantan PMI",
-    location: "Karangrejo, Tulungagung",
+    location: "Karangrejo, Trenggalek",
     case: "Penipuan Aset PMI",
     color: "from-rose-500 to-red-600",
     quote:
@@ -255,7 +256,7 @@ export const TESTIMONIALS = [
     initials: "BK",
     name: "Bapak K.",
     role: "Pencari Rongsok",
-    location: "Kedungwaru, Tulungagung",
+    location: "Kedungwaru, Trenggalek",
     case: "Itsbat Nikah Massal",
     color: "from-amber-500 to-amber-700",
     quote:
@@ -265,7 +266,7 @@ export const TESTIMONIALS = [
     initials: "ID",
     name: "Ibu D.",
     role: "Buruh Tani",
-    location: "Pakel, Tulungagung",
+    location: "Pakel, Trenggalek",
     case: "Kekerasan Seksual Anak",
     color: "from-red-600 to-rose-700",
     quote:
@@ -275,7 +276,7 @@ export const TESTIMONIALS = [
     initials: "BM",
     name: "Bapak M.",
     role: "Pengrajin Anyaman Difabel",
-    location: "Gondang, Tulungagung",
+    location: "Gondang, Trenggalek",
     case: "Sengketa Batas Tanah",
     color: "from-amber-600 to-orange-700",
     quote:
@@ -290,7 +291,7 @@ export const GALLERY = [
     alt: "Dokumentasi kegiatan BKH Kartini di lapangan",
     caption: "Posko Hukum Keliling",
     description:
-      "Tim BKH Kartini menyelenggarakan posko hukum keliling ke desa-desa terpencil di Tulungagung. Warga dapat langsung konsultasi soal kasus pertanahan, KDRT, pinjaman online ilegal, dan masalah administrasi kependudukan tanpa harus datang ke kota.",
+      "Tim BKH Kartini menyelenggarakan posko hukum keliling ke desa-desa terpencil di Trenggalek. Warga dapat langsung konsultasi soal kasus pertanahan, KDRT, pinjaman online ilegal, dan masalah administrasi kependudukan tanpa harus datang ke kota.",
     span: "",
   },
   {
@@ -322,7 +323,7 @@ export const GALLERY = [
     alt: "Sosialisasi anti Pinjol ilegal di pedesaan",
     caption: "Sosialisasi Anti Pinjol",
     description:
-      "Sosialisasi bahaya Pinjol ilegal digelar di desa-desa pesisir Tulungagung. Warga diajarkan cara melapor ke OJK dan Bareskrim Polri jika mengalami teror, peretasan data pribadi, atau penagihan di luar batas hukum.",
+      "Sosialisasi bahaya Pinjol ilegal digelar di desa-desa pesisir Trenggalek. Warga diajarkan cara melapor ke OJK dan Bareskrim Polri jika mengalami teror, peretasan data pribadi, atau penagihan di luar batas hukum.",
     span: "row-span-2",
   },
   {
@@ -346,7 +347,7 @@ export const GALLERY = [
     alt: "Kegiatan besar BKH Kartini di lapangan terbuka",
     caption: "Aksi Besar BKH Kartini",
     description:
-      "Kegiatan besar BKH Kartini menghadirkan ratusan warga dari berbagai desa di Tulungagung. Acara ini memadukan penyuluhan hukum, layanan pembuatan SKTM gratis, dan konsultasi kilat dengan para advokat muda.",
+      "Kegiatan besar BKH Kartini menghadirkan ratusan warga dari berbagai desa di Trenggalek. Acara ini memadukan penyuluhan hukum, layanan pembuatan SKTM gratis, dan konsultasi kilat dengan para advokat muda.",
     span: "row-span-2",
   },
   {
@@ -398,14 +399,14 @@ export const OPERATING_HOURS = [
 
 export const ADDRESS_LINES = [
   "Posbakum BKH Kartini",
-  "Jl. Raya Kartini No. 14, Kelurahan Tamanan",
-  "Kecamatan Tulungagung, Kabupaten Tulungagung",
-  "Jawa Timur 66211",
+  "Jl. R.A. Kartini No. 14, Kelurahan Sudimoro",
+  "Kecamatan Trenggalek, Kabupaten Trenggalek",
+  "Jawa Timur 66312",
 ];
 
 export const CONTACTS = {
   phone: WHATSAPP_DISPLAY,
-  email: "posbakum@bkh-kartini-ta.or.id",
+  email: "posbakum@bkhkartini.or.id",
   whatsapp: WHATSAPP_LINK,
 };
 

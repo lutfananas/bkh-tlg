@@ -45,7 +45,7 @@ export default function Testimonials() {
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
             11 Kisah Nyata dari{" "}
-            <span className="text-gold-accent">Warga Tulungagung &amp; Trenggalek</span>
+            <span className="text-gold-accent">Warga Trenggalek</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -23,7 +23,7 @@ export default function About() {
             <h2 className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
               Posko Hukum{" "}
               <span className="text-primary">Pro Bono</span> untuk Warga
-              Tulungagung yang Kurang Mampu
+              Trenggalek yang Kurang Mampu
             </h2>
             <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
               BKH Kartini adalah singkatan dari{" "}
@@ -31,10 +31,10 @@ export default function About() {
                 Biro Konsultasi dan Bantuan Hukum Kartini
               </strong>
               . Kami berdiri tahun 2016 atas prakarsa beberapa advokat muda dan
-              mahasiswa Fakultas Hukum asli Tulungagung yang resah melihat
+              mahasiswa Fakultas Hukum asli Trenggalek yang resah melihat
               warga kurang mampu dianiaya sistem peradilan karena tidak mampu
               menyewa pengacara. Sejak itu, kami sudah menangani lebih dari
-              1.200 kasus di seluruh kecamatan Tulungagung.
+              1.200 kasus di seluruh kecamatan Trenggalek.
             </p>
             <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               Fokus kami tiga kelompok paling rentan:{" "}

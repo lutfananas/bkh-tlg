@@ -63,3 +63,30 @@ Stage Summary:
 - ✅ Marquee carousel tetap jalan infinite dengan pause-on-hover
 - ✅ Lint passing (0 errors), runtime clean, lint hanya 8 cosmetic warnings
 - 📂 File final siap push ke GitHub
+
+---
+Task ID: 3
+Agent: Super Z (main)
+Task: Revisi konten sesuai berita pers Pemkab Trenggalek (Perda No. 5/2015). Brand BKH Kartini dialihkan dari "Tulungagung" menjadi "Trenggalek" menyeluruh, Ibu Uyin Wulandari dipastikan sebagai klien Trenggalek, dan susunan halaman diubah jadi: Berita → Testimoni → Pendaftaran di bagian atas.
+
+Work Log:
+- Update `src/components/bkbh/data.ts`:
+  - Header comment: "BKH Kartini Tulungagung" → "BKH Kartini Trenggalek".
+  - `STATS[1].description`: daftar kecamatan Trenggalek (Panggul, Watulimo, Tugu, Campurdarat, Pogalan, Durenan) menggantikan kecamatan Tulungagung.
+  - `FEATURED_TESTIMONIAL` (Uyin Wulandari): role & location ditulis eksplisit sebagai "Warga Pesisir Trenggalek" dan "Ds. Ngembel, Kec. Watulimo, Trenggalek".
+  - `TESTIMONIALS` array: AM (Pak AM dari Wonocoyo, Panggul, Trenggalek) dipindah ke posisi #1 — kartu paling atas di carousel — sesuai instruksi "berita ini menjadi paling atas". Uyin Wulandari turun ke posisi #2 sebagai kartu foto asli. Semua label lokasi (`Boyolangu`, `Kauman`, `Ngunut`, `Trenggalek Kota`, `Sumbergempol`, `Rejotangan`, `Karangrejo`, `Kedungwaru`, `Pakel`, `Gondang`) dipasangkan suffix `Trenggalek` menggantikan `Tulungagung`.
+  - `GALLERY[0/4/7].description`: "Tulungagung" → "Trenggalek" (3 deskripsi).
+  - `ADDRESS_LINES`: alamat kantor diganti dari "Jl. Raya Kartini No. 14, Kelurahan Tamanan, Kecamatan Tulungagung, Kabupaten Tulungagung, 66211" → "Jl. R.A. Kartini No. 14, Kelurahan Sudimoro, Kecamatan Trenggalek, Kabupaten Trenggalek, 66312".
+  - `CONTACTS.email`: `posbakum@bkh-kartini-ta.or.id` → `posbakum@bkhkartini.or.id` (suffix `-ta` Tulungagung dibuang).
+  - `NAV_MENU` diurutkan ulang jadi: Beranda → Berita → Testimoni → Pendaftaran (#kontak) → Tentang Kami → Layanan → Syarat SKTM → Galeri (sesuai fokus: berita-testimoni-pendaftaran paling depan).
+- Update `src/components/bkbh/Navbar.tsx`: alt logo + chip bawah nama brand "Tulungagung" → "Trenggalek".
+- Update `src/components/bkbh/Hero.tsx`: headline reveal "Warga Kurang Mampu Tulungagung" → "Trenggalek"; subtitle "seluruh Kabupaten Tulungagung" → "seluruh Kabupaten Trenggalek".
+- Update `src/components/bkbh/About.tsx`: 3 mention "Tulungagung" pada heading + narasi pendiri → "Trenggalek".
+- Update `src/components/bkbh/Footer.tsx`: alt logo, chip, paragraf brand, signature footer → semua jadi "Trenggalek".
+- Update `src/components/bkbh/Gallery.tsx`: caption "Kabupaten Tulungagung" → "Kabupaten Trenggalek".
+- Update `src/components/bkbh/IntakeForm.tsx`: badge peta "Tulungagung, Jatim" → "Trenggalek, Jatim".
+- Update `src/components/bkbh/Testimonials.tsx`: heading "Warga Tulungagung & Trenggalek" → "Warga Trenggalek".
+- Update `src/app/page.tsx`: urutan section disusun ulang jadi Hero → Stats → PressNews → Testimonials → IntakeForm → About → Services → Eligibility → Gallery. Fokus halaman jadi jelas: berita → testimoni → pendaftaran paling atas.
+- Verifikasi: `bun run build` sukses, 0 error TypeScript, 4 static pages ter-generate.
+
+Stage Summary: ✅ Brand BKH Kartini sepenuhnya dialihkan ke Trenggalek (alamat kantor, semua mention, semua testimoni, NAV menu). AM dari Wonocoyo/Panggul jadi kartu paling atas di carousel testimoni. Urutan halaman: Berita → Testimoni → Pendaftaran naik ke atas (setelah Hero+Stats), About/Layanan/Syarat/Galeri turun ke bawah sebagai konteks pendukung. Build sukses tanpa error.

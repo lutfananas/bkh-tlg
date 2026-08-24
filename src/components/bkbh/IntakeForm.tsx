@@ -311,7 +311,7 @@ export default function IntakeForm() {
                   </div>
                 </div>
                 <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur text-[10px] font-semibold text-charcoal ring-1 ring-border">
-                  Tulungagung, Jatim
+                  Trenggalek, Jatim
                 </div>
               </div>
               <div className="p-5">

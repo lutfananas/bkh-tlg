@@ -15,7 +15,7 @@ export default function Footer() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={LOGO_SRC}
-                  alt="Logo BKH Kartini Tulungagung"
+                  alt="Logo BKH Kartini Trenggalek"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -24,14 +24,14 @@ export default function Footer() {
                   BKH Kartini
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-gold-accent">
-                  Tulungagung
+                  Trenggalek
                 </div>
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-md">
               Biro Konsultasi dan Bantuan Hukum Kartini — posko bantuan hukum
               pro bono untuk fakir miskin, perempuan, dan anak di Kabupaten
-              Tulungagung. Berdiri sejak 2016, sudah menangani 1.200+ kasus di
+              Trenggalek. Berdiri sejak 2016, sudah menangani 1.200+ kasus di
               45+ desa.
             </p>
             <div className="mt-5 flex items-center gap-3">
@@ -114,7 +114,7 @@ export default function Footer() {
           <p className="flex items-center gap-1.5">
             Dibuat dengan{" "}
             <Heart className="w-3.5 h-3.5 text-gold-accent fill-gold-accent" /> oleh
-            tim BKH Kartini Tulungagung. © {new Date().getFullYear()} — Hak
+            tim BKH Kartini Trenggalek. © {new Date().getFullYear()} — Hak
             Cipta Dilindungi.
           </p>
           <div className="flex items-center gap-4">

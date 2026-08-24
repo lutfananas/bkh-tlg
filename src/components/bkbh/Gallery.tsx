@@ -214,7 +214,7 @@ export default function Gallery() {
                     {GALLERY[activeIndex].description}
                   </p>
                   <div className="mt-5 pt-5 border-t border-border text-xs text-muted-foreground">
-                    Lokasi: Kabupaten Tulungagung, Jawa Timur.
+                    Lokasi: Kabupaten Trenggalek, Jawa Timur.
                   </div>
                 </div>
               </div>
