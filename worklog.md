@@ -207,3 +207,23 @@ Stage Summary:
 - ✅ Build Next.js static export sukses di CI setelah prisma generate ditambahkan.
 - ❌ Auto-deploy ke Cloudflare Pages GAGAL — secret `CLOUDFLARE_API_TOKEN` & `CLOUDFLARE_ACCOUNT_ID` belum diset di repo.
 - BLOCKED: butuh input user — Cloudflare API token + Account ID, untuk diset sebagai GitHub repo secret (atau deploy manual via wrangler dari lokal).
+
+---
+Task ID: 7
+Agent: Super Z (main)
+Task: Set GitHub repo secrets untuk Cloudflare deploy + trigger re-run workflow.
+
+Work Log:
+- Install pynacl (dipasang di /home/z/.local/lib/python3.13/site-packages).
+- Tulis scripts/setup_cf_secrets.py — baca GH_TOKEN & CF_TOKEN dari env var (tidak echo ke stdout), resolve account ID via API Cloudflare, encrypt dua secret dengan sealed box, PUT ke GitHub repo.
+- Eksekusi script: sukses set 'CLOUDFLARE_API_TOKEN' & 'CLOUDFLARE_ACCOUNT_ID' sebagai encrypted repo secret di lutfananas/bkh-tlg.
+- Cloudflare account ter-resolve: Lutfananas@gmail.com's Account (ID c3054da4734ad593886118b33f3a35a8).
+- Trigger re-run workflow 32713521832 via API GitHub (POST /actions/runs/{id}/rerun) → HTTP 201.
+- Polling sampai selesai (~50 detik): semua step SUCCESS termasuk "Deploy to Cloudflare Pages".
+- Verifikasi live: curl https://bkhkartini.pages.dev/ → HTTP 200, content mengandung "100+ Kasus Selesai", "Trenggalek", "BKH Kartini".
+
+Stage Summary:
+- ✅ Cloudflare Pages project `bkhkartini` sudah ter-deploy penuh.
+- ✅ Site live di https://bkhkartini.pages.dev/ (HTTP 200, content update: 100+ Kasus Selesai, Trenggalek, BKH Kartini semuanya tampil).
+- ✅ Auto-deploy workflow akan jalan otomatis tiap push ke main branch.
+- Deployment terbaru: https://f2ba77ce.bkhkartini.pages.dev (created 2026-08-24T09:59:45Z).
