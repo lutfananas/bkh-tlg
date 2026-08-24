@@ -227,3 +227,38 @@ Stage Summary:
 - ✅ Site live di https://bkhkartini.pages.dev/ (HTTP 200, content update: 100+ Kasus Selesai, Trenggalek, BKH Kartini semuanya tampil).
 - ✅ Auto-deploy workflow akan jalan otomatis tiap push ke main branch.
 - Deployment terbaru: https://f2ba77ce.bkhkartini.pages.dev (created 2026-08-24T09:59:45Z).
+
+---
+Task ID: 8
+Agent: Super Z (main)
+Task: Hapus berita pers AM (Pemkab Trenggalek) dan jadikan testimoni Ibu Uyin sebagai berita utama.
+
+Work Log:
+- Hapus BERITA_PERS lama (isi: pers Pemkab Trenggalek tentang AM + Perda 5/2015).
+- Tulis ulang BERITA_PERS sebagai feature story tentang Ibu Uyin:
+  * image: /uploads/testimoni-uyin.jpeg
+  * category: "Kisah Klien"
+  * dateline: "WATULIMO, TRENGGALEK"
+  * headline: "Warga Pesisir Trenggalek: 'Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis'"
+  * lead: paragraf intro Ibu Uyin
+  * body: 5 paragraf (latar belakang, ketertarikan, quote inline, latar BKH, konteks 100+ kasus)
+  * pullQuote: field baru berisi kutipan penuh Ibu Uyin + atribusi
+  * source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek"
+- Update PressNews.tsx:
+  * heading: "Dari Pers Daerah, Untuk Masyarakat Kecil" → "Kisah Nyata Klien, Suara Akar Rumput"
+  * description: diganti jadi "Cerita langsung dari warga Trenggalek..."
+  * pull-quote: hardcoded AM quote → BERITA_PERS.pullQuote dinamis
+  * source strip: "Berita Pers Daerah" → BERITA_PERS.category (dinamis)
+  * hapus link "Buka kliping asli" (tidak ada kliping untuk kisah klien)
+  * hapus import ExternalLink (tidak terpakai lagi)
+- Verifikasi HTML output:
+  * Pernah Nyangka (1x), Ibu Uyin (13x), Kisah Nyata Klien (1x), Watulimo (15x) → semua tampil
+  * Sdr. AM / Buka kliping / Berita Pers Daerah → 0 hasil (press release benar-benar hilang)
+- Build sukses (0 error TypeScript, 4 static pages).
+- AM tetap ada di array TESTIMONIALS sebagai kartu testimoni (lokasi Ds. Wonocoyo) — user tidak minta hapus.
+
+Stage Summary:
+- ✅ Berita pers AM dihapus dari section Berita.
+- ✅ Kisah Ibu Uyin Wulandari kini jadi berita utama (featured article di section #berita).
+- ✅ Section Berita sekarang konsisten — heading "Kisah Nyata Klien, Suara Akar Rumput".
+- ✅ Build sukses, siap commit + push (auto-deploy via GitHub Actions).

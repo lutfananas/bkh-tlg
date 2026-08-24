@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Newspaper, MapPin, ExternalLink, Quote } from "lucide-react";
+import { Newspaper, MapPin, Quote } from "lucide-react";
 import { BERITA_PERS } from "./data";
 
 export default function PressNews() {
@@ -44,8 +44,8 @@ export default function PressNews() {
             transition={{ delay: 0.1 }}
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
           >
-            Dari Pers Daerah,{" "}
-            <span className="text-primary">Untuk Masyarakat Kecil</span>
+            Kisah Nyata Klien,{" "}
+            <span className="text-primary">Suara Akar Rumput</span>
           </motion.h2>
 
           <motion.p
@@ -55,10 +55,10 @@ export default function PressNews() {
             transition={{ delay: 0.2 }}
             className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            Kliping resmi yang dimuat oleh Pemerintah Kabupaten Trenggalek terkait
-            program bantuan hukum untuk masyarakat miskin. Cerita ini membuktikan
-            bahwa kolaborasi negara dan lembaga advokasi benar-benar menyentuh
-            penerima manfaat di tingkat akar rumput.
+            Cerita langsung dari warga Trenggalek yang sudah didampingi BKH Kartini.
+            Setiap kasus di sini bukan sekadar angka — ini adalah keluarga yang kami
+            wal sejak awal konsultasi sampai putusan pengadilan, tanpa memungut
+            sepeser pun.
           </motion.p>
         </div>
 
@@ -98,7 +98,7 @@ export default function PressNews() {
                 {BERITA_PERS.dateline}
               </span>
               <span className="text-muted-foreground/50">—</span>
-              <span>Berita Pers Daerah</span>
+              <span>{BERITA_PERS.category}</span>
             </div>
 
             <h3 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal leading-tight mb-4">
@@ -116,7 +116,7 @@ export default function PressNews() {
               ))}
             </div>
 
-            {/* Pull quote — selected excerpt from AM */}
+            {/* Pull quote — testimonial dari klien utama */}
             <motion.blockquote
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -126,35 +126,19 @@ export default function PressNews() {
             >
               <Quote className="absolute -top-3 -left-2 w-10 h-10 text-primary/30 bg-card rounded-full" />
               <p className="font-heading text-base md:text-lg italic text-charcoal leading-relaxed">
-                &ldquo;Keluarga saya sangat terbantu dengan adanya program ini
-                karena ada pendamping yang kompeten yang selalu mendampingi
-                anaknya dalam menghadapi permasalahan hukum tersebut. Selama
-                proses pendampingan hukum, tidak pernah dipungut biaya apa pun;
-                selain itu pada setiap tahapan juga selalu diberi tahu oleh
-                Organisasi Bantuan Hukum.&rdquo;
+                &ldquo;{BERITA_PERS.pullQuote.text}&rdquo;
               </p>
               <footer className="mt-4 text-sm font-semibold text-primary">
-                — Sdr. AM, Warga Desa Wonocoyo, Kecamatan Panggul, Trenggalek
+                — {BERITA_PERS.pullQuote.attribution}
               </footer>
             </motion.blockquote>
 
             {/* Source footer */}
-            <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-muted-foreground">
-              <div className="flex items-start gap-2">
-                <Newspaper className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                <span className="leading-relaxed">
-                  Sumber: {BERITA_PERS.source}
-                </span>
-              </div>
-              <a
-                href="/uploads/berita-am-trenggalek.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-primary font-semibold hover:text-red-700 transition-colors flex-shrink-0"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                Buka kliping asli
-              </a>
+            <div className="mt-8 pt-6 border-t border-border flex items-start gap-2 text-xs text-muted-foreground">
+              <Newspaper className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
+              <span className="leading-relaxed">
+                Sumber: {BERITA_PERS.source}
+              </span>
             </div>
           </div>
         </motion.article>

@@ -410,27 +410,29 @@ export const CONTACTS = {
   whatsapp: WHATSAPP_LINK,
 };
 
-// === Berita Pers / Kliping Media ===
-// Sumber: Pemerintah Kabupaten Trenggalek, terkait Perda No. 5 Tahun 2015
+// === Berita Utama / Kisah Klien ===
+// Cerita klien BKH Kartini — Ibu Uyin Wulandari, warga pesisir Trenggalek
 export const BERITA_PERS = {
-  image: "/uploads/berita-am-trenggalek.jpg",
+  image: "/uploads/testimoni-uyin.jpeg",
   imageAlt:
-    "Kliping berita Pemkab Trenggalek — testimoni AM warga Desa Wonocoyo tentang program bantuan hukum",
-  category: "Kabar Pers",
-  dateline: "TRENGGALEK",
+    "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
+  category: "Kisah Klien",
+  dateline: "WATULIMO, TRENGGALEK",
   headline:
-    "Mengawal Program Bantuan Hukum untuk Masyarakat Miskin Sampai ke Penerima Manfaat",
+    "Warga Pesisir Trenggalek: \"Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis\"",
   lead:
-    "Komitmen Pemerintah Kabupaten Trenggalek untuk memberikan bantuan hukum kepada masyarakat miskin berdasarkan Peraturan Daerah Kabupaten Trenggalek Nomor 5 Tahun 2015 tentang Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin, terus dilakukan.",
+    "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, baru saja menyelesaikan perkara hukumnya bersama BKH Kartini. Dari konsultasi awal sampai kasus selesai, tidak ada satu pun biaya yang diminta — bahkan ongkos transport tim advokad pun ditanggung sendiri.",
   body: [
-    "Kolaborasi antara Pemerintah Kabupaten Trenggalek dengan lembaga bantuan hukum diharapkan dapat memperkuat sistem pelayanan hukum sekaligus memberikan kepastian kepada masyarakat mengenai ke mana mereka harus mencari bantuan ketika menghadapi persoalan hukum.",
-    "Bantuan hukum tidak semata-mata dimaknai sebagai pendampingan terhadap masyarakat yang sedang menjalani proses hukum. Lebih dari itu, bantuan hukum juga memiliki fungsi edukatif dalam membangun kesadaran masyarakat mengenai hak dan kewajibannya.",
-    "Masyarakat yang memahami hukum akan lebih mampu melindungi dirinya dari berbagai tindakan yang merugikan, memahami pilihan penyelesaian masalah, serta mengambil keputusan yang tepat ketika menghadapi persoalan hukum.",
-    "Manfaat program bantuan hukum untuk masyarakat miskin ini salah satunya juga dirasakan oleh AM, warga Desa Wonocoyo Kecamatan Panggul. Saat ini anaknya sedang menghadapi perkara hukum pidana dan dibantu oleh Organisasi Bantuan Hukum yang ditunjuk oleh Pemerintah Kabupaten Trenggalek.",
-    "Pada saat Tim Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin datang ke rumahnya, Sdr. AM menyampaikan bahwa keluarganya sangat terbantu dengan adanya program ini karena ada pendamping yang kompeten yang selalu mendampingi anaknya dalam menghadapi permasalahan hukum tersebut. AM juga menyampaikan bahwa selama proses pendampingan hukum, tidak pernah dipungut biaya apa pun; selain itu pada setiap tahapan juga selalu diberi tahu oleh Organisasi Bantuan Hukum sehingga seluruh tahapan persidangan dan tahapan dapat diikuti dengan optimal.",
-    "AM menyampaikan terima kasih kepada Pemerintah Kabupaten Trenggalek karena memiliki program bantuan hukum ini. Karena di tengah kebingungan saat menghadapi permasalahan hukum ada yang membantu untuk memberikan arahan serta mendampingi selama proses persidangan.",
-    "AM berharap program ini dapat terus berjalan sehingga banyak orang yang kondisi ekonominya seperti dirinya mendapatkan layanan serupa.",
+    "Selama bertahun-tahun, Ibu Uyin — seperti kebanyakan warga pesisir Trenggalek — menganggap lembaga bantuan hukum selalu identik dengan biaya tersembunyi. Pengalaman bersama BKH Kartini mengubah persepsinya sama sekali. Dari konsultasi awal sampai seluruh proses hukum selesai, ia tidak dimintai sepeser pun.",
+    "Yang membuatnya paling terkesan, kata Ibu Uyin, bukan hanya pendampingan gratis, tetapi juga komitmen tim advokad yang rela mengeluarkan ongkos transport sendiri untuk datang ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek.",
+    "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujarnya. \"Selamanya saya berutang budi pada advokat-advokat muda ini.\"",
+    "BKH Kartini memang sejak awal didirikan atas semangat pro bono publik — melayani fakir miskin, perempuan, dan anak di seluruh kecamatan Trenggalek. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Bahkan biaya pengadilan dan materai resmi ditanggung penuh oleh lembaga.",
+    "Kisah Ibu Uyin hanyalah satu dari 100+ kasus yang sudah didampingi BKH Kartini sejak berdirinya tahun 2016. Tim advokad muda ini terus melayani warga dari Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan — tanpa membedakan latar belakang sosial, gender, atau agama.",
   ],
-  source:
-    "Pemerintah Kabupaten Trenggalek · Perda No. 5 Tahun 2015 tentang Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin",
+  pullQuote: {
+    text: "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
+    attribution:
+      "Ibu Uyin Wulandari — Warga Pesisir Trenggalek, Ds. Ngembel, Kec. Watulimo, Trenggalek",
+  },
+  source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek",
 } as const;
