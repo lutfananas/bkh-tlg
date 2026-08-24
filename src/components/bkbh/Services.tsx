@@ -106,7 +106,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {SERVICES.map((svc, i) => {
             const Icon = ICONS[svc.icon] ?? Gavel;
-            const isAmber = svc.accent === "amber";
+            const isGold = svc.accent === "gold";
             return (
               <motion.div
                 key={svc.title}
@@ -120,17 +120,17 @@ export default function Services() {
                     className="flex items-center justify-center w-14 h-14 rounded-xl mb-5"
                     style={{
                       transform: "translateZ(50px)",
-                      background: isAmber
+                      background: isGold
                         ? "linear-gradient(135deg, rgba(245,158,11,0.18), rgba(245,158,11,0.05))"
-                        : "linear-gradient(135deg, rgba(16,185,129,0.18), rgba(16,185,129,0.05))",
-                      boxShadow: isAmber
+                        : "linear-gradient(135deg, rgba(185,28,28,0.18), rgba(185,28,28,0.05))",
+                      boxShadow: isGold
                         ? "0 0 0 1px rgba(245,158,11,0.3) inset"
-                        : "0 0 0 1px rgba(16,185,129,0.3) inset",
+                        : "0 0 0 1px rgba(185,28,28,0.3) inset",
                     }}
                   >
                     <Icon
                       className={`w-7 h-7 ${
-                        isAmber ? "text-amber-600" : "text-primary"
+                        isGold ? "text-amber-600" : "text-primary"
                       }`}
                     />
                   </div>
@@ -138,7 +138,7 @@ export default function Services() {
                   <div style={{ transform: "translateZ(30px)" }}>
                     <span
                       className={`inline-block text-[10px] font-bold uppercase tracking-widest mb-2 ${
-                        isAmber ? "text-amber-600" : "text-primary"
+                        isGold ? "text-amber-600" : "text-primary"
                       }`}
                     >
                       {svc.short}
@@ -158,7 +158,7 @@ export default function Services() {
                         >
                           <ArrowRight
                             className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                              isAmber ? "text-amber-600" : "text-primary"
+                              isGold ? "text-amber-600" : "text-primary"
                             }`}
                           />
                           <span>{f}</span>

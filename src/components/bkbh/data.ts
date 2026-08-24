@@ -3,7 +3,7 @@
 // Tema: Keadilan Merah-Putih · Logo & foto asli BKH Kartini.
 
 export const WHATSAPP_NUMBER = "6281331922614"; // format internasional tanpa +
-export const WHATSAPP_DISPLAY = "0813-3192-2614";
+export const WHATSAPP_DISPLAY = "081331922614";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo%20BKH%20Kartini%2C%20saya%20ingin%20minta%20bantuan%20hukum.`;
 
 // Logo BKH Kartini (diunggah oleh klien)
@@ -44,8 +44,8 @@ export const HERO_SLIDES = [
 
 export const STATS = [
   {
-    target: 1200,
-    suffix: "+",
+    target: 76,
+    suffix: "",
     label: "Kasus Selesai",
     description:
       "Mulai dari perceraian, KDRT, sengketa tanah, hingga kasus pidana ringan — semuanya didampingi gratis dari awal hingga putusan.",
