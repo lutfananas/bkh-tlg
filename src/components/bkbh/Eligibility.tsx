@@ -131,19 +131,14 @@ export default function Eligibility() {
               registrasi kasus Anda.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  // Placeholder — nantinya menggantikan link file PDF riil
-                  alert(
-                    "Formulir intake PDF akan tersedia setelah deploy ke domain resmi BKH Kartini."
-                  );
-                }}
-                className="inline-flex items-center gap-2 rounded-full bg-gold-accent text-charcoal hover:brightness-110 px-5 py-2.5 text-sm font-semibold transition"
+              <a
+                href="/uploads/formulir-intake-bkh.pdf"
+                download="Formulir-Intake-BKH-Kartini.pdf"
+                className="inline-flex items-center gap-2 rounded-full bg-gold-accent text-charcoal hover:brightness-110 px-5 py-2.5 text-sm font-semibold transition shadow-lg shadow-amber-900/30"
               >
                 <Download className="w-4 h-4" />
                 Unduh PDF (Gratis)
-              </button>
+              </a>
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
