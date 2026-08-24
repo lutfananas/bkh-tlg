@@ -473,21 +473,22 @@ def build_story():
          ["", ""],
          ["", ""],
          [sig_sub, sig_sub2]],
-        colWidths=[content_w * 0.48, content_w * 0.48],
+        colWidths=[content_w * 0.50, content_w * 0.50],
         rowHeights=[None, 1.6 * cm, 0.3 * cm, 0.2 * cm, None]
     )
     sig_box.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
         ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 4),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+        # Left column: no left pad, big right pad (= gap between columns)
+        ("LEFTPADDING", (0, 0), (0, -1), 0),
+        ("RIGHTPADDING", (0, 0), (0, -1), 24),
+        # Right column: big left pad (= gap), no right pad
+        ("LEFTPADDING", (1, 0), (1, -1), 24),
+        ("RIGHTPADDING", (1, 0), (1, -1), 0),
         ("TOPPADDING", (0, 0), (-1, -1), 2),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
     ]))
-    # Add gap between the two columns
-    sig_outer = Table([[sig_box, ""]], colWidths=[content_w * 0.49, content_w * 0.02])
-    sig_outer.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP")]))
-    story.append(sig_outer)
+    story.append(sig_box)
 
     # === Page break to page 2 ===
     from reportlab.platypus import PageBreak
@@ -568,20 +569,22 @@ def build_story():
             [Paragraph("Nama & cap lembaga", S_SIG_SUB),
              Paragraph("Nama & cap lembaga", S_SIG_SUB)],
         ],
-        colWidths=[content_w * 0.48, content_w * 0.48],
+        colWidths=[content_w * 0.50, content_w * 0.50],
         rowHeights=[None, 1.8 * cm, None, None]
     )
     appr_sig.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
         ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 4),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+        # Left column: no left pad, big right pad (= gap between columns)
+        ("LEFTPADDING", (0, 0), (0, -1), 0),
+        ("RIGHTPADDING", (0, 0), (0, -1), 24),
+        # Right column: big left pad (= gap), no right pad
+        ("LEFTPADDING", (1, 0), (1, -1), 24),
+        ("RIGHTPADDING", (1, 0), (1, -1), 0),
         ("TOPPADDING", (0, 0), (-1, -1), 2),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
     ]))
-    appr_outer = Table([[appr_sig, ""]], colWidths=[content_w * 0.49, content_w * 0.02])
-    appr_outer.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP")]))
-    story.append(appr_outer)
+    story.append(appr_sig)
 
     return story
 
