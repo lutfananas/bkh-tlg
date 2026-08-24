@@ -186,3 +186,24 @@ Stage Summary:
 - Semua instansi "1.200+ Kasus Selesai" di kodebase sudah diganti ke "100+ Kasus Selesai".
 - Stat di blok Stats besar juga diupdate ke 100+ supaya konsisten dengan mini highlight row di Hero.
 - Build sukses, siap commit + push ke GitHub (auto-deploy Cloudflare Pages via GitHub Actions).
+
+---
+Task ID: 6
+Agent: Super Z (main)
+Task: Push ke GitHub + auto-deploy ke Cloudflare Pages via GitHub Actions.
+
+Work Log:
+- Commit & push stats fix (Task ID 5) ke origin/main: 07d09c9
+- Cek status workflow run 32713369947 → FAILURE pada step "Build static export for Cloudflare Pages" — error: Module '"@prisma/client"' has no exported member 'PrismaClient'.
+- Root cause: CI jalan `bun install --frozen-lockfile` yang tidak menjalankan `prisma generate` postinstall, sehingga `.prisma/client/` tidak ada di runner.
+- Fix: tambah step `bunx prisma generate` di workflow sebelum build.
+- Commit & push fix: 15bb5fc
+- Polling workflow run baru (32713521832) → BUILD SUCCEED ✅, tapi step "Deploy to Cloudflare Pages" gagal dengan error: "In a non-interactive environment, it's necessary to set a CLOUDFLARE_API_TOKEN environment variable for wrangler to work."
+- Root cause: repo lutfananas/bkh-tlg belum punya GitHub Actions secret `CLOUDFLARE_API_TOKEN` & `CLOUDFLARE_ACCOUNT_ID`.
+- Verifikasi via API GitHub: GET /actions/secrets → list kosong.
+
+Stage Summary:
+- ✅ Push ke GitHub main sukses (commit 07d09c9 untuk stats + 15bb5fc untuk CI fix prisma generate).
+- ✅ Build Next.js static export sukses di CI setelah prisma generate ditambahkan.
+- ❌ Auto-deploy ke Cloudflare Pages GAGAL — secret `CLOUDFLARE_API_TOKEN` & `CLOUDFLARE_ACCOUNT_ID` belum diset di repo.
+- BLOCKED: butuh input user — Cloudflare API token + Account ID, untuk diset sebagai GitHub repo secret (atau deploy manual via wrangler dari lokal).
