@@ -1,0 +1,152 @@
+"use client";
+
+import { useRef, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import { Quote, MapPin, Briefcase, Scale } from "lucide-react";
+import { TESTIMONIALS } from "./data";
+
+// Duplicate list untuk loop infinite seamless
+const LOOP_LIST = [...TESTIMONIALS, ...TESTIMONIALS];
+
+export default function Testimonials() {
+  const [paused, setPaused] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <section id="testimoni" className="py-20 md:py-28 bg-secondary text-secondary-foreground relative overflow-hidden">
+      {/* Ambient blobs */}
+      <div className="absolute -top-32 -left-20 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-20 w-[28rem] h-[28rem] bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-amber-gold"
+          >
+            <span className="h-px w-8 bg-amber-gold/50" />
+            Suara Warga yang Didampingi
+            <span className="h-px w-8 bg-amber-gold/50" />
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
+          >
+            10 Kisah Nyata dari{" "}
+            <span className="text-amber-gold">Warga Tulungagung</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-5 text-base md:text-lg text-emerald-50/80 leading-relaxed"
+          >
+            Identitas dilindungi dengan inisial demi privasi hukum. Namun cerita
+            mereka benar adanya, terdokumentasi rapi di arsip kasus BKBH Kartini
+            Tulungagung. Arahkan kursor ke kartu untuk menjeda pergerakan.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* Marquee track */}
+      <div
+        className="relative overflow-hidden"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        {/* Edge fades */}
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" />
+
+        <div
+          ref={trackRef}
+          className="flex w-max gap-5 md:gap-6 px-3 md:px-6 marquee-track"
+          style={{
+            animation: "marquee-left 60s linear infinite",
+            animationPlayState: paused ? "paused" : "running",
+          }}
+        >
+          {LOOP_LIST.map((t, i) => {
+            // Highlight middle-ish card every rotation
+            const isActive = i % TESTIMONIALS.length === Math.floor(TESTIMONIALS.length / 2);
+            return (
+              <TestimonialCard key={`${t.name}-${i}`} t={t} isActive={isActive} />
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-10 text-center">
+        <p className="text-xs md:text-sm text-emerald-50/60">
+          <span className="font-semibold text-amber-gold">Tip:</span> Geser
+          kursor di atas kartu untuk berhenti sejenak. Semua testimoni sudah
+          kami sahkan kebenarannya dari arsip kasus.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function TestimonialCard({
+  t,
+  isActive,
+}: {
+  t: (typeof TESTIMONIALS)[number];
+  isActive: boolean;
+  children?: ReactNode;
+}) {
+  return (
+    <motion.article
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className={`relative w-[290px] sm:w-[340px] md:w-[380px] flex-shrink-0 rounded-2xl bg-white/5 backdrop-blur ring-1 ring-white/10 p-6 md:p-7 hover:ring-amber-gold/40 transition-all duration-500 ${
+        isActive ? "shadow-2xl shadow-amber-500/20 ring-amber-gold/30" : ""
+      }`}
+    >
+      {/* Glow ring when active */}
+      {isActive && (
+        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-amber-gold/20 to-emerald-400/20 blur-md -z-10" />
+      )}
+
+      <Quote className="w-8 h-8 text-amber-gold/40 mb-4" />
+      <p className="text-sm md:text-[0.95rem] text-emerald-50 leading-relaxed italic">
+        &ldquo;{t.quote}&rdquo;
+      </p>
+
+      <div className="mt-5 pt-5 border-t border-white/10 flex items-center gap-3">
+        {/* Avatar */}
+        <div
+          className={`flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white font-heading font-bold text-base ring-2 ring-white/20`}
+        >
+          {t.initials}
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="font-semibold text-white text-sm truncate">
+            {t.name}
+          </div>
+          <div className="text-[11px] text-emerald-50/70 flex items-center gap-1">
+            <Briefcase className="w-3 h-3" />
+            <span className="truncate">{t.role}</span>
+          </div>
+          <div className="text-[11px] text-emerald-50/70 flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            <span className="truncate">{t.location}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Case tag */}
+      <div className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-amber-gold/15 ring-1 ring-amber-gold/30 text-amber-gold text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1">
+        <Scale className="w-3 h-3" />
+        {t.case}
+      </div>
+    </motion.article>
+  );
+}
