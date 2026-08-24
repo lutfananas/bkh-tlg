@@ -143,3 +143,27 @@ Stage Summary: ✅ Push ke GitHub sukses (commit 3c7a812 di origin/main). Cloudf
   - Opsi A: Hubungkan repo `lutfananas/bkh-tlg` di dashboard Cloudflare Pages (auto-deploy on push).
   - Opsi B: Tambah secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID di GitHub repo Settings → Secrets, lalu push commit apa pun (atau trigger workflow manual) — GitHub Actions yang baru saja di-push akan auto-deploy ke project `bkh-kartini-trenggalek`.
   - Opsi C: Set CLOUDFLARE_API_TOKEN di shell lokal, lalu jalankan `bun run cf:deploy`.
+
+---
+Task ID: 6
+Agent: Super Z (main)
+Task: Fix footer formulir PDF (WA overlap) + push ke GitHub & deploy ke Cloudflare Pages dengan kredensial yang diberikan user. Project name: bkhkartini (subdomain: bkhkartini.pages.dev).
+
+Work Log:
+- Fix `scripts/gen_intake_pdf.py` footer:
+  - Pisah footer jadi 2 baris: (1) alamat posbakum + (2) WA + email.
+  - Font bold 7.5pt → 6.5pt untuk baris 1, body 6pt untuk baris 2.
+  - Garis pemisah digeser 0.45→0.55 cm di atas foot_y untuk memberi ruang 2 baris.
+  - "Halaman X" tetap di kanan, sejajar baris 1 (gak overlap WA lagi).
+- Regenerate PDF: `python scripts/gen_intake_pdf.py` → 1348.9 KB.
+- Update `wrangler.toml`, `package.json` (cf:deploy script), `.github/workflows/deploy-cloudflare-pages.yml`: project name `bkh-kartini-trenggalek` → `bkhkartini`.
+- Update `README.md`: subdomain example jadi `https://bkhkartini.pages.dev`, project name di dokumen Cloudflare Pages juga `bkhkartini`.
+- Update git remote URL dengan token GitHub baru: `https://lutfananas:ghp_***@github.com/lutfananas/bkh-tlg.git`.
+- Commit `d4fc5dd fix: formulir PDF footer WA overlap (font 6pt + 2 baris) + rename CF project to bkhkartini` → push ke origin/main sukses.
+- Buat project Cloudflare Pages: `npx wrangler pages project create bkhkartini --production-branch=main` → sukses, project terdaftar.
+- Deploy: `npx wrangler pages deploy out --project-name=bkhkartini --branch=main --commit-dirty=true`:
+  - Upload 61 files (4.71 detik).
+  - Deployment complete: https://39550e58.bkhkartini.pages.dev
+- Verifikasi produksi URL: `curl https://bkhkartini.pages.dev/` → HTTP/2 200, title = "BKH Kartini Trenggalek — Bantuan Hukum Gratis untuk Warga Kurang Mampu".
+
+Stage Summary: ✅ Website live di https://bkhkartini.pages.dev/. GitHub repo https://github.com/lutfananas/bkh-tlg up-to-date sampai commit d4fc5dd. Formulir PDF footer sudah 2 baris, WA tidak lagi overlap. Untuk deploy berikutnya, user cukup push ke GitHub (kalau pakai Opsi B dengan secret GitHub) atau `bun run cf:deploy` dari lokal.
