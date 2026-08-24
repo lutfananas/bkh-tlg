@@ -113,3 +113,33 @@ Work Log:
 - Verifikasi: `rg "Tulungagung|Tulung" src/` → 0 hasil. `bun run build` → sukses, 0 error, 4 static pages.
 
 Stage Summary: ✅ Formulir PDF & metadata SEO sepenuhnya dialihkan ke Trenggalek. Alamat posbakum kini resmi berlokasi di Lantai 1 Gedung Pengadilan Negeri Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek. PDF formulir sudah ter-generate ulang dan siap diunduh dari `/uploads/formulir-intake-bkh.pdf`.
+
+---
+Task ID: 5
+Agent: Super Z (main)
+Task: Push ke GitHub + Cloudflare Pages.
+
+Work Log:
+- Cek git status: 3 commit lokal ahead of origin/main (revisi konten Trenggalek, formulir PDF, metadata SEO).
+- Push ke origin/main (https://github.com/lutfananas/bkh-tlg.git) — sukses, 3 commit terkirim (sampai f34a2f3).
+- Cek Cloudflare API token: tidak ada di env / .env. Wrangler non-interactive gagal: "Please set CLOUDFLARE_API_TOKEN".
+- Build static export via `bun run build:cf` → `out/` 6.5 MB (index.html, 404.html, _next/, uploads/).
+- Tambah GitHub Actions workflow `.github/workflows/deploy-cloudflare-pages.yml`:
+  - Trigger: push ke main + workflow_dispatch manual.
+  - Steps: checkout → setup bun → bun install --frozen-lockfile → build:cf → verify out/index.html → cloudflare/wrangler-action@v3 pages deploy.
+  - Project name: bkh-kartini-trenggalek. Branch: main.
+  - Butuh secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID (di-set user di GitHub Settings → Secrets).
+- Tambah `wrangler.toml` (project name + pages_build_output_dir = "out").
+- Tambah `package.json` script `cf:deploy` (build:cf + wrangler pages deploy — untuk eksekusi manual lokal).
+- Update `README.md`:
+  - Header: "BKBH Kartini Tulungagung" → "BKH Kartini Trenggalek".
+  - Tambah alamat posbakum PN Trenggalek di intro.
+  - Ganti subdomain example jadi `bkh-kartini-trenggalek.pages.dev`.
+  - Ganti example custom domain jadi `bkhkartini.or.id`.
+  - Tambah dokumentasi 3 opsi deploy (A: Cloudflare dashboard / B: GitHub Actions / C: manual `bun run cf:deploy`).
+- Commit & push ke origin/main — sukses (sampai 3c7a812).
+
+Stage Summary: ✅ Push ke GitHub sukses (commit 3c7a812 di origin/main). Cloudflare deployment belum otomatis jalan karena tidak ada CLOUDFLARE_API_TOKEN di environment; user perlu pilih salah satu:
+  - Opsi A: Hubungkan repo `lutfananas/bkh-tlg` di dashboard Cloudflare Pages (auto-deploy on push).
+  - Opsi B: Tambah secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID di GitHub repo Settings → Secrets, lalu push commit apa pun (atau trigger workflow manual) — GitHub Actions yang baru saja di-push akan auto-deploy ke project `bkh-kartini-trenggalek`.
+  - Opsi C: Set CLOUDFLARE_API_TOKEN di shell lokal, lalu jalankan `bun run cf:deploy`.
