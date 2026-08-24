@@ -5,6 +5,7 @@ import About from "@/components/bkbh/About";
 import Services from "@/components/bkbh/Services";
 import Eligibility from "@/components/bkbh/Eligibility";
 import Gallery from "@/components/bkbh/Gallery";
+import PressNews from "@/components/bkbh/PressNews";
 import Testimonials from "@/components/bkbh/Testimonials";
 import IntakeForm from "@/components/bkbh/IntakeForm";
 import Footer from "@/components/bkbh/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Eligibility />
         <Gallery />
+        <PressNews />
         <Testimonials />
         <IntakeForm />
       </main>

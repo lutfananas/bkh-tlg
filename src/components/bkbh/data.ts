@@ -15,6 +15,7 @@ export const NAV_MENU = [
   { label: "Layanan", href: "#layanan" },
   { label: "Syarat SKTM", href: "#syarat" },
   { label: "Galeri", href: "#galeri" },
+  { label: "Berita", href: "#berita" },
   { label: "Testimoni", href: "#testimoni" },
 ] as const;
 
@@ -168,6 +169,17 @@ export const TESTIMONIALS = [
     quote:
       "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Selamanya saya berutang budi.",
     isFeatured: true,
+  },
+  // Testimoni AM — warga Trenggalek, dirilis via berita Pemkab Trenggalek
+  {
+    initials: "AM",
+    name: "Bapak AM",
+    role: "Wali Anak Pemohon",
+    location: "Ds. Wonocoyo, Kec. Panggul, Trenggalek",
+    case: "Pendampingan Pidana (Perkara Anak)",
+    color: "from-red-600 to-rose-800",
+    quote:
+      "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
   },
   {
     initials: "IM",
@@ -396,3 +408,28 @@ export const CONTACTS = {
   email: "posbakum@bkh-kartini-ta.or.id",
   whatsapp: WHATSAPP_LINK,
 };
+
+// === Berita Pers / Kliping Media ===
+// Sumber: Pemerintah Kabupaten Trenggalek, terkait Perda No. 5 Tahun 2015
+export const BERITA_PERS = {
+  image: "/uploads/berita-am-trenggalek.jpg",
+  imageAlt:
+    "Kliping berita Pemkab Trenggalek — testimoni AM warga Desa Wonocoyo tentang program bantuan hukum",
+  category: "Kabar Pers",
+  dateline: "TRENGGALEK",
+  headline:
+    "Mengawal Program Bantuan Hukum untuk Masyarakat Miskin Sampai ke Penerima Manfaat",
+  lead:
+    "Komitmen Pemerintah Kabupaten Trenggalek untuk memberikan bantuan hukum kepada masyarakat miskin berdasarkan Peraturan Daerah Kabupaten Trenggalek Nomor 5 Tahun 2015 tentang Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin, terus dilakukan.",
+  body: [
+    "Kolaborasi antara Pemerintah Kabupaten Trenggalek dengan lembaga bantuan hukum diharapkan dapat memperkuat sistem pelayanan hukum sekaligus memberikan kepastian kepada masyarakat mengenai ke mana mereka harus mencari bantuan ketika menghadapi persoalan hukum.",
+    "Bantuan hukum tidak semata-mata dimaknai sebagai pendampingan terhadap masyarakat yang sedang menjalani proses hukum. Lebih dari itu, bantuan hukum juga memiliki fungsi edukatif dalam membangun kesadaran masyarakat mengenai hak dan kewajibannya.",
+    "Masyarakat yang memahami hukum akan lebih mampu melindungi dirinya dari berbagai tindakan yang merugikan, memahami pilihan penyelesaian masalah, serta mengambil keputusan yang tepat ketika menghadapi persoalan hukum.",
+    "Manfaat program bantuan hukum untuk masyarakat miskin ini salah satunya juga dirasakan oleh AM, warga Desa Wonocoyo Kecamatan Panggul. Saat ini anaknya sedang menghadapi perkara hukum pidana dan dibantu oleh Organisasi Bantuan Hukum yang ditunjuk oleh Pemerintah Kabupaten Trenggalek.",
+    "Pada saat Tim Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin datang ke rumahnya, Sdr. AM menyampaikan bahwa keluarganya sangat terbantu dengan adanya program ini karena ada pendamping yang kompeten yang selalu mendampingi anaknya dalam menghadapi permasalahan hukum tersebut. AM juga menyampaikan bahwa selama proses pendampingan hukum, tidak pernah dipungut biaya apa pun; selain itu pada setiap tahapan juga selalu diberi tahu oleh Organisasi Bantuan Hukum sehingga seluruh tahapan persidangan dan tahapan dapat diikuti dengan optimal.",
+    "AM menyampaikan terima kasih kepada Pemerintah Kabupaten Trenggalek karena memiliki program bantuan hukum ini. Karena di tengah kebingungan saat menghadapi permasalahan hukum ada yang membantu untuk memberikan arahan serta mendampingi selama proses persidangan.",
+    "AM berharap program ini dapat terus berjalan sehingga banyak orang yang kondisi ekonominya seperti dirinya mendapatkan layanan serupa.",
+  ],
+  source:
+    "Pemerintah Kabupaten Trenggalek · Perda No. 5 Tahun 2015 tentang Penyelenggaraan Bantuan Hukum untuk Masyarakat Miskin",
+} as const;

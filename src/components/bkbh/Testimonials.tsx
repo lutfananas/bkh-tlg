@@ -44,8 +44,8 @@ export default function Testimonials() {
             transition={{ delay: 0.1 }}
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
-            10 Kisah Nyata dari{" "}
-            <span className="text-gold-accent">Warga Tulungagung</span>
+            11 Kisah Nyata dari{" "}
+            <span className="text-gold-accent">Warga Tulungagung &amp; Trenggalek</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
