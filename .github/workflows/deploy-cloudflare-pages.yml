@@ -1,0 +1,42 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build static export for Cloudflare Pages
+        env:
+          NEXT_PUBLIC_STATIC_EXPORT: "true"
+        run: bun run build:cf
+
+      - name: Verify build output
+        run: |
+          test -f out/index.html && echo "OK: out/index.html exists"
+          test -f out/404.html  && echo "OK: out/404.html exists"
+          du -sh out/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=bkh-kartini-trenggalek --branch=main --commit-dirty=true

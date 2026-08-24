@@ -1,8 +1,9 @@
-# BKBH Kartini Tulungagung — Website Profil
+# BKH Kartini Trenggalek — Website Profil
 
-Website single-page untuk **BKBH Kartini** (Biro Konsultasi dan Bantuan Hukum
-Kartini) Tulungagung — NGO yang menyediakan bantuan hukum gratis (pro bono)
-bagi fakir miskin, perempuan, dan anak.
+Website single-page untuk **BKH Kartini** (Biro Konsultasi dan Bantuan Hukum
+Kartini) Trenggalek — NGO yang menyediakan bantuan hukum gratis (pro bono)
+bagi fakir miskin, perempuan, dan anak. Posbakum berlokasi di Lantai 1 Gedung
+Pengadilan Negeri Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek.
 
 Dibangun dengan **Next.js 16**, **Tailwind CSS 4**, **Framer Motion**, dan
 **lucide-react**. Siap deploy ke **GitHub** + **Cloudflare Pages**.
@@ -62,13 +63,15 @@ bun run build:cf
 ```bash
 git init
 git add .
-git commit -m "feat: initial BKBH Kartini Tulungagung website"
+git commit -m "feat: initial BKH Kartini Trenggalek website"
 git branch -M main
-git remote add origin https://github.com/USERNAME/bkbh-kartini-ta.git
+git remote add origin https://github.com/USERNAME/bkh-kartini-trenggalek.git
 git push -u origin main
 ```
 
 ### Langkah 2 — Setup Cloudflare Pages
+
+**Opsi A — Auto-deploy via Cloudflare Pages dashboard (paling gampang):**
 
 1. Login ke [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages)
 2. Klik **Create a project** → **Connect to Git**
@@ -85,8 +88,33 @@ git push -u origin main
 
 5. Klik **Save and Deploy**
 6. Tunggu build selesai (sekitar 2-3 menit)
-7. Anda akan dapat subdomain `https://bkbh-kartini-ta.pages.dev`
-8. (Opsional) Tambahkan custom domain `bkbh-kartini-ta.or.id` via **Custom domains** tab
+7. Anda akan dapat subdomain `https://bkh-kartini-trenggalek.pages.dev`
+8. (Opsional) Tambahkan custom domain `bkhkartini.or.id` via **Custom domains** tab
+
+**Opsi B — Auto-deploy via GitHub Actions (CI/CD otomatis):**
+
+Workflow `.github/workflows/deploy-cloudflare-pages.yml` sudah disiapkan.
+Setiap push ke `main` akan memicu build + deploy otomatis.
+
+1. Buat Cloudflare API token di https://dash.cloudflare.com/profile/api-tokens
+   (gunakan template "Edit Cloudflare Workers" atau buat custom token dengan
+   permission `Cloudflare Pages: Edit`).
+2. Catat Account ID Anda (ada di dashboard Cloudflare kanan atas).
+3. Di GitHub repo → **Settings** → **Secrets and variables** → **Actions** →
+   **New repository secret**, tambahkan:
+   - `CLOUDFLARE_API_TOKEN` = token langkah 1
+   - `CLOUDFLARE_ACCOUNT_ID` = account ID langkah 2
+4. Push commit ke `main`. GitHub Actions akan otomatis build + deploy ke
+   project Cloudflare Pages `bkh-kartini-trenggalek`. Project akan dibuat
+   otomatis oleh wrangler bila belum ada.
+
+**Opsi C — Deploy manual dari lokal:**
+
+```bash
+# Set env dulu, atau letakkan di .env
+export CLOUDFLARE_API_TOKEN=xxx
+bun run cf:deploy   # build + deploy sekaligus
+```
 
 ### Langkah 3 — Update Kontak & Gambar
 
@@ -119,5 +147,5 @@ Sebelum go-live, update data berikut di `src/components/bkbh/data.ts`:
 
 ## 📝 Lisensi
 
-© BKBH Kartini Tulungagung. Kode sumber bebas digunakan untuk keperluan
+© BKH Kartini Trenggalek. Kode sumber bebas digunakan untuk keperluan
 non-komersial oleh lembaga bantuan hukum lain di Indonesia.
