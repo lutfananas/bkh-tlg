@@ -262,3 +262,24 @@ Stage Summary:
 - ✅ Kisah Ibu Uyin Wulandari kini jadi berita utama (featured article di section #berita).
 - ✅ Section Berita sekarang konsisten — heading "Kisah Nyata Klien, Suara Akar Rumput".
 - ✅ Build sukses, siap commit + push (auto-deploy via GitHub Actions).
+
+---
+Task ID: 9
+Agent: Super Z (main)
+Task: Verifikasi & report deploy terbaru (kisah Ibu Uyin jadi berita utama).
+
+Work Log:
+- Push commit 9dcc012 → trigger workflow run 32723722395 → conclusion=success dalam ~25 detik.
+- Verifikasi head_sha workflow = 9dcc0126 (match dengan local HEAD).
+- Cloudflare latest deployment: 91657ba3.bkhkartini.pages.dev, created 2026-08-24T11:48:39Z, status=success.
+- Cek konten di deployment-specific URL (bypass CDN cache):
+  * Ibu Uyin (13x) ✅
+  * Kisah Nyata Klien (1x) ✅ — heading baru
+  * Pernah Nyangka (1x) ✅ — headline Ibu Uyin
+  * Sdr. AM / Buka kliping / Berita Pers Daerah → 0 hasil ✅
+- Cek production URL dengan cache-buster (?v=timestamp): hasil sama persis, content fresh.
+
+Stage Summary:
+- ✅ Berita pers AM sudah benar-benar hilang dari live site.
+- ✅ Kisah Ibu Uyin Wulandari sudah menjadi berita utama di section #berita pada https://bkhkartini.pages.dev.
+- ✅ CDN Cloudflare mungkin masih cache versi lama sampai ~5 menit, tapi konten fresh sudah tersedia di edge.
