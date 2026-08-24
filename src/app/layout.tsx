@@ -33,7 +33,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "BKH Kartini Tulungagung" }],
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/uploads/logo-bkh.png", type: "image/png", sizes: "any" },
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" },
+    ],
+    shortcut: ["/uploads/logo-bkh.png"],
+    apple: [{ url: "/uploads/logo-bkh.png", sizes: "180x180" }],
   },
   openGraph: {
     title: "BKH Kartini Tulungagung — Keadilan untuk Semua",

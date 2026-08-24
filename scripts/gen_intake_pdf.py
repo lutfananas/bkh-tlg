@@ -552,7 +552,7 @@ def build_story():
     story.append(Spacer(1, 0.25 * cm))
 
     appr_text = (
-        "Setelah mempelajati berkas pemohon, saya menyetujui kasus ini untuk ditangani "
+        "Setelah mempelajari berkas pemohon, saya menyetujui kasus ini untuk ditangani "
         "secara <b>gratuitas (bantuan hukum gratis penuh)</b> sesuai dengan kriteria BKH Kartini. "
         "Biaya pendaftaran, materai, dan transport tim akan ditanggung oleh posbakum."
     )
