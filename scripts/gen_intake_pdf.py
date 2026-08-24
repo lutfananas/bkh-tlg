@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generator Formulir Pengajuan Bantuan Hukum — BKH Kartini Tulungagung
+Generator Formulir Pengajuan Bantuan Hukum — BKH Kartini Trenggalek
 Output: /home/z/my-project/public/uploads/formulir-intake-bkh.pdf
 
 Halaman 1 = Formulir resmi (Data Pemohon + Data Kasus + Pernyataan)
@@ -77,7 +77,7 @@ def draw_page_chrome(canv: canvas.Canvas, doc):
     canv.setFillColor(white)
     canv.setFont(BOLD_FONT, 8)
     canv.drawString(MARGIN_L, PAGE_H - band_h + 0.16 * cm,
-                    "BKH KARTINI TULUNGAGUNG — FORMULIR PENGAJUAN BANTUAN HUKUM")
+                    "BKH KARTINI TRENGGALEK — FORMULIR PENGAJUAN BANTUAN HUKUM")
     canv.drawRightString(PAGE_W - MARGIN_R, PAGE_H - band_h + 0.16 * cm,
                          "Resmi · Gratis · Tidak Dipungut Biaya")
 
@@ -95,7 +95,7 @@ def draw_page_chrome(canv: canvas.Canvas, doc):
     canv.setFillColor(CHARCOAL)
     canv.setFont(BOLD_FONT, 7.5)
     canv.drawString(MARGIN_L, foot_y,
-                    "Posbakum BKH Kartini  ·  Jl. Raya Kartini No. 14, Tamanan, Tulungagung  ·  WA 081331922614")
+                    "Posbakum BKH Kartini  ·  Lantai 1 Gedung PN Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek  ·  WA 081331922614")
     canv.setFont(BODY_FONT, 7.5)
     canv.drawRightString(PAGE_W - MARGIN_R, foot_y, f"Halaman {doc.page}")
 
@@ -300,7 +300,7 @@ def build_story():
 
     # Org name block
     story.append(Paragraph("BIRO KONSULTASI DAN BANTUAN HUKUM KARTINI", S_TITLE))
-    story.append(Paragraph("TULUNGAGUNG", S_SUBTITLE))
+    story.append(Paragraph("TRENGGALEK", S_SUBTITLE))
     story.append(Paragraph(
         "Bantuan Hukum Gratis untuk Warga Kurang Mampu · Perempuan · Anak",
         S_SUBTITLE))
@@ -600,10 +600,10 @@ def main():
         pagesize=A4,
         leftMargin=MARGIN_L, rightMargin=MARGIN_R,
         topMargin=MARGIN_T, bottomMargin=MARGIN_B,
-        title="Formulir Pengajuan Bantuan Hukum — BKH Kartini Tulungagung",
-        author="BKH Kartini Tulungagung",
+        title="Formulir Pengajuan Bantuan Hukum — BKH Kartini Trenggalek",
+        author="BKH Kartini Trenggalek",
         subject="Formulir resmi intake Bantuan Hukum",
-        creator="BKH Kartini Tulungagung",
+        creator="BKH Kartini Trenggalek",
     )
 
     frame = Frame(

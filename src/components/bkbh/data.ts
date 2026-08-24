@@ -398,8 +398,8 @@ export const OPERATING_HOURS = [
 ] as const;
 
 export const ADDRESS_LINES = [
-  "Posbakum BKH Kartini",
-  "Jl. R.A. Kartini No. 14, Kelurahan Sudimoro",
+  "Posbakum BKH Kartini — Lantai 1, Gedung Pengadilan Negeri Trenggalek",
+  "Jl. Diponegoro No. 11, Kelurahan Sudimoro",
   "Kecamatan Trenggalek, Kabupaten Trenggalek",
   "Jawa Timur 66312",
 ];

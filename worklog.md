@@ -90,3 +90,26 @@ Work Log:
 - Verifikasi: `bun run build` sukses, 0 error TypeScript, 4 static pages ter-generate.
 
 Stage Summary: ✅ Brand BKH Kartini sepenuhnya dialihkan ke Trenggalek (alamat kantor, semua mention, semua testimoni, NAV menu). AM dari Wonocoyo/Panggul jadi kartu paling atas di carousel testimoni. Urutan halaman: Berita → Testimoni → Pendaftaran naik ke atas (setelah Hero+Stats), About/Layanan/Syarat/Galeri turun ke bawah sebagai konteks pendukung. Build sukses tanpa error.
+
+---
+Task ID: 4
+Agent: Super Z (main)
+Task: Update formulir intake PDF + pindah alamat posbakum ke Pengadilan Negeri Trenggalek, sesuai instruksi "update formulirnya juga, dan alamatnya pengadilan trenggalek".
+
+Work Log:
+- Update `src/components/bkbh/data.ts` `ADDRESS_LINES`:
+  - Baris 1 (sebelumnya "Posbakum BKH Kartini") → "Posbakum BKH Kartini — Lantai 1, Gedung Pengadilan Negeri Trenggalek"
+  - Baris 2 → "Jl. Diponegoro No. 11, Kelurahan Sudimoro"
+  - Baris 3-4 tetap Kec. Trenggalek, Kab. Trenggalek, 66312.
+  - IntakeForm.tsx otomatis ikut (pakai `ADDRESS_LINES.map`).
+- Update `scripts/gen_intake_pdf.py`:
+  - Header docstring: "Tulungagung" → "Trenggalek".
+  - Top header band: "BKH KARTINI TULUNGAGUNG — FORMULIR ..." → "BKH KARTINI TRENGGALEK — ...".
+  - Footer address bar: "Jl. Raya Kartini No. 14, Tamanan, Tulungagung" → "Lantai 1 Gedung PN Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek".
+  - Subtitle org name: "TULUNGAGUNG" → "TRENGGALEK".
+  - PDF metadata (title/author/creator): "Tulungagung" → "Trenggalek".
+- Regenerate PDF: `python scripts/gen_intake_pdf.py` → sukses, 1348.8 KB, output ke `/public/uploads/formulir-intake-bkh.pdf`.
+- Update `src/app/layout.tsx` metadata SEO (10 referensi "Tulungagung" pada title, description, keywords, authors, openGraph, twitter) → "Trenggalek".
+- Verifikasi: `rg "Tulungagung|Tulung" src/` → 0 hasil. `bun run build` → sukses, 0 error, 4 static pages.
+
+Stage Summary: ✅ Formulir PDF & metadata SEO sepenuhnya dialihkan ke Trenggalek. Alamat posbakum kini resmi berlokasi di Lantai 1 Gedung Pengadilan Negeri Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek. PDF formulir sudah ter-generate ulang dan siap diunduh dari `/uploads/formulir-intake-bkh.pdf`.

@@ -16,13 +16,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BKH Kartini Tulungagung — Bantuan Hukum Gratis untuk Warga Kurang Mampu",
+  title: "BKH Kartini Trenggalek — Bantuan Hukum Gratis untuk Warga Kurang Mampu",
   description:
-    "Biro Konsultasi dan Bantuan Hukum (BKH) Kartini Tulungagung: posko bantuan hukum pro bono bagi fakir miskin, perempuan, dan anak. Pendampingan kasus pidana, perdata, KDRT, dan sengketa pertanahan tanpa biaya sepeser pun.",
+    "Biro Konsultasi dan Bantuan Hukum (BKH) Kartini Trenggalek: posko bantuan hukum pro bono bagi fakir miskin, perempuan, dan anak. Pendampingan kasus pidana, perdata, KDRT, dan sengketa pertanahan tanpa biaya sepeser pun.",
   keywords: [
     "BKH Kartini",
-    "Bantuan Hukum Gratis Tulungagung",
-    "Posbakum Tulungagung",
+    "Bantuan Hukum Gratis Trenggalek",
+    "Posbakum Trenggalek",
     "Pro Bono Indonesia",
     "Bantuan Hukum Murah",
     "SKTM",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Restorative Justice",
     "Mediasi Non-Litigasi",
   ],
-  authors: [{ name: "BKH Kartini Tulungagung" }],
+  authors: [{ name: "BKH Kartini Trenggalek" }],
   icons: {
     icon: [
       { url: "/uploads/logo-bkh.png", type: "image/png", sizes: "any" },
@@ -41,17 +41,17 @@ export const metadata: Metadata = {
     apple: [{ url: "/uploads/logo-bkh.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: "BKH Kartini Tulungagung — Keadilan untuk Semua",
+    title: "BKH Kartini Trenggalek — Keadilan untuk Semua",
     description:
-      "Bantuan hukum gratis (pro bono) bagi fakir miskin, perempuan, dan anak di Kabupaten Tulungagung. Litigasi, non-litigasi, dan penyuluhan hukum desa.",
-    siteName: "BKH Kartini Tulungagung",
+      "Bantuan hukum gratis (pro bono) bagi fakir miskin, perempuan, dan anak di Kabupaten Trenggalek. Litigasi, non-litigasi, dan penyuluhan hukum desa.",
+    siteName: "BKH Kartini Trenggalek",
     type: "website",
     locale: "id_ID",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BKH Kartini Tulungagung",
-    description: "Bantuan hukum gratis untuk warga kurang mampu Tulungagung.",
+    title: "BKH Kartini Trenggalek",
+    description: "Bantuan hukum gratis untuk warga kurang mampu Trenggalek.",
   },
   robots: {
     index: true,
