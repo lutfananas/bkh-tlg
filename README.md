@@ -88,7 +88,7 @@ git push -u origin main
 
 5. Klik **Save and Deploy**
 6. Tunggu build selesai (sekitar 2-3 menit)
-7. Anda akan dapat subdomain `https://bkh-kartini-trenggalek.pages.dev`
+7. Anda akan dapat subdomain `https://bkhkartini.pages.dev`
 8. (Opsional) Tambahkan custom domain `bkhkartini.or.id` via **Custom domains** tab
 
 **Opsi B — Auto-deploy via GitHub Actions (CI/CD otomatis):**
@@ -105,7 +105,7 @@ Setiap push ke `main` akan memicu build + deploy otomatis.
    - `CLOUDFLARE_API_TOKEN` = token langkah 1
    - `CLOUDFLARE_ACCOUNT_ID` = account ID langkah 2
 4. Push commit ke `main`. GitHub Actions akan otomatis build + deploy ke
-   project Cloudflare Pages `bkh-kartini-trenggalek`. Project akan dibuat
+   project Cloudflare Pages `bkhkartini`. Project akan dibuat
    otomatis oleh wrangler bila belum ada.
 
 **Opsi C — Deploy manual dari lokal:**

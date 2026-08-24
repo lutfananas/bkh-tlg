@@ -1,7 +1,7 @@
-name = "bkh-kartini-trenggalek"
+name = "bkhkartini"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "out"
 
 # Untuk deploy manual dari lokal:
 #   CLOUDFLARE_API_TOKEN=xxx npx wrangler pages deploy out \
-#     --project-name=bkh-kartini-trenggalek --branch=main
+#     --project-name=bkhkartini --branch=main

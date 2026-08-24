@@ -39,4 +39,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy out --project-name=bkh-kartini-trenggalek --branch=main --commit-dirty=true
+          command: pages deploy out --project-name=bkhkartini --branch=main --commit-dirty=true

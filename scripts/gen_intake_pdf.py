@@ -86,18 +86,26 @@ def draw_page_chrome(canv: canvas.Canvas, doc):
     canv.setLineWidth(1.4)
     canv.line(0, PAGE_H - band_h - 2, PAGE_W, PAGE_H - band_h - 2)
 
-    # === Footer: contact + page number ===
+    # === Footer: contact + page number (2 baris agar tidak overlap) ===
     foot_y = MARGIN_B - 0.6 * cm
+    # Garis pemisah digeser sedikit ke atas agar muat 2 baris
     canv.setStrokeColor(RULE_GREY)
     canv.setLineWidth(0.4)
-    canv.line(MARGIN_L, foot_y + 0.45 * cm, PAGE_W - MARGIN_R, foot_y + 0.45 * cm)
+    canv.line(MARGIN_L, foot_y + 0.55 * cm, PAGE_W - MARGIN_R, foot_y + 0.55 * cm)
 
+    # Baris 1: alamat posbakum (bold 6.5pt)
     canv.setFillColor(CHARCOAL)
-    canv.setFont(BOLD_FONT, 7.5)
-    canv.drawString(MARGIN_L, foot_y,
-                    "Posbakum BKH Kartini  ·  Lantai 1 Gedung PN Trenggalek, Jl. Diponegoro No. 11, Sudimoro, Trenggalek  ·  WA 081331922614")
-    canv.setFont(BODY_FONT, 7.5)
-    canv.drawRightString(PAGE_W - MARGIN_R, foot_y, f"Halaman {doc.page}")
+    canv.setFont(BOLD_FONT, 6.5)
+    canv.drawString(MARGIN_L, foot_y + 0.18 * cm,
+                    "Posbakum BKH Kartini  \u00b7  Lantai 1 Gedung PN Trenggalek  \u00b7  Jl. Diponegoro No. 11, Sudimoro, Trenggalek")
+    # Halaman tetap di kanan, sejajar dengan baris 1
+    canv.setFont(BODY_FONT, 6.5)
+    canv.drawRightString(PAGE_W - MARGIN_R, foot_y + 0.18 * cm, f"Halaman {doc.page}")
+
+    # Baris 2: WA + email (body 6pt)
+    canv.setFont(BODY_FONT, 6)
+    canv.drawString(MARGIN_L, foot_y - 0.12 * cm,
+                    "Bantuan Hukum Gratis  \u00b7  WA 081331922614  \u00b7  posbakum@bkhkartini.or.id")
 
     # Bottom red+white justice bar
     bar_h = 0.35 * cm
