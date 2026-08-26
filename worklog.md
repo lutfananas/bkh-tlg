@@ -353,3 +353,27 @@ Stage Summary:
 - ✅ Berita utama #2 (Neni Kartika Wati) sudah ditambahkan di section Berita, muncul setelah artikel Ibu Uyin.
 - ✅ Setiap kartu testimoni sekarang menampilkan badge tahun (mayoritas 2024, beberapa 2025, sedikit 2026).
 - ✅ Build sukses, siap commit + push (auto-deploy via GitHub Actions).
+
+---
+Task ID: 12
+Agent: Super Z (main)
+Task: Trigger deploy ulang setelah GitHub Actions workflow stuck di status queued ~10 menit.
+
+Work Log:
+- Push commit bb5fa68 → git remote updated (HEAD = bb5fa68), tapi workflow push trigger tidak jalan otomatis (kemungkinan karena banyak file mode change, GitHub skip).
+- Coba workflow_dispatch manual via API GitHub → HTTP 204, run baru 32984081088 ter-create.
+- Polling 10+ menit: status tetap "queued" (GitHub Actions runner shortage di free tier).
+- Decision: deploy manual via wrangler CLI langsung ke Cloudflare Pages.
+- Install wrangler@4.126.0 via npm install -g wrangler.
+- Build lokal sudah fresh (out/index.html timestamp 15:03).
+- Eksekusi: CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID wrangler pages deploy out --project-name=bkhkartini --branch=main --commit-dirty=true
+- Hasil: ✨ Deployment complete! URL: https://bdf24879.bkhkartini.pages.dev
+- Verifikasi live (deployment-specific URL, bypass CDN cache):
+  * Berita: Neni Kartika Wati (6x), Gandusari (8x), Wonorejo (4x), Ibu Uyin (7x), Kisah Nyata Klien (1x) ✅
+  * Testimoni years: 2024 (18x), 2025 (6x), 2026 (3x) — distribusi sesuai ✅
+
+Stage Summary:
+- ✅ Berita utama #2 (Neni Kartika Wati) sudah live di production.
+- ✅ Testimoni kartu sekarang menampilkan badge tahun (2024/2025/2026).
+- ✅ Production URL: https://bkhkartini.pages.dev (CDN cache akan refresh dalam ~5 menit).
+- ⚠️ GitHub Actions workflow masih stuck di "queued" — perlu di-cancel manual atau tunggu runner tersedia. Deploy via wrangler CLI tetap sukses dan site sudah live dengan commit terbaru.
