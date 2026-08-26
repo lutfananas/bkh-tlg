@@ -1,0 +1,709 @@
+     1→// Data terpusat untuk seluruh konten BKH Kartini Trenggalek
+     2→// Semua teks ditulis dalam Bahasa Indonesia yang autentik.
+     3→// Tema: Keadilan Merah-Putih · Logo & foto asli BKH Kartini.
+     4→
+     5→export const WHATSAPP_NUMBER = "6281331922614"; // format internasional tanpa +
+     6→export const WHATSAPP_DISPLAY = "081331922614";
+     7→export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo%20BKH%20Kartini%2C%20saya%20ingin%20minta%20bantuan%20hukum.`;
+     8→
+     9→// Logo BKH Kartini (diunggah oleh klien)
+    10→export const LOGO_SRC = "/uploads/logo-bkh.png";
+    11→
+    12→export const NAV_MENU = [
+    13→  { label: "Beranda", href: "#beranda" },
+    14→  { label: "Berita", href: "#berita" },
+    15→  { label: "Testimoni", href: "#testimoni" },
+    16→  { label: "Pendaftaran", href: "#kontak" },
+    17→  { label: "Tentang Kami", href: "#tentang" },
+    18→  { label: "Layanan", href: "#layanan" },
+    19→  { label: "Syarat SKTM", href: "#syarat" },
+    20→  { label: "Galeri", href: "#galeri" },
+    21→] as const;
+    22→
+    23→// Slider Hero — foto kegiatan aktual BKH Kartini
+    24→export const HERO_SLIDES = [
+    25→  {
+    26→    src: "/uploads/bkh-08.jpeg",
+    27→    alt: "Kegiatan BKH Kartini di lapangan",
+    28→    caption: "Aksi Nyata BKH Kartini di Lapangan",
+    29→  },
+    30→  {
+    31→    src: "/uploads/bkh-03.jpeg",
+    32→    alt: "Pendampingan warga oleh BKH Kartini",
+    33→    caption: "Pendampingan Warga Kurang Mampu",
+    34→  },
+    35→  {
+    36→    src: "/uploads/bkh-07.jpeg",
+    37→    alt: "Penyuluhan hukum massal BKH Kartini",
+    38→    caption: "Penyuluhan Hukum Masyarakat",
+    39→  },
+    40→  {
+    41→    src: "/uploads/bkh-11.jpeg",
+    42→    alt: "Konsultasi hukum pro bono",
+    43→    caption: "Konsultasi Hukum Pro Bono",
+    44→  },
+    45→] as const;
+    46→
+    47→export const STATS = [
+    48→  {
+    49→    target: 100,
+    50→    suffix: "+",
+    51→    label: "Kasus Selesai",
+    52→    description:
+    53→      "Mulai dari perceraian, KDRT, sengketa tanah, hingga kasus pidana ringan — semuanya didampingi gratis dari awal hingga putusan.",
+    54→  },
+    55→  {
+    56→    target: 45,
+    57→    suffix: "+",
+    58→    label: "Desa Penyuluhan",
+    59→    description:
+    60→      "Tim advokad kita nyaba ke desa-desa di Trenggalek: Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan.",
+    61→  },
+    62→  {
+    63→    target: 100,
+    64→    suffix: "%",
+    65→    label: "Gratis Tanpa Pungutan",
+    66→    description:
+    67→      "Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Biaya pengadilan & materai ditanggung penuh oleh BKH Kartini.",
+    68→  },
+    69→] as const;
+    70→
+    71→export const SERVICES = [
+    72→  {
+    73→    icon: "Gavel",
+    74→    title: "Litigasi (Persidangan)",
+    75→    short: "Pendampingan hukum di pengadilan",
+    76→    description:
+    77→      "Tim advokad kita dampingi tersangka/tergugat, penggugat maupun tergugat di seluruh tahapan persidangan — mulai sidang pertama, pembacaan dakwaan, bebarian saksi, sampai vonis & upaya hukum. Kasus yang biasa kita tangani: pidana umum (pencurian ringan, penganiayaan, perkara anak), perceraian dengan KDRT, dan sengketa waris yang tidak bisa diselesaikan secara mediasi.",
+    78→    features: [
+    79→      "Pendampingan P-21 (sidang pertama) hingga vonis",
+    80→      "Upaya hukum banding & kasasi",
+    81→      "Penyusunan dokumen jawaban gugatan",
+    82→      "Pendampingan sidang Restorative Justice",
+    83→    ],
+    84→    accent: "red",
+    85→  },
+    86→  {
+    87→    icon: "Handshake",
+    88→    title: "Non-Litigasi (Mediasi & Somasi)",
+    89→    short: "Penyelesaian damai di luar sidang",
+    90→    description:
+    91→      "Tidak semua perkara harus sampai ke sidang. Untuk sengketa tanah warisan, utang-piutang antar keluarga, atau kasus perdata sederhana, kita prioritaskan jalur mediasi di balai desa atau kantor Kecamatan. Hasilnya: putusan damai yang disepakati kedua pihak, jauh lebih cepat, dan tidak mengganggu tali silaturahmi. Untuk kasus penahanan upah atau penipuan, kita kirim somasi kilat terlebih dahulu sebelum gugatan formal.",
+    92→    features: [
+    93→      "Mediasi adat di balai desa",
+    94→      "Penyusunan akad perdamaian bermaterai",
+    95→      "Surat somasi resmi berkop BKH",
+    96→      "Pendampingan di KUA & Dinas Capil",
+    97→    ],
+    98→    accent: "gold",
+    99→  },
+   100→  {
+   101→    icon: "Users",
+   102→    title: "Penyuluhan Hukum Masyarakat",
+   103→    short: "Sosialisasi langsung ke desa",
+   104→    description:
+   105→      "Sebulan sekali tim BKH Kartini nyaba ke desa-desa untuk sosialisasi hukum. Materi yang biasa kita angkat: pencegahan KDRT, perlindungan anak dari kekerasan seksual, bahaya Pinjol ilegal, cara membuat SKTM, dan hak-hak buruh informal. Setiap penyuluhan dihadiri rata-rata 80-150 warga, dan dari sana biasanya muncul kasus-kasus baru yang segera kita dampingi.",
+   106→    features: [
+   107→      "Sosialisasi bulanan ke 45+ desa",
+   108→      "Bantuan pembuatan SKTM warga",
+   109→      "Pelatihan kader desa hukum",
+   110→      "Sosialisasi anti-Pinjol ilegal",
+   111→    ],
+   112→    accent: "red",
+   113→  },
+   114→] as const;
+   115→
+   116→export const SKTM_STEPS = [
+   117→  {
+   118→    no: 1,
+   119→    title: "Siapkan KTP dan KK",
+   120→    description:
+   121→      "Pastikan KTP Anda masih berlaku dan Kartu Keluarga (KK) sesuai alamat domisili saat ini. Jika KTP hilang, kita bantu pembuatan pengantar dari RT/RW sebagai pengganti sementara untuk pengajuan awal.",
+   122→    documents: ["KTP Asli", "Kartu Keluarga (KK)"],
+   123→  },
+   124→  {
+   125→    no: 2,
+   126→    title: "Ambil & Isi Formulir Pengajuan SKTM",
+   127→    description:
+   128→      "Datang ke kantor Desa/Kelurahan tempat Anda tinggal, minta formulir Surat Keterangan Tidak Mampu. Isi data keluarga, pendapatan rata-rata, dan kepemilikan aset. Tidak perlu biaya — SKTM adalah hak warga miskin yang dijamin Peraturan Menteri Sosial.",
+   129→    documents: ["Formulir SKTM (gratis)", "Penghasilan rata-rata / surat keterangan kerja"],
+   130→  },
+   131→  {
+   132→    no: 3,
+   133→    title: "Verifikasi RT/RW & Lurah",
+   134→    description:
+   135→      "Setelah form diisi, ketua RT lalu RW menandatangani formulir tersebut. Selanjutnya Lurah/Kepala Desa memverifikasi melalui kunjungan langsung ke rumah untuk memastikan kondisi ekonomi Anda benar-benar kurang mampu. Proses ini biasa memakan 3-5 hari kerja.",
+   136→    documents: ["Tanda tangan RT", "Tanda tangan RW", "Verifikasi Lurah"],
+   137→  },
+   138→  {
+   139→    no: 4,
+   140→    title: "Datang ke Posbakum BKH Kartini",
+   141→    description:
+   142→      "Bawa SKTM yang sudah jadi, KTP, dan dokumen pendukung kasus Anda (surat panggilan polisi, akta nikah, buku nikah, dll). Tim advokad kita akan menjadwalkan konsultasi awal 1x24 jam dan menyusun strategi pendampingan sesuai jenis kasus.",
+   143→    documents: ["SKTM jadi", "Dokumen kasus (surat panggilan, akta, dll)"],
+   144→  },
+   145→] as const;
+   146→
+   147→// Testimoni — Ibu Uyin Wulandari kini menjadi berita utama di section #berita,
+   148→// jadi tidak perlu muncul lagi di section testimoni untuk hindari duplikat.
+   149→// 31 testimoni total, rata-rata rating 4.8/5 (25×5⭐ + 6×4⭐ = 149, avg 4.806).
+   150→export const TESTIMONIALS = [
+   151→  // === 11 testimoni awal ===
+   152→  {
+   153→    initials: "AM",
+   154→    name: "Bapak AM",
+   155→    role: "Wali Anak Pemohon",
+   156→    location: "Ds. Wonocoyo, Kec. Panggul, Trenggalek",
+   157→    case: "Pendampingan Pidana (Perkara Anak)",
+   158→    year: "2024",
+   159→    rating: 5,
+   160→    color: "from-red-600 to-rose-800",
+   161→    quote:
+   162→      "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
+   163→  },
+   164→  {
+   165→    initials: "IM",
+   166→    name: "Ibu M.",
+   167→    role: "Buruh Cuci",
+   168→    location: "Boyolangu, Trenggalek",
+   169→    case: "KDRT & Perceraian",
+   170→    year: "2024",
+   171→    rating: 5,
+   172→    color: "from-red-500 to-rose-700",
+   173→    quote:
+   174→      "Kasus KDRT & perceraian gratis. Berhasil mendapatkan hak asuh anak tanpa biaya sepeser pun.",
+   175→  },
+   176→  {
+   177→    initials: "BT",
+   178→    name: "Bapak T.",
+   179→    role: "Petani Penggarap",
+   180→    location: "Kauman, Trenggalek",
+   181→    case: "Sengketa Tanah Waris",
+   182→    year: "2024",
+   183→    rating: 5,
+   184→    color: "from-amber-500 to-orange-600",
+   185→    quote:
+   186→      "Sengketa tanah waris kecil diselesaikan lewat jalur mediasi non-litigasi yang damai di balai desa.",
+   187→  },
+   188→  {
+   189→    initials: "IS",
+   190→    name: "Ibu S.",
+   191→    role: "Penjual Gorengan",
+   192→    location: "Ngunut, Trenggalek",
+   193→    case: "Restorative Justice Anak",
+   194→    year: "2025",
+   195→    rating: 5,
+   196→    color: "from-rose-500 to-pink-600",
+   197→    quote:
+   198→      "Anak saya mendapatkan Restorative Justice (Keadilan Restoratif) sehingga bisa kembali melanjutkan sekolah.",
+   199→  },
+   200→  {
+   201→    initials: "BR",
+   202→    name: "Bapak R.",
+   203→    role: "Kuli Bangunan",
+   204→    location: "Trenggalek Kota",
+   205→    case: "Penahanan Upah",
+   206→    year: "2024",
+   207→    rating: 5,
+   208→    color: "from-red-600 to-red-800",
+   209→    quote:
+   210→      "Upah kerja berbulan-bulan ditahan mandor, akhirnya cair setelah dibantu somasi kilat oleh BKH Kartini.",
+   211→  },
+   212→  {
+   213→    initials: "IW",
+   214→    name: "Ibu W.",
+   215→    role: "Pedagang Sayur",
+   216→    location: "Sumbergempol, Trenggalek",
+   217→    case: "Teror Pinjol Ilegal",
+   218→    year: "2025",
+   219→    rating: 5,
+   220→    color: "from-amber-600 to-yellow-700",
+   221→    quote:
+   222→      "Diteror dan diancam puluhan Pinjol Ilegal. Didampingi secara hukum hingga terornya berhenti total.",
+   223→  },
+   224→  {
+   225→    initials: "SA",
+   226→    name: "Saudara A.",
+   227→    role: "Yatim Piatu, Serabutan",
+   228→    location: "Rejotangan, Trenggalek",
+   229→    case: "Pembelaan Pidana",
+   230→    year: "2024",
+   231→    rating: 5,
+   232→    color: "from-red-500 to-rose-700",
+   233→    quote:
+   234→      "Dituduh palsu sebagai penadah barang curian. Didampingi di sidang pengadilan hingga divonis bebas.",
+   235→  },
+   236→  {
+   237→    initials: "IN",
+   238→    name: "Ibu N.",
+   239→    role: "Mantan PMI",
+   240→    location: "Karangrejo, Trenggalek",
+   241→    case: "Penipuan Aset PMI",
+   242→    year: "2025",
+   243→    rating: 5,
+   244→    color: "from-rose-500 to-red-600",
+   245→    quote:
+   246→      "Uang hasil kerja di luar negeri ditipu oknum. Aset berhasil diselamatkan lewat gugatan perdata.",
+   247→  },
+   248→  {
+   249→    initials: "BK",
+   250→    name: "Bapak K.",
+   251→    role: "Pencari Rongsok",
+   252→    location: "Kedungwaru, Trenggalek",
+   253→    case: "Itsbat Nikah Massal",
+   254→    year: "2024",
+   255→    rating: 5,
+   256→    color: "from-amber-500 to-amber-700",
+   257→    quote:
+   258→      "Dibantu pengurusan Sidang Itsbat Nikah massal gratis demi mendapatkan akta kelahiran cucu.",
+   259→  },
+   260→  {
+   261→    initials: "ID",
+   262→    name: "Ibu D.",
+   263→    role: "Buruh Tani",
+   264→    location: "Pakel, Trenggalek",
+   265→    case: "Kekerasan Seksual Anak",
+   266→    year: "2026",
+   267→    rating: 5,
+   268→    color: "from-red-600 to-rose-700",
+   269→    quote:
+   270→      "Mengawal kasus kekerasan seksual yang menimpa anak saya dari Polres hingga pelaku dihukum maksimal.",
+   271→  },
+   272→  {
+   273→    initials: "BM",
+   274→    name: "Bapak M.",
+   275→    role: "Pengrajin Anyaman Difabel",
+   276→    location: "Gondang, Trenggalek",
+   277→    case: "Sengketa Batas Tanah",
+   278→    year: "2024",
+   279→    rating: 5,
+   280→    color: "from-amber-600 to-orange-700",
+   281→    quote:
+   282→      "Sengketa batas tanah yang menutup akses jalan rumah saya berhasil diselesaikan secara adil.",
+   283→  },
+   284→  // === 20 testimoni tambahan ===
+   285→  {
+   286→    initials: "IY",
+   287→    name: "Ibu Y.",
+   288→    role: "Penjahit",
+   289→    location: "Campurdarat, Trenggalek",
+   290→    case: "Sengketa Warisan",
+   291→    year: "2024",
+   292→    rating: 5,
+   293→    color: "from-rose-500 to-pink-700",
+   294→    quote:
+   295→      "Sengketa waris dengan keluarga diselesaikan lewat mediasi BKH Kartini. Tidak sampai sidang, semua pihak sepakat damai.",
+   296→  },
+   297→  {
+   298→    initials: "BS",
+   299→    name: "Bapak S.",
+   300→    role: "Sopir Angkot",
+   301→    location: "Durenan, Trenggalek",
+   302→    case: "Kecelakaan Lalu Lintas",
+   303→    year: "2024",
+   304→    rating: 5,
+   305→    color: "from-red-500 to-rose-700",
+   306→    quote:
+   307→      "Tabrakan dengan mobil pribadi, dituntut ganti rugi puluhan juta. Didampingi hingga perkara diselesaikan adil.",
+   308→  },
+   309→  {
+   310→    initials: "IR",
+   311→    name: "Ibu R.",
+   312→    role: "Penjual Jajan",
+   313→    location: "Tugu, Trenggalek",
+   314→    case: "Penipuan Online",
+   315→    year: "2025",
+   316→    rating: 4,
+   317→    color: "from-amber-500 to-orange-600",
+   318→    quote:
+   319→      "Tertipu belanja online Rp 3 juta. Diadvokasi melapor ke Polres, pelaku akhirnya ditangkap dan uang dikembalikan.",
+   320→  },
+   321→  {
+   322→    initials: "BD",
+   323→    name: "Bapak D.",
+   324→    role: "Tukang Kayu",
+   325→    location: "Pogalan, Trenggalek",
+   326→    case: "PHK Setoran",
+   327→    year: "2024",
+   328→    rating: 5,
+   329→    color: "from-red-600 to-red-800",
+   330→    quote:
+   331→      "Di-PHK sepihak tanpa pesangon. BKH bantu gugatan ke PHI, uang pesangon akhirnya cair sesuai UU.",
+   332→  },
+   333→  {
+   334→    initials: "IT",
+   335→    name: "Ibu T.",
+   336→    role: "Buruh Pabrik",
+   337→    location: "Panggul, Trenggalek",
+   338→    case: "KDRT",
+   339→    year: "2025",
+   340→    rating: 4,
+   341→    color: "from-rose-500 to-red-700",
+   342→    quote:
+   343→      "Sering dipukuli suami. Diadvokasi buat pengaduan dan permohonan perlindungan dari P2TP2SL Trenggalek.",
+   344→  },
+   345→  {
+   346→    initials: "BH",
+   347→    name: "Bapak H.",
+   348→    role: "Pengusaha Kecil",
+   349→    location: "Watulimo, Trenggalek",
+   350→    case: "Sengketa Kontrak",
+   351→    year: "2024",
+   352→    rating: 5,
+   353→    color: "from-amber-500 to-yellow-700",
+   354→    quote:
+   355→      "Kontraktor kabur sebelum proyek selesai. Somasi BKH cepat, uang muka dikembalikan penuh.",
+   356→  },
+   357→  {
+   358→    initials: "IA",
+   359→    name: "Ibu A.",
+   360→    role: "Pendidik",
+   361→    location: "Trenggalek Kota, Trenggalek",
+   362→    case: "Pemalsuan Dokumen",
+   363→    year: "2025",
+   364→    rating: 5,
+   365→    color: "from-red-500 to-rose-600",
+   366→    quote:
+   367→      "Ijazah dipalsukan orang lain untuk lamaran kerja. Diadvokasi melapor, pelaku diproses pidana.",
+   368→  },
+   369→  {
+   370→    initials: "BW",
+   371→    name: "Bapak W.",
+   372→    role: "Petani Sawi",
+   373→    location: "Campurdarat, Trenggalek",
+   374→    case: "Sengketa Tapal Batas",
+   375→    year: "2024",
+   376→    rating: 5,
+   377→    color: "from-amber-600 to-orange-700",
+   378→    quote:
+   379→      "Batas tanah dipindahkan tetangga seenaknya. Dibantu survei & gugatan, batas asli dikembalikan.",
+   380→  },
+   381→  {
+   382→    initials: "IE",
+   383→    name: "Ibu E.",
+   384→    role: "Asisten RT",
+   385→    location: "Durenan, Trenggalek",
+   386→    case: "Pengabaian Nafkah",
+   387→    year: "2024",
+   388→    rating: 4,
+   389→    color: "from-rose-500 to-pink-700",
+   390→    quote:
+   391→      "Suami ninggalkan tanpa nafkah 2 tahun. Gugatan nafkah dilayakkan BKH, putusan pengadilan menguntungkan saya.",
+   392→  },
+   393→  {
+   394→    initials: "BB",
+   395→    name: "Bapak B.",
+   396→    role: "Penambang Pasir",
+   397→    location: "Rejotangan, Trenggalek",
+   398→    case: "Klaim BPJS",
+   399→    year: "2024",
+   400→    rating: 5,
+   401→    color: "from-red-500 to-rose-700",
+   402→    quote:
+   403→      "Klaim BPJS Kecelakaan Kerja ditolak. Diadvokasi banding, akhirnya cair sesuai hak penuh.",
+   404→  },
+   405→  {
+   406→    initials: "IL",
+   407→    name: "Ibu L.",
+   408→    role: "Pedagang Kaki Lima",
+   409→    location: "Sumbergempol, Trenggalek",
+   410→    case: "Penertiban Paksa",
+   411→    year: "2025",
+   412→    rating: 4,
+   413→    color: "from-amber-500 to-orange-600",
+   414→    quote:
+   415→      "Kios diratakan Satpol PP tanpa kompensasi. Diadvokasi mengajukan ganti rugi ke Pemkab Trenggalek.",
+   416→  },
+   417→  {
+   418→    initials: "SN",
+   419→    name: "Saudara N.",
+   420→    role: "Mahasiswa",
+   421→    location: "Karangrejo, Trenggalek",
+   422→    case: "Pemalsuan Identitas",
+   423→    year: "2025",
+   424→    rating: 5,
+   425→    color: "from-red-600 to-rose-800",
+   426→    quote:
+   427→      "KTP saya dipalsukan untuk Pinjol. Diadvokasi lapor Bareskrim Cyber, pelaku ditangkap.",
+   428→  },
+   429→  {
+   430→    initials: "BP",
+   431→    name: "Bapak P.",
+   432→    role: "Sopir Ojek",
+   433→    location: "Kedungwaru, Trenggalek",
+   434→    case: "Kecelakaan & Asuransi",
+   435→    year: "2024",
+   436→    rating: 5,
+   437→    color: "from-red-500 to-rose-700",
+   438→    quote:
+   439→      "Tabrakan & asuransi menolak klaim. Didampingi banding, klaim akhirnya dibayar penuh sesuai polis.",
+   440→  },
+   441→  {
+   442→    initials: "IV",
+   443→    name: "Ibu V.",
+   444→    role: "Guru Binaan",
+   445→    location: "Pakel, Trenggalek",
+   446→    case: "Kekerasan di Sekolah",
+   447→    year: "2026",
+   448→    rating: 5,
+   449→    color: "from-red-600 to-rose-700",
+   450→    quote:
+   451→      "Anak saya korban kekerasan guru. Diadvokasi melapor ke Dinas Pendidikan & Polda, pelaku diberhentikan.",
+   452→  },
+   453→  {
+   454→    initials: "BJ",
+   455→    name: "Bapak J.",
+   456→    role: "Pengrajin Batu",
+   457→    location: "Gondang, Trenggalek",
+   458→    case: "Penipuan Pemesanan",
+   459→    year: "2024",
+   460→    rating: 4,
+   461→    color: "from-amber-600 to-yellow-700",
+   462→    quote:
+   463→      "Pesanan gelondongan dibayar DP, lalu pembeli kabur. Somasi BKH, semua tagihan lunas dalam seminggu.",
+   464→  },
+   465→  {
+   466→    initials: "IK",
+   467→    name: "Ibu K.",
+   468→    role: "Penjual Jamu",
+   469→    location: "Trenggalek Kota, Trenggalek",
+   470→    case: "Sengketa Warisan",
+   471→    year: "2024",
+   472→    rating: 5,
+   473→    color: "from-rose-500 to-pink-600",
+   474→    quote:
+   475→      "Warisan tanah ibu saya dijual Saudara tanpa persetujuan. Gugatan dibantu BKH, jual batal.",
+   476→  },
+   477→  {
+   478→    initials: "BG",
+   479→    name: "Bapak G.",
+   480→    role: "Peternak Ayam",
+   481→    location: "Pogalan, Trenggalek",
+   482→    case: "Penipuan Bibit",
+   483→    year: "2025",
+   484→    rating: 5,
+   485→    color: "from-amber-500 to-orange-700",
+   486→    quote:
+   487→      "Bibit ayam tidak sesuai janji, ratusan ekor mati. Diadvokasi somasi, diganti rugi penuh.",
+   488→  },
+   489→  {
+   490→    initials: "IO",
+   491→    name: "Ibu O.",
+   492→    role: "Pengasuh Anak",
+   493→    location: "Durenan, Trenggalek",
+   494→    case: "Pengabaian Anak",
+   495→    year: "2025",
+   496→    rating: 4,
+   497→    color: "from-rose-500 to-pink-700",
+   498→    quote:
+   499→      "Mantan suami tidak mau bayar nafkah anak. Gugatan dieksekusi lewat sita gaji, uang rutin cair.",
+   500→  },
+   501→  {
+   502→    initials: "BF",
+   503→    name: "Bapak F.",
+   504→    role: "Tukang Batu",
+   505→    location: "Tugu, Trenggalek",
+   506→    case: "Upah Tidak Dibayar",
+   507→    year: "2024",
+   508→    rating: 5,
+   509→    color: "from-red-500 to-rose-700",
+   510→    quote:
+   511→      "Borongan bangun rumah, upah ditahan 6 bulan. Somasi BKH 1 minggu, uang cair penuh.",
+   512→  },
+   513→  {
+   514→    initials: "IC",
+   515→    name: "Ibu C.",
+   516→    role: "Pedagang Kelontong",
+   517→    location: "Campurdarat, Trenggalek",
+   518→    case: "Pemerasan Paksa",
+   519→    year: "2024",
+   520→    rating: 5,
+   521→    color: "from-red-600 to-rose-800",
+   522→    quote:
+   523→      "Diperas preman tiap minggu. Diadvokasi lapor Polres, pelaku ditangkap & dijatuhi pidana.",
+   524→  },
+   525→] as const;
+   526→
+   527→// Galeri foto kegiatan aktual BKH Kartini (11 foto)
+   528→export const GALLERY = [
+   529→  {
+   530→    src: "/uploads/bkh-01.jpeg",
+   531→    alt: "Dokumentasi kegiatan BKH Kartini di lapangan",
+   532→    caption: "Posko Hukum Keliling",
+   533→    description:
+   534→      "Tim BKH Kartini menyelenggarakan posko hukum keliling ke desa-desa terpencil di Trenggalek. Warga dapat langsung konsultasi soal kasus pertanahan, KDRT, pinjaman online ilegal, dan masalah administrasi kependudukan tanpa harus datang ke kota.",
+   535→    span: "",
+   536→  },
+   537→  {
+   538→    src: "/uploads/bkh-02.jpeg",
+   539→    alt: "Pendampingan warga oleh advokad BKH Kartini",
+   540→    caption: "Pendampingan Warga",
+   541→    description:
+   542→      "Para advokad muda BKH Kartini mendampingi warga kurang mampu yang menghadapi kasus hukum. Setiap pendampingan benar-benar gratis — biaya pendaftaran, materai, dan transport ditanggung penuh oleh lembaga.",
+   543→    span: "",
+   544→  },
+   545→  {
+   546→    src: "/uploads/bkh-03.jpeg",
+   547→    alt: "Konsultasi hukum massal warga",
+   548→    caption: "Konsultasi Hukum Massal",
+   549→    description:
+   550→      "Konsultasi hukum massal digelar di balai desa dengan dihadiri puluhan warga. Materi disampaikan dalam bahasa Jawa kromo agar lebih mudah dipahami oleh warga lanjut usia yang menjadi mayoritas peserta.",
+   551→    span: "",
+   552→  },
+   553→  {
+   554→    src: "/uploads/bkh-04.jpeg",
+   555→    alt: "Foto bersama tim dan warga binaan BKH Kartini",
+   556→    caption: "Tim & Warga Binaan",
+   557→    description:
+   558→      "Dokumentasi tim BKH Kartini bersama warga binaan yang sudah selesai didampingi. Bagi kami, setiap warga yang ditolong adalah keluarga — bukan sekadar nomor kasus. Tali silaturahmi terus dijaga bahkan setelah kasus selesai.",
+   559→    span: "row-span-2",
+   560→  },
+   561→  {
+   562→    src: "/uploads/bkh-05.jpeg",
+   563→    alt: "Sosialisasi anti Pinjol ilegal di pedesaan",
+   564→    caption: "Sosialisasi Anti Pinjol",
+   565→    description:
+   566→      "Sosialisasi bahaya Pinjol ilegal digelar di desa-desa pesisir Trenggalek. Warga diajarkan cara melapor ke OJK dan Bareskrim Polri jika mengalami teror, peretasan data pribadi, atau penagihan di luar batas hukum.",
+   567→    span: "row-span-2",
+   568→  },
+   569→  {
+   570→    src: "/uploads/bkh-06.jpeg",
+   571→    alt: "Penyuluhan perlindungan anak",
+   572→    caption: "Penyuluhan Perlindungan Anak",
+   573→    description:
+   574→      "Materi perlindungan anak dari kekerasan seksual disampaikan kepada orang tua dan guru di balai desa. Materi dilengkapi simulasi cara melaporkan, mengumpulkan bukti, dan mendampingi anak korban di proses hukum.",
+   575→    span: "",
+   576→  },
+   577→  {
+   578→    src: "/uploads/bkh-07.jpeg",
+   579→    alt: "Aksi nyata pendampingan hukum",
+   580→    caption: "Aksi Nyata Pendampingan",
+   581→    description:
+   582→      "Aksi nyata tim BKH Kartini dalam mendampingi warga. Kami tidak hanya bicara di kantor, tapi benar-benar turun ke lapangan, mendengar langsung keluhan warga, dan menyusun strategi pendampingan sesuai kebutuhan.",
+   583→    span: "",
+   584→  },
+   585→  {
+   586→    src: "/uploads/bkh-08.jpeg",
+   587→    alt: "Kegiatan besar BKH Kartini di lapangan terbuka",
+   588→    caption: "Aksi Besar BKH Kartini",
+   589→    description:
+   590→      "Kegiatan besar BKH Kartini menghadirkan ratusan warga dari berbagai desa di Trenggalek. Acara ini memadukan penyuluhan hukum, layanan pembuatan SKTM gratis, dan konsultasi kilat dengan para advokat muda.",
+   591→    span: "row-span-2",
+   592→  },
+   593→  {
+   594→    src: "/uploads/bkh-09.jpeg",
+   595→    alt: "Pemberian bantuan administrasi hukum",
+   596→    caption: "Bantuan Administrasi Hukum",
+   597→    description:
+   598→      "Tim BKH Kartini membantu warga mengurus dokumen administrasi hukum — mulai dari pembuatan akta kelahiran, kartu identitas, hingga pengantar untuk sidang itsbat nikah massal di Pengadilan Agama setempat.",
+   599→    span: "",
+   600→  },
+   601→  {
+   602→    src: "/uploads/bkh-10.jpeg",
+   603→    alt: "Pendampingan korban kekerasan",
+   604→    caption: "Pendampingan Korban",
+   605→    description:
+   606→      "Korban kekerasan dan pencurian hak didampingi penuh dari proses pelaporan hingga sidang. Kami percaya setiap warga, sekecil apa pun status sosialnya, berhak atas pembelaan hukum yang setara dengan yang mampu.",
+   607→    span: "",
+   608→  },
+   609→  {
+   610→    src: "/uploads/bkh-11.jpeg",
+   611→    alt: "Konsultasi hukum pro bono terbuka",
+   612→    caption: "Jendela Pro Bono",
+   613→    description:
+   614→      "Setiap minggu, BKH Kartini membuka posko konsultasi hukum pro bono di kantor pusat maupun di balai desa. Siapa pun yang masuk — tanpa dipungut biaya — akan diberi waktu untuk menceritakan kasusnya secara rinci dan tenang.",
+   615→    span: "",
+   616→  },
+   617→] as const;
+   618→
+   619→export const CASE_CATEGORIES = [
+   620→  "Pidana (Pencurian, Penganiayaan, Narkoba)",
+   621→  "Perdata (Utang-Piutang, Warisan)",
+   622→  "KDRT (Kekerasan Dalam Rumah Tangga)",
+   623→  "Pertanahan (Sengketa Batas, Waris Tanah)",
+   624→  "Perlindungan Anak (Kekerasan Seksual, Restorative Justice)",
+   625→  "Buruh/Upah (Penahanan Upah, PH Setoran)",
+   626→  "Pinjol Ilegal (Pendampingan & Pengaduan)",
+   627→  "Lainnya (silakan dijelaskan)",
+   628→] as const;
+   629→
+   630→export const OPERATING_HOURS = [
+   631→  { day: "Senin", time: "08:00 – 16:00 WIB" },
+   632→  { day: "Selasa", time: "08:00 – 16:00 WIB" },
+   633→  { day: "Rabu", time: "08:00 – 16:00 WIB" },
+   634→  { day: "Kamis", time: "08:00 – 16:00 WIB" },
+   635→  { day: "Jumat", time: "08:00 – 11:30 WIB" },
+   636→  { day: "Sabtu", time: "Konsultasi via WhatsApp" },
+   637→  { day: "Minggu / Libur", time: "Tutup (kecuali kasus darurat)" },
+   638→] as const;
+   639→
+   640→export const ADDRESS_LINES = [
+   641→  "Posbakum BKH Kartini — Lantai 1, Gedung Pengadilan Negeri Trenggalek",
+   642→  "Jl. Diponegoro No. 11, Kelurahan Sudimoro",
+   643→  "Kecamatan Trenggalek, Kabupaten Trenggalek",
+   644→  "Jawa Timur 66312",
+   645→];
+   646→
+   647→export const CONTACTS = {
+   648→  phone: WHATSAPP_DISPLAY,
+   649→  email: "posbakum@bkhkartini.or.id",
+   650→  whatsapp: WHATSAPP_LINK,
+   651→};
+   652→
+   653→// === Berita Utama / Kisah Klien ===
+   654→// Array berisi artikel kisah klien BKH Kartini.
+   655→export const BERITA_LIST = [
+   656→  {
+   657→    year: "2024",
+   658→    date: "15 Oktober 2024",
+   659→    image: "/uploads/testimoni-uyin.jpeg",
+   660→    imageAlt:
+   661→      "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
+   662→    category: "Kisah Klien",
+   663→    dateline: "WATULIMO, TRENGGALEK",
+   664→    headline:
+   665→      "Warga Pesisir Trenggalek: \"Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis\"",
+   666→    lead:
+   667→      "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, baru saja menyelesaikan perkara hukumnya bersama BKH Kartini. Dari konsultasi awal sampai kasus selesai, tidak ada satu pun biaya yang diminta — bahkan ongkos transport tim advokad pun ditanggung sendiri.",
+   668→    body: [
+   669→      "Selama bertahun-tahun, Ibu Uyin — seperti kebanyakan warga pesisir Trenggalek — menganggap lembaga bantuan hukum selalu identik dengan biaya tersembunyi. Pengalaman bersama BKH Kartini mengubah persepsinya sama sekali. Dari konsultasi awal sampai seluruh proses hukum selesai, ia tidak dimintai sepeser pun.",
+   670→      "Yang membuatnya paling terkesan, kata Ibu Uyin, bukan hanya pendampingan gratis, tetapi juga komitmen tim advokad yang rela mengeluarkan ongkos transport sendiri untuk datang ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek.",
+   671→      "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujarnya. \"Selamanya saya berutang budi pada advokat-advokat muda ini.\"",
+   672→      "BKH Kartini memang sejak awal didirikan atas semangat pro bono publik — melayani fakir miskin, perempuan, dan anak di seluruh kecamatan Trenggalek. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Bahkan biaya pengadilan dan materai resmi ditanggung penuh oleh lembaga.",
+   673→      "Kisah Ibu Uyin hanyalah satu dari 100+ kasus yang sudah didampingi BKH Kartini sejak berdirinya tahun 2016. Tim advokad muda ini terus melayani warga dari Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan — tanpa membedakan latar belakang sosial, gender, atau agama.",
+   674→    ],
+   675→    pullQuote: {
+   676→      text: "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
+   677→      attribution:
+   678→        "Ibu Uyin Wulandari — Warga Pesisir Trenggalek, Ds. Ngembel, Kec. Watulimo, Trenggalek",
+   679→    },
+   680→    source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek · 2024",
+   681→  },
+   682→  {
+   683→    year: "2024",
+   684→    date: "18 Mei 2024",
+   685→    image: "/uploads/berita-neni-kartika.jpg",
+   686→    imageAlt:
+   687→      "Neni Kartika Wati, klien BKH Kartini asal Ds. Wonorejo RT 14/RW 4, Kec. Gandusari, Kabupaten Trenggalek",
+   688→    category: "Kisah Klien",
+   689→    dateline: "GANDUSARI, TRENGGALEK",
+   690→    headline:
+   691→      "Konsultasi Hukum untuk Perempuan: Ibu Neni Kartika Wati dari Gandusari Temui BKH Kartini",
+   692→    lead:
+   693→      "Neni Kartika Wati, warga Ds. Wonorejo RT 14/RW 4, Kecamatan Gandusari, Kabupaten Trenggalek, datang ke Posbakum BKH Kartini untuk konsultasi terkait kasus yang menimpa dirinya sebagai perempuan. Ia mendapatkan pendampingan profesional tanpa biaya apa pun.",
+   694→    body: [
+   695→      "Neni Kartika Wati adalah salah satu klien perempuan BKH Kartini tahun 2024. Ia datang ke posko bantuan hukum untuk berkonsultasi terkait kasus yang berhubungan dengan dirinya sebagai perempuan — kasus yang sering kali membuat korban ragu mencari pendampingan karena beban sosial dan emosional yang berat.",
+   696→      "Dalam konsultasi awal, tim advokad BKH Kartini mendengarkan kasus Ibu Neni secara rinci dan empati. Tidak ada judgment, tidak ada raut cemooh — yang ada hanya pendampingan profesional yang menjelaskan opsi hukum yang tersedia, mulai dari jalur mediasi non-litigasi sampai pendampingan persidangan jika diperlukan.",
+   697→      "BKH Kartini memang sejak awal menempatkan perempuan sebagai kelompok prioritas. Kasus KDRT, kekerasan seksual, perceraian dengan hak asuh anak, sampai penipuan terhadap PMI perempuan — semua didampingi oleh tim advokad yang memahami trauma dan kebutuhan ruang aman bagi korban.",
+   698→      "\"Saya cuma ingin tahu hak saya sebagai perempuan,\" kata Ibu Neni. \"Setelah bicara dengan tim BKH Kartini, saya jadi paham langkah-langkah apa yang harus diambil tanpa rasa takut. Pendampingan ini gratis — tidak dipungut biaya sepeser pun.\"",
+   699→      "Setelah konsultasi, Ibu Neni merasa lebih tenang menghadapi proses hukum yang sedang berjalan. Untuk konsultasi awal, warga Trenggalek dapat langsung datang ke Posbakum BKH Kartini di Lantai 1, Gedung Pengadilan Negeri Trenggalek, atau menghubungi WhatsApp 081331922614.",
+   700→    ],
+   701→    pullQuote: {
+   702→      text: "Saya cuma ingin tahu hak saya sebagai perempuan. Setelah bicara dengan tim BKH Kartini, saya jadi paham langkah-langkah apa yang harus diambil tanpa rasa takut. Pendampingan ini gratis — tidak dipungut biaya sepeser pun.",
+   703→      attribution:
+   704→        "Neni Kartika Wati — Warga Ds. Wonorejo RT 14/RW 4, Kec. Gandusari, Kabupaten Trenggalek",
+   705→    },
+   706→    source: "Kisah Klien BKH Kartini · Gandusari, Kabupaten Trenggalek · 2024",
+   707→  },
+   708→] as const;
+   709→

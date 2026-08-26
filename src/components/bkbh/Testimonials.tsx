@@ -49,7 +49,7 @@ export default function Testimonials() {
             transition={{ delay: 0.1 }}
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
-            {TESTIMONIALS.length} Kisah Nyata dari{" "}
+            Kisah Nyata dari{" "}
             <span className="text-gold-accent">Warga Trenggalek</span>
           </motion.h2>
           <motion.p
@@ -88,7 +88,7 @@ export default function Testimonials() {
               {AVG_RATING}/5
             </span>
             <span className="text-xs text-red-50/80">
-              rata-rata kepuasan dari {TESTIMONIALS.length} klien
+              rata-rata kepuasan klien kami
             </span>
           </motion.div>
         </div>
@@ -108,8 +108,9 @@ export default function Testimonials() {
           ref={trackRef}
           className="flex w-max gap-5 md:gap-6 px-3 md:px-6 marquee-track"
           style={{
-            animation: "marquee-left 60s linear infinite",
+            animation: "marquee-left 240s linear infinite",
             animationPlayState: paused ? "paused" : "running",
+            willChange: "transform",
           }}
         >
           {LOOP_LIST.map((t, i) => {
@@ -144,9 +145,9 @@ function TestimonialCard({
 }) {
   return (
     <motion.article
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`relative w-[290px] sm:w-[340px] md:w-[380px] flex-shrink-0 rounded-2xl bg-white/5 backdrop-blur ring-1 ring-white/10 p-6 md:p-7 hover:ring-gold-accent/40 transition-all duration-500 ${
+      whileHover={{ scale: 1.04 }}
+      transition={{ type: "spring", stiffness: 250, damping: 22 }}
+      className={`relative w-[290px] sm:w-[340px] md:w-[380px] flex-shrink-0 rounded-2xl bg-white/[0.07] ring-1 ring-white/10 p-6 md:p-7 hover:ring-gold-accent/40 ${
         isActive ? "shadow-2xl shadow-amber-500/20 ring-gold-accent/30" : ""
       }`}
     >

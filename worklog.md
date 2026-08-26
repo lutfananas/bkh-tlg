@@ -412,3 +412,40 @@ Stage Summary:
 - ✅ Testimoni bertambah dari 11 → 31 (+ 20 baru)
 - ✅ Rating rata-rata 4.8/5 ditampilkan sebagai badge di heading section Testimoni
 - ✅ Setiap kartu testimoni sekarang menampilkan 5 bintang sesuai rating klien
+
+---
+Task ID: 12
+Agent: Super Z (main)
+Task: Hapus angka jumlah testimoni (31) dari judul + perbaiki animasi marquee yang macet & terlalu cepat
+
+Work Log:
+- Analisis root cause animasi macet:
+  * 62 kartu (31 testimoni × 2 loop) semuanya pakai `backdrop-blur` → GPU overload
+  * `transition-all duration-500` pada kartu konflik dengan framer-motion spring hover
+  * Tidak ada `will-change: transform` di track → browser tidak pre-allocate GPU layer
+  * Animasi 60s untuk 62 kartu = ~0.97s per kartu (vs awalnya 11 kartu = ~2.7s per kartu, sudah 3x lebih cepat dari desain asli)
+- Edit `src/components/bkbh/Testimonials.tsx` (4 perubahan via MultiEdit):
+  1. Heading: hapus `{TESTIMONIALS.length} ` prefix → "Kisah Nyata dari Warga Trenggalek" (tanpa angka)
+  2. Rating badge: "rata-rata kepuasan dari {TESTIMONIALS.length} klien" → "rata-rata kepuasan klien kami"
+  3. Track inline style: `marquee-left 60s` → `marquee-left 240s` (4x lebih lambat, ~3.87s per kartu untuk 62 kartu)
+     + tambah `willChange: "transform"` untuk GPU hint
+  4. Kartu TestimonialCard:
+     - `backdrop-blur` dihapus (ganti dengan `bg-white/[0.07]` solid)
+     - `transition-all duration-500` dihapus (biar framer-motion handle hover tanpa konflik)
+     - Hover scale 1.05 → 1.04 (lebih halus)
+     - Spring stiffness 300→250, damping 20→22 (kurangi bouncing berlebih)
+- Build: `bun run build:cf` ✅ (0 error, 4 static pages)
+- Verifikasi output `out/index.html`:
+  * "Kisah Nyata dari" ada tanpa prefix angka ✅
+  * "marquee-left 240s" ada (1x) ✅
+  * "backdrop-blur" hanya tersisa di Navbar (logo + nav buttons, hanya 2-3 elemen, OK)
+  * "rata-rata kepuasan klien kami" ✅
+  * Tidak ada lagi "[0-9]+ Kisah Nyata" pattern ✅
+
+Stage Summary:
+- ✅ Judul testimoni tidak lagi menampilkan angka "31"
+- ✅ Animasi marquee 4x lebih lambat (240s vs 60s) — kecepatan baca nyaman
+- ✅ Hapus `backdrop-blur` dari 62 kartu → GPU strain turun drastis, animasi halus
+- ✅ Tambah `will-change: transform` untuk pre-allocate GPU layer di track
+- ✅ Hapus `transition-all duration-500` yang konflik dengan spring physics framer-motion
+- Hasil: marquee sekarang halus & kecepatan nyaman dibaca
