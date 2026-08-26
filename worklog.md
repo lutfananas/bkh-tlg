@@ -377,3 +377,38 @@ Stage Summary:
 - ✅ Testimoni kartu sekarang menampilkan badge tahun (2024/2025/2026).
 - ✅ Production URL: https://bkhkartini.pages.dev (CDN cache akan refresh dalam ~5 menit).
 - ⚠️ GitHub Actions workflow masih stuck di "queued" — perlu di-cancel manual atau tunggu runner tersedia. Deploy via wrangler CLI tetap sukses dan site sudah live dengan commit terbaru.
+
+---
+Task ID: 13
+Agent: Super Z (main)
+Task: Tambah tanggal spesifik di berita + 20 testimoni baru + rating 4.8 rata-rata.
+
+Work Log:
+- Update BERITA_LIST:
+  * Artikel 1 (Ibu Uyin): tambah date "15 Oktober 2024"
+  * Artikel 2 (Neni): tambah date "18 Mei 2024"
+- Update PressNews.tsx: badge overlay & dateline strip sekarang pakai article.date (bukan year).
+- Tambah 20 testimoni baru ke array TESTIMONIALS (total 31):
+  * Ibu Y., Bapak S., Ibu R., Bapak D., Ibu T., Bapak H., Ibu A., Bapak W., Ibu E., Bapak B., Ibu L., Saudara N., Bapak P., Ibu V., Bapak J., Ibu K., Bapak G., Ibu O., Bapak F., Ibu C.
+  * Distribusi tahun: 2024 (19), 2025 (10), 2026 (2)
+  * Distribusi rating: 25 testimoni rating 5 + 6 testimoni rating 4 = total 149/31 = 4.806 → 4.8
+- Tambah field rating ke semua 11 testimoni existing (semua rating 5).
+- Update Testimonials.tsx:
+  * Heading: "11 Kisah Nyata" → "{TESTIMONIALS.length} Kisah Nyata" (dynamic, sekarang 31)
+  * Tambah badge rata-rata rating di bawah heading: 5 bintang + "4.8/5" + "rata-rata kepuasan dari 31 klien"
+  * Tambah Star icon import
+  * Tambah compute AVG_RATING const (reduce sum / length, toFixed(1))
+  * Tambah star rating row per TestimonialCard (5 stars, filled based on t.rating)
+- Verifikasi HTML output:
+  * "15 Oktober 2024" (2x) ✅, "18 Mei 2024" (2x) ✅
+  * "31<!-- --> Kisah Nyata dari" ✅ (React text fragment marker)
+  * "4.8<!-- -->/5" avg rating badge ✅
+  * Year distribution: 2024 (38x), 2025 (20x), 2026 (5x) — proporsi sesuai ✅
+- Build sukses (0 error TypeScript, 4 static pages).
+
+Stage Summary:
+- ✅ Berita utama Ibu Uyin: tanggal 15 Oktober 2024
+- ✅ Berita #2 Neni Kartika Wati: tanggal 18 Mei 2024
+- ✅ Testimoni bertambah dari 11 → 31 (+ 20 baru)
+- ✅ Rating rata-rata 4.8/5 ditampilkan sebagai badge di heading section Testimoni
+- ✅ Setiap kartu testimoni sekarang menampilkan 5 bintang sesuai rating klien

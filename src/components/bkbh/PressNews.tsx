@@ -93,7 +93,7 @@ export default function PressNews() {
                 {/* Year badge overlay (top-right) */}
                 <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-gold-accent text-charcoal px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider shadow-lg">
                   <Calendar className="w-3.5 h-3.5" />
-                  {article.year}
+                  {article.date}
                 </div>
 
                 <figcaption className="sr-only">{article.imageAlt}</figcaption>
@@ -111,7 +111,7 @@ export default function PressNews() {
                     <span>{article.category}</span>
                   </div>
                   <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold tracking-wider">
-                    {article.year}
+                    {article.date}
                   </span>
                 </div>
 

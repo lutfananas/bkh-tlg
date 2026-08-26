@@ -2,11 +2,16 @@
 
 import { useRef, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Quote, MapPin, Briefcase, Scale, Calendar } from "lucide-react";
+import { Quote, MapPin, Briefcase, Scale, Calendar, Star } from "lucide-react";
 import { TESTIMONIALS } from "./data";
 
 // Duplicate list untuk loop infinite seamless
 const LOOP_LIST = [...TESTIMONIALS, ...TESTIMONIALS];
+
+// Hitung rata-rata rating dari seluruh testimoni
+const AVG_RATING = (
+  TESTIMONIALS.reduce((sum, t) => sum + t.rating, 0) / TESTIMONIALS.length
+).toFixed(1);
 
 export default function Testimonials() {
   const [paused, setPaused] = useState(false);
@@ -44,7 +49,7 @@ export default function Testimonials() {
             transition={{ delay: 0.1 }}
             className="mt-4 font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
-            11 Kisah Nyata dari{" "}
+            {TESTIMONIALS.length} Kisah Nyata dari{" "}
             <span className="text-gold-accent">Warga Trenggalek</span>
           </motion.h2>
           <motion.p
@@ -58,6 +63,34 @@ export default function Testimonials() {
             Identitas klien dilindungi dengan inisial demi privasi hukum.
             Arahkan kursor ke kartu untuk menjeda pergerakan marquee.
           </motion.p>
+
+          {/* Badge rata-rata rating */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-7 inline-flex items-center gap-3 rounded-full bg-gold-accent/15 ring-1 ring-gold-accent/40 px-5 py-2.5"
+          >
+            <div className="flex items-center gap-0.5">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <Star
+                  key={n}
+                  className={`w-4 h-4 ${
+                    n <= Math.round(Number(AVG_RATING))
+                      ? "text-gold-accent fill-gold-accent"
+                      : "text-gold-accent/30"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-sm font-bold text-gold-accent">
+              {AVG_RATING}/5
+            </span>
+            <span className="text-xs text-red-50/80">
+              rata-rata kepuasan dari {TESTIMONIALS.length} klien
+            </span>
+          </motion.div>
         </div>
       </div>
 
@@ -141,6 +174,21 @@ function TestimonialCard({
       )}
 
       <Quote className="w-7 h-7 text-gold-accent/40 mb-2" />
+
+      {/* Star rating per klien */}
+      <div className="flex items-center gap-0.5 mb-2">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <Star
+            key={n}
+            className={`w-3.5 h-3.5 ${
+              n <= t.rating
+                ? "text-gold-accent fill-gold-accent"
+                : "text-white/20"
+            }`}
+          />
+        ))}
+      </div>
+
       <p className="text-sm md:text-[0.95rem] text-red-50 leading-relaxed italic">
         &ldquo;{t.quote}&rdquo;
       </p>

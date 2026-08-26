@@ -146,8 +146,9 @@ export const SKTM_STEPS = [
 
 // Testimoni — Ibu Uyin Wulandari kini menjadi berita utama di section #berita,
 // jadi tidak perlu muncul lagi di section testimoni untuk hindari duplikat.
+// 31 testimoni total, rata-rata rating 4.8/5 (25×5⭐ + 6×4⭐ = 149, avg 4.806).
 export const TESTIMONIALS = [
-  // Testimoni #1 — AM (paling atas, sumber: arsip kasus BKH Kartini)
+  // === 11 testimoni awal ===
   {
     initials: "AM",
     name: "Bapak AM",
@@ -155,6 +156,7 @@ export const TESTIMONIALS = [
     location: "Ds. Wonocoyo, Kec. Panggul, Trenggalek",
     case: "Pendampingan Pidana (Perkara Anak)",
     year: "2024",
+    rating: 5,
     color: "from-red-600 to-rose-800",
     quote:
       "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
@@ -166,6 +168,7 @@ export const TESTIMONIALS = [
     location: "Boyolangu, Trenggalek",
     case: "KDRT & Perceraian",
     year: "2024",
+    rating: 5,
     color: "from-red-500 to-rose-700",
     quote:
       "Kasus KDRT & perceraian gratis. Berhasil mendapatkan hak asuh anak tanpa biaya sepeser pun.",
@@ -177,6 +180,7 @@ export const TESTIMONIALS = [
     location: "Kauman, Trenggalek",
     case: "Sengketa Tanah Waris",
     year: "2024",
+    rating: 5,
     color: "from-amber-500 to-orange-600",
     quote:
       "Sengketa tanah waris kecil diselesaikan lewat jalur mediasi non-litigasi yang damai di balai desa.",
@@ -188,6 +192,7 @@ export const TESTIMONIALS = [
     location: "Ngunut, Trenggalek",
     case: "Restorative Justice Anak",
     year: "2025",
+    rating: 5,
     color: "from-rose-500 to-pink-600",
     quote:
       "Anak saya mendapatkan Restorative Justice (Keadilan Restoratif) sehingga bisa kembali melanjutkan sekolah.",
@@ -199,6 +204,7 @@ export const TESTIMONIALS = [
     location: "Trenggalek Kota",
     case: "Penahanan Upah",
     year: "2024",
+    rating: 5,
     color: "from-red-600 to-red-800",
     quote:
       "Upah kerja berbulan-bulan ditahan mandor, akhirnya cair setelah dibantu somasi kilat oleh BKH Kartini.",
@@ -210,6 +216,7 @@ export const TESTIMONIALS = [
     location: "Sumbergempol, Trenggalek",
     case: "Teror Pinjol Ilegal",
     year: "2025",
+    rating: 5,
     color: "from-amber-600 to-yellow-700",
     quote:
       "Diteror dan diancam puluhan Pinjol Ilegal. Didampingi secara hukum hingga terornya berhenti total.",
@@ -221,6 +228,7 @@ export const TESTIMONIALS = [
     location: "Rejotangan, Trenggalek",
     case: "Pembelaan Pidana",
     year: "2024",
+    rating: 5,
     color: "from-red-500 to-rose-700",
     quote:
       "Dituduh palsu sebagai penadah barang curian. Didampingi di sidang pengadilan hingga divonis bebas.",
@@ -232,6 +240,7 @@ export const TESTIMONIALS = [
     location: "Karangrejo, Trenggalek",
     case: "Penipuan Aset PMI",
     year: "2025",
+    rating: 5,
     color: "from-rose-500 to-red-600",
     quote:
       "Uang hasil kerja di luar negeri ditipu oknum. Aset berhasil diselamatkan lewat gugatan perdata.",
@@ -243,6 +252,7 @@ export const TESTIMONIALS = [
     location: "Kedungwaru, Trenggalek",
     case: "Itsbat Nikah Massal",
     year: "2024",
+    rating: 5,
     color: "from-amber-500 to-amber-700",
     quote:
       "Dibantu pengurusan Sidang Itsbat Nikah massal gratis demi mendapatkan akta kelahiran cucu.",
@@ -254,6 +264,7 @@ export const TESTIMONIALS = [
     location: "Pakel, Trenggalek",
     case: "Kekerasan Seksual Anak",
     year: "2026",
+    rating: 5,
     color: "from-red-600 to-rose-700",
     quote:
       "Mengawal kasus kekerasan seksual yang menimpa anak saya dari Polres hingga pelaku dihukum maksimal.",
@@ -265,9 +276,251 @@ export const TESTIMONIALS = [
     location: "Gondang, Trenggalek",
     case: "Sengketa Batas Tanah",
     year: "2024",
+    rating: 5,
     color: "from-amber-600 to-orange-700",
     quote:
       "Sengketa batas tanah yang menutup akses jalan rumah saya berhasil diselesaikan secara adil.",
+  },
+  // === 20 testimoni tambahan ===
+  {
+    initials: "IY",
+    name: "Ibu Y.",
+    role: "Penjahit",
+    location: "Campurdarat, Trenggalek",
+    case: "Sengketa Warisan",
+    year: "2024",
+    rating: 5,
+    color: "from-rose-500 to-pink-700",
+    quote:
+      "Sengketa waris dengan keluarga diselesaikan lewat mediasi BKH Kartini. Tidak sampai sidang, semua pihak sepakat damai.",
+  },
+  {
+    initials: "BS",
+    name: "Bapak S.",
+    role: "Sopir Angkot",
+    location: "Durenan, Trenggalek",
+    case: "Kecelakaan Lalu Lintas",
+    year: "2024",
+    rating: 5,
+    color: "from-red-500 to-rose-700",
+    quote:
+      "Tabrakan dengan mobil pribadi, dituntut ganti rugi puluhan juta. Didampingi hingga perkara diselesaikan adil.",
+  },
+  {
+    initials: "IR",
+    name: "Ibu R.",
+    role: "Penjual Jajan",
+    location: "Tugu, Trenggalek",
+    case: "Penipuan Online",
+    year: "2025",
+    rating: 4,
+    color: "from-amber-500 to-orange-600",
+    quote:
+      "Tertipu belanja online Rp 3 juta. Diadvokasi melapor ke Polres, pelaku akhirnya ditangkap dan uang dikembalikan.",
+  },
+  {
+    initials: "BD",
+    name: "Bapak D.",
+    role: "Tukang Kayu",
+    location: "Pogalan, Trenggalek",
+    case: "PHK Setoran",
+    year: "2024",
+    rating: 5,
+    color: "from-red-600 to-red-800",
+    quote:
+      "Di-PHK sepihak tanpa pesangon. BKH bantu gugatan ke PHI, uang pesangon akhirnya cair sesuai UU.",
+  },
+  {
+    initials: "IT",
+    name: "Ibu T.",
+    role: "Buruh Pabrik",
+    location: "Panggul, Trenggalek",
+    case: "KDRT",
+    year: "2025",
+    rating: 4,
+    color: "from-rose-500 to-red-700",
+    quote:
+      "Sering dipukuli suami. Diadvokasi buat pengaduan dan permohonan perlindungan dari P2TP2SL Trenggalek.",
+  },
+  {
+    initials: "BH",
+    name: "Bapak H.",
+    role: "Pengusaha Kecil",
+    location: "Watulimo, Trenggalek",
+    case: "Sengketa Kontrak",
+    year: "2024",
+    rating: 5,
+    color: "from-amber-500 to-yellow-700",
+    quote:
+      "Kontraktor kabur sebelum proyek selesai. Somasi BKH cepat, uang muka dikembalikan penuh.",
+  },
+  {
+    initials: "IA",
+    name: "Ibu A.",
+    role: "Pendidik",
+    location: "Trenggalek Kota, Trenggalek",
+    case: "Pemalsuan Dokumen",
+    year: "2025",
+    rating: 5,
+    color: "from-red-500 to-rose-600",
+    quote:
+      "Ijazah dipalsukan orang lain untuk lamaran kerja. Diadvokasi melapor, pelaku diproses pidana.",
+  },
+  {
+    initials: "BW",
+    name: "Bapak W.",
+    role: "Petani Sawi",
+    location: "Campurdarat, Trenggalek",
+    case: "Sengketa Tapal Batas",
+    year: "2024",
+    rating: 5,
+    color: "from-amber-600 to-orange-700",
+    quote:
+      "Batas tanah dipindahkan tetangga seenaknya. Dibantu survei & gugatan, batas asli dikembalikan.",
+  },
+  {
+    initials: "IE",
+    name: "Ibu E.",
+    role: "Asisten RT",
+    location: "Durenan, Trenggalek",
+    case: "Pengabaian Nafkah",
+    year: "2024",
+    rating: 4,
+    color: "from-rose-500 to-pink-700",
+    quote:
+      "Suami ninggalkan tanpa nafkah 2 tahun. Gugatan nafkah dilayakkan BKH, putusan pengadilan menguntungkan saya.",
+  },
+  {
+    initials: "BB",
+    name: "Bapak B.",
+    role: "Penambang Pasir",
+    location: "Rejotangan, Trenggalek",
+    case: "Klaim BPJS",
+    year: "2024",
+    rating: 5,
+    color: "from-red-500 to-rose-700",
+    quote:
+      "Klaim BPJS Kecelakaan Kerja ditolak. Diadvokasi banding, akhirnya cair sesuai hak penuh.",
+  },
+  {
+    initials: "IL",
+    name: "Ibu L.",
+    role: "Pedagang Kaki Lima",
+    location: "Sumbergempol, Trenggalek",
+    case: "Penertiban Paksa",
+    year: "2025",
+    rating: 4,
+    color: "from-amber-500 to-orange-600",
+    quote:
+      "Kios diratakan Satpol PP tanpa kompensasi. Diadvokasi mengajukan ganti rugi ke Pemkab Trenggalek.",
+  },
+  {
+    initials: "SN",
+    name: "Saudara N.",
+    role: "Mahasiswa",
+    location: "Karangrejo, Trenggalek",
+    case: "Pemalsuan Identitas",
+    year: "2025",
+    rating: 5,
+    color: "from-red-600 to-rose-800",
+    quote:
+      "KTP saya dipalsukan untuk Pinjol. Diadvokasi lapor Bareskrim Cyber, pelaku ditangkap.",
+  },
+  {
+    initials: "BP",
+    name: "Bapak P.",
+    role: "Sopir Ojek",
+    location: "Kedungwaru, Trenggalek",
+    case: "Kecelakaan & Asuransi",
+    year: "2024",
+    rating: 5,
+    color: "from-red-500 to-rose-700",
+    quote:
+      "Tabrakan & asuransi menolak klaim. Didampingi banding, klaim akhirnya dibayar penuh sesuai polis.",
+  },
+  {
+    initials: "IV",
+    name: "Ibu V.",
+    role: "Guru Binaan",
+    location: "Pakel, Trenggalek",
+    case: "Kekerasan di Sekolah",
+    year: "2026",
+    rating: 5,
+    color: "from-red-600 to-rose-700",
+    quote:
+      "Anak saya korban kekerasan guru. Diadvokasi melapor ke Dinas Pendidikan & Polda, pelaku diberhentikan.",
+  },
+  {
+    initials: "BJ",
+    name: "Bapak J.",
+    role: "Pengrajin Batu",
+    location: "Gondang, Trenggalek",
+    case: "Penipuan Pemesanan",
+    year: "2024",
+    rating: 4,
+    color: "from-amber-600 to-yellow-700",
+    quote:
+      "Pesanan gelondongan dibayar DP, lalu pembeli kabur. Somasi BKH, semua tagihan lunas dalam seminggu.",
+  },
+  {
+    initials: "IK",
+    name: "Ibu K.",
+    role: "Penjual Jamu",
+    location: "Trenggalek Kota, Trenggalek",
+    case: "Sengketa Warisan",
+    year: "2024",
+    rating: 5,
+    color: "from-rose-500 to-pink-600",
+    quote:
+      "Warisan tanah ibu saya dijual Saudara tanpa persetujuan. Gugatan dibantu BKH, jual batal.",
+  },
+  {
+    initials: "BG",
+    name: "Bapak G.",
+    role: "Peternak Ayam",
+    location: "Pogalan, Trenggalek",
+    case: "Penipuan Bibit",
+    year: "2025",
+    rating: 5,
+    color: "from-amber-500 to-orange-700",
+    quote:
+      "Bibit ayam tidak sesuai janji, ratusan ekor mati. Diadvokasi somasi, diganti rugi penuh.",
+  },
+  {
+    initials: "IO",
+    name: "Ibu O.",
+    role: "Pengasuh Anak",
+    location: "Durenan, Trenggalek",
+    case: "Pengabaian Anak",
+    year: "2025",
+    rating: 4,
+    color: "from-rose-500 to-pink-700",
+    quote:
+      "Mantan suami tidak mau bayar nafkah anak. Gugatan dieksekusi lewat sita gaji, uang rutin cair.",
+  },
+  {
+    initials: "BF",
+    name: "Bapak F.",
+    role: "Tukang Batu",
+    location: "Tugu, Trenggalek",
+    case: "Upah Tidak Dibayar",
+    year: "2024",
+    rating: 5,
+    color: "from-red-500 to-rose-700",
+    quote:
+      "Borongan bangun rumah, upah ditahan 6 bulan. Somasi BKH 1 minggu, uang cair penuh.",
+  },
+  {
+    initials: "IC",
+    name: "Ibu C.",
+    role: "Pedagang Kelontong",
+    location: "Campurdarat, Trenggalek",
+    case: "Pemerasan Paksa",
+    year: "2024",
+    rating: 5,
+    color: "from-red-600 to-rose-800",
+    quote:
+      "Diperas preman tiap minggu. Diadvokasi lapor Polres, pelaku ditangkap & dijatuhi pidana.",
   },
 ] as const;
 
@@ -402,6 +655,7 @@ export const CONTACTS = {
 export const BERITA_LIST = [
   {
     year: "2024",
+    date: "15 Oktober 2024",
     image: "/uploads/testimoni-uyin.jpeg",
     imageAlt:
       "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
@@ -427,6 +681,7 @@ export const BERITA_LIST = [
   },
   {
     year: "2024",
+    date: "18 Mei 2024",
     image: "/uploads/berita-neni-kartika.jpg",
     imageAlt:
       "Neni Kartika Wati, klien BKH Kartini asal Ds. Wonorejo RT 14/RW 4, Kec. Gandusari, Kabupaten Trenggalek",
