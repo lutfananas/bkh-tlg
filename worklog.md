@@ -473,3 +473,34 @@ Stage Summary:
 - ⏳ Deploy tertunda karena GitHub Actions infrastructure issue
 - 🔁 User dapat re-trigger workflow_dispatch nanti setelah GitHub Actions recover
 - 📝 Webhook event push mungkin tidak ter-trigger (workflow hanya jalan setelah manual dispatch)
+
+---
+Task ID: 12 (Direct Cloudflare Deploy — Success)
+Agent: Super Z (main)
+Task: Deploy commit 487b3feb langsung ke Cloudflare Pages, lewati GitHub Actions yang stuck
+
+Work Log:
+- User kasih token baru: GitHub PAT (ghp_fWArOC...) + Cloudflare API Token (cfat_INNxC...)
+- Verifikasi Cloudflare token via `wrangler whoami`:
+  * Account: Lutfanasan@gmail.com's Account
+  * Account ID: c3054da4734ad593886118b33f3a35a8
+- Build fresh: `bun run build:cf` sukses (0 error)
+- Deploy: `wrangler pages deploy out --project-name=bkhkartini --branch=main --commit-dirty=true`
+  * 62 files total, 18 baru di-upload (44 sudah ada), 1.87 detik
+  * Deployment URL: https://7da2c393.bkhkartini.pages.dev
+- Verifikasi live site (cache-busted, size 558835 bytes — beda dari build lama 561136):
+  * ✅ `marquee-left 240s` (was 60s) — animasi 4x lebih lambat
+  * ✅ `rata-rata kepuasan klien kami` (was "dari 31 klien")
+  * ✅ `31<!--` count = 0 (was 1) — angka dihapus dari judul
+  * ✅ `Kisah Nyata dari` tanpa prefix angka
+  * ✅ `backdrop-blur` count = 1 (only Navbar — was on every card, GPU killer)
+  * ✅ `will-change:transform` present (GPU hint untuk animasi halus)
+- Update git remote URL dengan PAT baru: git remote set-url origin
+- Re-run setup_cf_secrets.py dengan token baru → GitHub repo secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID updated
+
+Stage Summary:
+- ✅ LIVE SITE https://bkhkartini.pages.dev sudah pakai commit 487b3feb
+- ✅ Animasi marquee sekarang halus & lambat (240s, no backdrop-blur, will-change)
+- ✅ Judul testimoni tidak lagi menampilkan angka "31"
+- ✅ GitHub secrets di-update dengan token baru (CI/CD siap pakai)
+- ✅ GitHub Actions run #9 masih stuck tapi tidak masalah — deploy sudah lewat wrangler
