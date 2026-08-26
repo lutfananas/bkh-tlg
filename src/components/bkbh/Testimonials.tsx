@@ -2,7 +2,7 @@
 
 import { useRef, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Quote, MapPin, Briefcase, Scale } from "lucide-react";
+import { Quote, MapPin, Briefcase, Scale, Calendar } from "lucide-react";
 import { TESTIMONIALS } from "./data";
 
 // Duplicate list untuk loop infinite seamless
@@ -161,10 +161,16 @@ function TestimonialCard({
         </div>
       </div>
 
-      {/* Case tag */}
-      <div className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-gold-accent/15 ring-1 ring-gold-accent/30 text-gold-accent text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1">
-        <Scale className="w-3 h-3" />
-        {t.case}
+      {/* Case tag + Year badge */}
+      <div className="mt-3 flex items-center gap-2 flex-wrap">
+        <div className="inline-flex items-center gap-1.5 rounded-md bg-gold-accent/15 ring-1 ring-gold-accent/30 text-gold-accent text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1">
+          <Scale className="w-3 h-3" />
+          {t.case}
+        </div>
+        <div className="inline-flex items-center gap-1 rounded-md bg-white/5 ring-1 ring-white/15 text-red-50/80 text-[10px] font-semibold px-2 py-1">
+          <Calendar className="w-3 h-3" />
+          {t.year}
+        </div>
       </div>
     </motion.article>
   );

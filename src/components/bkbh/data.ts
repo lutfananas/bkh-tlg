@@ -154,6 +154,7 @@ export const TESTIMONIALS = [
     role: "Wali Anak Pemohon",
     location: "Ds. Wonocoyo, Kec. Panggul, Trenggalek",
     case: "Pendampingan Pidana (Perkara Anak)",
+    year: "2024",
     color: "from-red-600 to-rose-800",
     quote:
       "Keluarga saya sangat terbantu dengan program bantuan hukum ini. Ada pendamping kompeten yang selalu menemani anak saya menghadapi persidangan, dan tidak pernah dipungut biaya apa pun. Setiap tahapan juga selalu diberi tahu, sehingga kami bisa mengikuti prosesnya dengan tenang.",
@@ -164,6 +165,7 @@ export const TESTIMONIALS = [
     role: "Buruh Cuci",
     location: "Boyolangu, Trenggalek",
     case: "KDRT & Perceraian",
+    year: "2024",
     color: "from-red-500 to-rose-700",
     quote:
       "Kasus KDRT & perceraian gratis. Berhasil mendapatkan hak asuh anak tanpa biaya sepeser pun.",
@@ -174,6 +176,7 @@ export const TESTIMONIALS = [
     role: "Petani Penggarap",
     location: "Kauman, Trenggalek",
     case: "Sengketa Tanah Waris",
+    year: "2024",
     color: "from-amber-500 to-orange-600",
     quote:
       "Sengketa tanah waris kecil diselesaikan lewat jalur mediasi non-litigasi yang damai di balai desa.",
@@ -184,6 +187,7 @@ export const TESTIMONIALS = [
     role: "Penjual Gorengan",
     location: "Ngunut, Trenggalek",
     case: "Restorative Justice Anak",
+    year: "2025",
     color: "from-rose-500 to-pink-600",
     quote:
       "Anak saya mendapatkan Restorative Justice (Keadilan Restoratif) sehingga bisa kembali melanjutkan sekolah.",
@@ -194,6 +198,7 @@ export const TESTIMONIALS = [
     role: "Kuli Bangunan",
     location: "Trenggalek Kota",
     case: "Penahanan Upah",
+    year: "2024",
     color: "from-red-600 to-red-800",
     quote:
       "Upah kerja berbulan-bulan ditahan mandor, akhirnya cair setelah dibantu somasi kilat oleh BKH Kartini.",
@@ -204,6 +209,7 @@ export const TESTIMONIALS = [
     role: "Pedagang Sayur",
     location: "Sumbergempol, Trenggalek",
     case: "Teror Pinjol Ilegal",
+    year: "2025",
     color: "from-amber-600 to-yellow-700",
     quote:
       "Diteror dan diancam puluhan Pinjol Ilegal. Didampingi secara hukum hingga terornya berhenti total.",
@@ -214,6 +220,7 @@ export const TESTIMONIALS = [
     role: "Yatim Piatu, Serabutan",
     location: "Rejotangan, Trenggalek",
     case: "Pembelaan Pidana",
+    year: "2024",
     color: "from-red-500 to-rose-700",
     quote:
       "Dituduh palsu sebagai penadah barang curian. Didampingi di sidang pengadilan hingga divonis bebas.",
@@ -224,6 +231,7 @@ export const TESTIMONIALS = [
     role: "Mantan PMI",
     location: "Karangrejo, Trenggalek",
     case: "Penipuan Aset PMI",
+    year: "2025",
     color: "from-rose-500 to-red-600",
     quote:
       "Uang hasil kerja di luar negeri ditipu oknum. Aset berhasil diselamatkan lewat gugatan perdata.",
@@ -234,6 +242,7 @@ export const TESTIMONIALS = [
     role: "Pencari Rongsok",
     location: "Kedungwaru, Trenggalek",
     case: "Itsbat Nikah Massal",
+    year: "2024",
     color: "from-amber-500 to-amber-700",
     quote:
       "Dibantu pengurusan Sidang Itsbat Nikah massal gratis demi mendapatkan akta kelahiran cucu.",
@@ -244,6 +253,7 @@ export const TESTIMONIALS = [
     role: "Buruh Tani",
     location: "Pakel, Trenggalek",
     case: "Kekerasan Seksual Anak",
+    year: "2026",
     color: "from-red-600 to-rose-700",
     quote:
       "Mengawal kasus kekerasan seksual yang menimpa anak saya dari Polres hingga pelaku dihukum maksimal.",
@@ -254,6 +264,7 @@ export const TESTIMONIALS = [
     role: "Pengrajin Anyaman Difabel",
     location: "Gondang, Trenggalek",
     case: "Sengketa Batas Tanah",
+    year: "2024",
     color: "from-amber-600 to-orange-700",
     quote:
       "Sengketa batas tanah yang menutup akses jalan rumah saya berhasil diselesaikan secara adil.",
@@ -387,28 +398,56 @@ export const CONTACTS = {
 };
 
 // === Berita Utama / Kisah Klien ===
-// Cerita klien BKH Kartini — Ibu Uyin Wulandari, warga pesisir Trenggalek
-export const BERITA_PERS = {
-  image: "/uploads/testimoni-uyin.jpeg",
-  imageAlt:
-    "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
-  category: "Kisah Klien",
-  dateline: "WATULIMO, TRENGGALEK",
-  headline:
-    "Warga Pesisir Trenggalek: \"Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis\"",
-  lead:
-    "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, baru saja menyelesaikan perkara hukumnya bersama BKH Kartini. Dari konsultasi awal sampai kasus selesai, tidak ada satu pun biaya yang diminta — bahkan ongkos transport tim advokad pun ditanggung sendiri.",
-  body: [
-    "Selama bertahun-tahun, Ibu Uyin — seperti kebanyakan warga pesisir Trenggalek — menganggap lembaga bantuan hukum selalu identik dengan biaya tersembunyi. Pengalaman bersama BKH Kartini mengubah persepsinya sama sekali. Dari konsultasi awal sampai seluruh proses hukum selesai, ia tidak dimintai sepeser pun.",
-    "Yang membuatnya paling terkesan, kata Ibu Uyin, bukan hanya pendampingan gratis, tetapi juga komitmen tim advokad yang rela mengeluarkan ongkos transport sendiri untuk datang ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek.",
-    "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujarnya. \"Selamanya saya berutang budi pada advokat-advokat muda ini.\"",
-    "BKH Kartini memang sejak awal didirikan atas semangat pro bono publik — melayani fakir miskin, perempuan, dan anak di seluruh kecamatan Trenggalek. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Bahkan biaya pengadilan dan materai resmi ditanggung penuh oleh lembaga.",
-    "Kisah Ibu Uyin hanyalah satu dari 100+ kasus yang sudah didampingi BKH Kartini sejak berdirinya tahun 2016. Tim advokad muda ini terus melayani warga dari Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan — tanpa membedakan latar belakang sosial, gender, atau agama.",
-  ],
-  pullQuote: {
-    text: "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
-    attribution:
-      "Ibu Uyin Wulandari — Warga Pesisir Trenggalek, Ds. Ngembel, Kec. Watulimo, Trenggalek",
+// Array berisi artikel kisah klien BKH Kartini.
+export const BERITA_LIST = [
+  {
+    year: "2024",
+    image: "/uploads/testimoni-uyin.jpeg",
+    imageAlt:
+      "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
+    category: "Kisah Klien",
+    dateline: "WATULIMO, TRENGGALEK",
+    headline:
+      "Warga Pesisir Trenggalek: \"Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis\"",
+    lead:
+      "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, baru saja menyelesaikan perkara hukumnya bersama BKH Kartini. Dari konsultasi awal sampai kasus selesai, tidak ada satu pun biaya yang diminta — bahkan ongkos transport tim advokad pun ditanggung sendiri.",
+    body: [
+      "Selama bertahun-tahun, Ibu Uyin — seperti kebanyakan warga pesisir Trenggalek — menganggap lembaga bantuan hukum selalu identik dengan biaya tersembunyi. Pengalaman bersama BKH Kartini mengubah persepsinya sama sekali. Dari konsultasi awal sampai seluruh proses hukum selesai, ia tidak dimintai sepeser pun.",
+      "Yang membuatnya paling terkesan, kata Ibu Uyin, bukan hanya pendampingan gratis, tetapi juga komitmen tim advokad yang rela mengeluarkan ongkos transport sendiri untuk datang ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek.",
+      "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujarnya. \"Selamanya saya berutang budi pada advokat-advokat muda ini.\"",
+      "BKH Kartini memang sejak awal didirikan atas semangat pro bono publik — melayani fakir miskin, perempuan, dan anak di seluruh kecamatan Trenggalek. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Bahkan biaya pengadilan dan materai resmi ditanggung penuh oleh lembaga.",
+      "Kisah Ibu Uyin hanyalah satu dari 100+ kasus yang sudah didampingi BKH Kartini sejak berdirinya tahun 2016. Tim advokad muda ini terus melayani warga dari Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan — tanpa membedakan latar belakang sosial, gender, atau agama.",
+    ],
+    pullQuote: {
+      text: "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
+      attribution:
+        "Ibu Uyin Wulandari — Warga Pesisir Trenggalek, Ds. Ngembel, Kec. Watulimo, Trenggalek",
+    },
+    source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek · 2024",
   },
-  source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek",
-} as const;
+  {
+    year: "2024",
+    image: "/uploads/berita-neni-kartika.jpg",
+    imageAlt:
+      "Neni Kartika Wati, klien BKH Kartini asal Ds. Wonorejo RT 14/RW 4, Kec. Gandusari, Kabupaten Trenggalek",
+    category: "Kisah Klien",
+    dateline: "GANDUSARI, TRENGGALEK",
+    headline:
+      "Konsultasi Hukum untuk Perempuan: Ibu Neni Kartika Wati dari Gandusari Temui BKH Kartini",
+    lead:
+      "Neni Kartika Wati, warga Ds. Wonorejo RT 14/RW 4, Kecamatan Gandusari, Kabupaten Trenggalek, datang ke Posbakum BKH Kartini untuk konsultasi terkait kasus yang menimpa dirinya sebagai perempuan. Ia mendapatkan pendampingan profesional tanpa biaya apa pun.",
+    body: [
+      "Neni Kartika Wati adalah salah satu klien perempuan BKH Kartini tahun 2024. Ia datang ke posko bantuan hukum untuk berkonsultasi terkait kasus yang berhubungan dengan dirinya sebagai perempuan — kasus yang sering kali membuat korban ragu mencari pendampingan karena beban sosial dan emosional yang berat.",
+      "Dalam konsultasi awal, tim advokad BKH Kartini mendengarkan kasus Ibu Neni secara rinci dan empati. Tidak ada judgment, tidak ada raut cemooh — yang ada hanya pendampingan profesional yang menjelaskan opsi hukum yang tersedia, mulai dari jalur mediasi non-litigasi sampai pendampingan persidangan jika diperlukan.",
+      "BKH Kartini memang sejak awal menempatkan perempuan sebagai kelompok prioritas. Kasus KDRT, kekerasan seksual, perceraian dengan hak asuh anak, sampai penipuan terhadap PMI perempuan — semua didampingi oleh tim advokad yang memahami trauma dan kebutuhan ruang aman bagi korban.",
+      "\"Saya cuma ingin tahu hak saya sebagai perempuan,\" kata Ibu Neni. \"Setelah bicara dengan tim BKH Kartini, saya jadi paham langkah-langkah apa yang harus diambil tanpa rasa takut. Pendampingan ini gratis — tidak dipungut biaya sepeser pun.\"",
+      "Setelah konsultasi, Ibu Neni merasa lebih tenang menghadapi proses hukum yang sedang berjalan. Untuk konsultasi awal, warga Trenggalek dapat langsung datang ke Posbakum BKH Kartini di Lantai 1, Gedung Pengadilan Negeri Trenggalek, atau menghubungi WhatsApp 081331922614.",
+    ],
+    pullQuote: {
+      text: "Saya cuma ingin tahu hak saya sebagai perempuan. Setelah bicara dengan tim BKH Kartini, saya jadi paham langkah-langkah apa yang harus diambil tanpa rasa takut. Pendampingan ini gratis — tidak dipungut biaya sepeser pun.",
+      attribution:
+        "Neni Kartika Wati — Warga Ds. Wonorejo RT 14/RW 4, Kec. Gandusari, Kabupaten Trenggalek",
+    },
+    source: "Kisah Klien BKH Kartini · Gandusari, Kabupaten Trenggalek · 2024",
+  },
+] as const;

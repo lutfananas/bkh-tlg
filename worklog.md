@@ -311,3 +311,45 @@ Stage Summary:
 - ✅ Section Testimoni hanya berisi marquee 11 kartu (AM, Ibu M., Bapak T., Ibu S., Bapak R., Ibu W., Saudara A., Ibu N., Bapak K., Ibu D., Bapak M.) — semua pakai inisial.
 - ✅ Heading section Testimoni tetap "11 Kisah Nyata dari Warga Trenggalek".
 - ✅ Build sukses, siap push ke GitHub (auto-deploy Cloudflare via GitHub Actions).
+
+---
+Task ID: 11
+Agent: Super Z (main)
+Task: Tambah berita utama #2 (Neni Kartika Wati) + tambah tahun di testimoni (mayoritas 2024, beberapa 2025, sedikit 2026).
+
+Work Log:
+- Copy gambar upload-an ke public/uploads/berita-neni-kartika.jpg (126KB, 1600x721).
+- Konversi BERITA_PERS (object tunggal) → BERITA_LIST (array 2 artikel):
+  * Artikel #1: Ibu Uyin Wulandari (year 2024) — konten lama dipertahankan, source ditambah suffix "· 2024".
+  * Artikel #2 (BARU): Neni Kartika Wati
+    - year: 2024
+    - image: /uploads/berita-neni-kartika.jpg
+    - dateline: GANDUSARI, TRENGGALEK
+    - headline: "Konsultasi Hukum untuk Perempuan: Ibu Neni Kartika Wati dari Gandusari Temui BKH Kartini"
+    - lead: 1 paragraf intro
+    - body: 5 paragraf (konteks Neni, proses konsultasi, fokus perempuan BKH, quote inline, outcome + cara kontak)
+    - pullQuote: quote dari Neni + atribusi lengkap
+    - source: "Kisah Klien BKH Kartini · Gandusari, Kabupaten Trenggalek · 2024"
+- Rewrite PressNews.tsx:
+  * Import BERITA_LIST (bukan BERITA_PERS)
+  * Map BERITA_LIST → render multiple <motion.article> dengan space-y-12/16
+  * Tambah Calendar icon import
+  * Tambah year badge overlay di pojok kanan atas gambar (bg-gold-accent)
+  * Tambah year badge di dateline strip (di sebelah kanan, justify-between layout)
+  * Eyebrow heading diubah dari BERITA_PERS.category ke "Berita Klien" (generic karena multi-artikel)
+- Tambah field `year` ke semua 11 entry TESTIMONIALS:
+  * 7 di 2024: AM, Ibu M., Bapak T., Bapak R., Saudara A., Bapak K., Bapak M.
+  * 3 di 2025: Ibu S., Ibu W., Ibu N.
+  * 1 di 2026: Ibu D. (kasus kekerasan seksual anak)
+- Update Testimonials.tsx:
+  * Import Calendar icon
+  * Tambah year badge di TestimonialCard (sebelah case tag, flex-wrap)
+- Verifikasi HTML output:
+  * Berita: Neni Kartika Wati (6x), Gandusari (8x), Wonorejo (4x), Ibu Uyin (7x), Kisah Nyata Klien (1x) ✅
+  * Testimoni years: 2024 (21x), 2025 (6x), 2026 (3x) — distribusi sesuai permintaan ✅
+- Build sukses (0 error TypeScript, 4 static pages).
+
+Stage Summary:
+- ✅ Berita utama #2 (Neni Kartika Wati) sudah ditambahkan di section Berita, muncul setelah artikel Ibu Uyin.
+- ✅ Setiap kartu testimoni sekarang menampilkan badge tahun (mayoritas 2024, beberapa 2025, sedikit 2026).
+- ✅ Build sukses, siap commit + push (auto-deploy via GitHub Actions).
