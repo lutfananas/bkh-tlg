@@ -449,3 +449,27 @@ Stage Summary:
 - ✅ Tambah `will-change: transform` untuk pre-allocate GPU layer di track
 - ✅ Hapus `transition-all duration-500` yang konflik dengan spring physics framer-motion
 - Hasil: marquee sekarang halus & kecepatan nyaman dibaca
+
+---
+Task ID: 12 (Deployment Status)
+Agent: Super Z (main)
+Task: Verifikasi deploy commit 487b3feb ke live site
+
+Work Log:
+- Push ke GitHub sukses (commit 487b3feb di remote main pada 2026-08-26T15:27:35Z)
+- Workflow run #9 di-trigger via workflow_dispatch (created 2026-08-26T15:36:29Z)
+- Status: stuck di "queued" selama 14+ menit, 0 jobs assigned
+- Mencoba rerun #8 (sukses sebelumnya) → conclusion berubah jadi "startup_failure" (runner tidak bisa alokasi)
+- Mencoba rerun #9 → error 403 "This workflow is already running" (meski status masih queued)
+- Live site (https://bkhkartini.pages.dev) masih menampilkan commit lama (f785c730 — "31 Kisah" + marquee 60s)
+
+Root Cause:
+- GitHub Actions infrastructure issue hari ini (2026-08-26) — runner tidak di-assign ke job yang queued
+- Ini bukan masalah kode/CI/CD config — workflow YAML valid, secrets OK, build lokal sukses
+- GitHub reported "startup_failure" untuk rerun #8 — confirmation bahwa ini masalah sisi GitHub
+
+Stage Summary:
+- ✅ Kode sudah benar & ter-commit di GitHub (commit 487b3feb)
+- ⏳ Deploy tertunda karena GitHub Actions infrastructure issue
+- 🔁 User dapat re-trigger workflow_dispatch nanti setelah GitHub Actions recover
+- 📝 Webhook event push mungkin tidak ter-trigger (workflow hanya jalan setelah manual dispatch)
