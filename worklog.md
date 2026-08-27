@@ -504,3 +504,48 @@ Stage Summary:
 - ✅ Judul testimoni tidak lagi menampilkan angka "31"
 - ✅ GitHub secrets di-update dengan token baru (CI/CD siap pakai)
 - ✅ GitHub Actions run #9 masih stuck tapi tidak masalah — deploy sudah lewat wrangler
+
+---
+Task ID: 13
+Agent: Super Z (main)
+Task: Ganti narasi artikel Ibu Uyin dengan teks baru dari user (fokus Pemkab Trenggalek × LBH Kartini Tulungagung)
+
+Work Log:
+- User kasih narasi baru untuk artikel Ibu Uyin — angle berubah: fokus kerjasama Pemerintah Kabupaten Trenggalek (pemberi bantuan) × LBH Kartini Tulungagung (pelaksana di persidangan)
+- Edit `src/components/bkbh/data.ts` — replace BERITA_LIST[0] (article Ibu Uyin):
+  * date: "15 Oktober 2024" → "20 Februari 2024"
+  * imageAlt: tambah konteks "penerima bantuan hukum gratis Pemerintah Kabupaten Trenggalek"
+  * headline: "Warga Pesisir Trenggalek: Pemerintah Kabupaten Trenggalek Hadir Memberikan Bantuan Hukum Gratis bagi Masyarakat Kurang Mampu"
+  * lead: paragraf pembuka baru — Ibu Uyin menyelesaikan perkara dengan bantuan Pemkab Trenggalek × BKH Kartini Tulungagung
+  * body: 8 paragraf (was 5) — termasuk kutipan langsung Ibu Uyin panjang tentang ketidakpercayaan awal & rasa terima kasih
+  * pullQuote: diganti dengan kutipan "Saya sebelumnya tidak percaya kalau perkara saya bisa diselesaikan tanpa biaya (gratis)..."
+  * source: "Bantuan Hukum Pemkab Trenggalek × LBH Kartini Tulungagung · Watulimo, 20 Februari 2024"
+- Cleanup typo kecil di teks user (preserve tone & intent):
+  * Trengalek → Trenggalek (konsisten)
+  * hinga → hingga
+  * menyelesaiakan → menyelesaikan
+  * kususnya → khususnya
+  * Cuma-Cuma → cuma-cuma
+  * dipersidangan → di persidangan
+- Build: `bun run build:cf` sukses (0 error TypeScript)
+- Verifikasi build output:
+  * "20 Februari 2024" ada (1x)
+  * "15 Oktober 2024" hilang (0x)
+  * "Pemerintah Kabupaten Trenggalek" ada (1x)
+  * "LBH Kartini Tulungagung" ada (1x)
+- Deploy via wrangler: `npx wrangler pages deploy out --project-name=bkhkartini --branch=main --commit-dirty=true`
+  * 18 files baru di-upload (44 sudah ada), 1.82 detik
+  * Deployment URL: https://96b7c47d.bkhkartini.pages.dev
+- Verifikasi live site (size 560931 bytes, beda dari sebelumnya):
+  * ✅ "20 Februari 2024" present
+  * ✅ "15 Oktober 2024" absent (old date gone)
+  * ✅ New headline "Pemerintah Kabupaten Trenggalek Hadir Memberikan Bantuan Hukum Gratis" present
+  * ✅ Old headline "Saya Tidak Pernah Nyangka Ada Lembaga" absent
+  * ✅ New pull quote "Saya sebelumnya tidak percaya kalau perkara saya bisa diselesaikan tanpa biaya" present
+
+Stage Summary:
+- ✅ Artikel Ibu Uyin di live site sekarang pakai narasi baru
+- ✅ Angle: Pemkab Trenggalek sebagai pemberi bantuan + LBH Kartini Tulungagung sebagai pelaksana
+- ✅ Tanggal: 20 Februari 2024
+- ✅ Headline baru: "Warga Pesisir Trenggalek: Pemerintah Kabupaten Trenggalek Hadir..."
+- ✅ Pull quote baru: kutipan panjang Ibu Uyin tentang ketidakpercayaan awal & rasa terima kasih

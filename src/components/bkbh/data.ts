@@ -655,29 +655,33 @@ export const CONTACTS = {
 export const BERITA_LIST = [
   {
     year: "2024",
-    date: "15 Oktober 2024",
+    date: "20 Februari 2024",
     image: "/uploads/testimoni-uyin.jpeg",
     imageAlt:
-      "Ibu Uyin Wulandari, klien BKH Kartini asal Ds. Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
+      "Ibu Uyin Wulandari, warga Desa Ngembel, Kec. Watulimo, Kabupaten Trenggalek — penerima bantuan hukum gratis Pemerintah Kabupaten Trenggalek",
     category: "Kisah Klien",
     dateline: "WATULIMO, TRENGGALEK",
     headline:
-      "Warga Pesisir Trenggalek: \"Saya Tidak Pernah Nyangka Ada Lembaga yang Benar-benar Gratis\"",
+      "Warga Pesisir Trenggalek: Pemerintah Kabupaten Trenggalek Hadir Memberikan Bantuan Hukum Gratis bagi Masyarakat Kurang Mampu",
     lead:
-      "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, baru saja menyelesaikan perkara hukumnya bersama BKH Kartini. Dari konsultasi awal sampai kasus selesai, tidak ada satu pun biaya yang diminta — bahkan ongkos transport tim advokad pun ditanggung sendiri.",
+      "Ibu Uyin Wulandari, warga Desa Ngembel, Kecamatan Watulimo, adalah salah satu masyarakat Kabupaten Trenggalek yang baru saja menyelesaikan perkara hukumnya dengan memperoleh bantuan hukum gratis dari Pemerintah Kabupaten Trenggalek yang bekerjasama dengan BKH Kartini Tulungagung sebagai pelaksana di persidangan. Sejak proses konsultasi hingga pendampingan di persidangan selesai, semua biaya ditanggung oleh Pemda Trenggalek sepenuhnya.",
     body: [
-      "Selama bertahun-tahun, Ibu Uyin — seperti kebanyakan warga pesisir Trenggalek — menganggap lembaga bantuan hukum selalu identik dengan biaya tersembunyi. Pengalaman bersama BKH Kartini mengubah persepsinya sama sekali. Dari konsultasi awal sampai seluruh proses hukum selesai, ia tidak dimintai sepeser pun.",
-      "Yang membuatnya paling terkesan, kata Ibu Uyin, bukan hanya pendampingan gratis, tetapi juga komitmen tim advokad yang rela mengeluarkan ongkos transport sendiri untuk datang ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek.",
-      "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujarnya. \"Selamanya saya berutang budi pada advokat-advokat muda ini.\"",
-      "BKH Kartini memang sejak awal didirikan atas semangat pro bono publik — melayani fakir miskin, perempuan, dan anak di seluruh kecamatan Trenggalek. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti. Bahkan biaya pengadilan dan materai resmi ditanggung penuh oleh lembaga.",
-      "Kisah Ibu Uyin hanyalah satu dari 100+ kasus yang sudah didampingi BKH Kartini sejak berdirinya tahun 2016. Tim advokad muda ini terus melayani warga dari Panggul, Watulimo, Tugu, Campurdarat, sampai Pogalan dan Durenan — tanpa membedakan latar belakang sosial, gender, atau agama.",
+      "Bantuan hukum dari Pemerintah Kabupaten Trenggalek dirasa sangat membantu masyarakat, khususnya yang berada di pesisir wilayah Trenggalek, karena dalam hal ini Pemerintah Kabupaten Trenggalek telah berupaya menjangkau warga masyarakat di berbagai wilayah dengan cara terjun langsung ke berbagai desa.",
+      "Salah satunya adalah Ibu Uyin yang beralamatkan di Desa Ngembel, Kecamatan Watulimo, Kabupaten Trenggalek. Ibu Uyin yang dalam hal ini terkendala biaya dalam menyelesaikan perkaranya di pengadilan, telah memperoleh manfaat dari hadirnya Pemerintah Kabupaten Trenggalek yang telah memberikan bantuan hukum secara cuma-cuma kepada masyarakat, bekerjasama dengan LBH Kartini Tulungagung.",
+      "Yang membuat Ibu Uyin paling terkesan adalah bukan hanya biaya pendampingan secara gratis, tetapi tim hukum Pemerintah Kabupaten Trenggalek juga berkomitmen datang langsung ke Watulimo — kecamatan pesisir yang berjarak sekitar satu jam perjalanan dari kota Trenggalek, dengan biaya transport seluruhnya ditanggung oleh Pemerintah Kabupaten Trenggalek.",
+      "\"Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri,\" ujar Ibu Uyin yang merasa hal ini sangat membantu dan tidak menjadi beban baginya.",
+      "Pemerintah Kabupaten Trenggalek hadir untuk masyarakat dengan tujuan memberikan pelayanan secara pro bono. Tidak ada biaya pendaftaran, biaya pengganti, atau upeti, sampai dengan perkara selesai. Bahkan biaya pengadilan dan materai seluruhnya ditanggung penuh oleh Pemerintah Kabupaten Trenggalek.",
+      "Kisah Ibu Uyin adalah salah satu dari 100+ kasus yang sudah memperoleh pelayanan bantuan hukum dari Pemerintah Kabupaten Trenggalek, dan Tim advokat muda dari LBH Kartini Tulungagung yang telah bekerjasama dengan Pemerintah Kabupaten Trenggalek, terus berupaya semaksimal mungkin melayani warga masyarakat yang membutuhkan, mulai dari wilayah Panggul, Watulimo, Tugu, Pogalan, Durenan — dan hampir menjangkau seluruh desa yang ada di wilayah Kabupaten Trenggalek tanpa membedakan latar belakang sosial, gender, atau agama.",
+      "\"Saya sebelumnya tidak percaya kalau perkara saya bisa diselesaikan tanpa biaya (gratis), karena setahu saya masyarakat yang juga memiliki permasalahan yang sama dengan saya, penyelesaiannya memerlukan biaya yang tidak murah. Namun setelah saya memperoleh informasi dari pemerintah desa saya bahwasanya Pemerintah Kabupaten Trenggalek memberikan bantuan penanganan perkara hukum secara gratis, saya langsung bergegas mencari tahu, dan oleh pemerintah desa langsung disambut dengan baik dan saya langsung dihubungkan dengan tim pelaksana lapangan yaitu LBH Kartini Tulungagung. Saya sangat merasakan manfaatnya dan saya sangat berterimakasih yang sebesar-besarnya kepada Pemerintah Kabupaten Trenggalek dan LBH Kartini yang telah hadir untuk masyarakat dengan memberikan pelayanan bantuan hukum secara gratis. Sekali lagi saya ucapkan terimakasih yang sebesar-besarnya kepada Pemerintah Kabupaten Trenggalek.\"",
+      "Trenggalek, 20 Februari 2024.",
     ],
     pullQuote: {
-      text: "Saya tidak pernah nyangka ada lembaga yang benar-benar gratis membantu warga kecil seperti saya. Dari awal konsultasi sampai masalah hukum saya selesai, BKH Kartini tidak meminta sepeser pun. Bahkan ongkos transport tim ke Watulimo pun ditanggung sendiri. Selamanya saya berutang budi pada advokat-adadvokat muda ini.",
+      text: "Saya sebelumnya tidak percaya kalau perkara saya bisa diselesaikan tanpa biaya (gratis). Setelah memperoleh informasi dari pemerintah desa, saya langsung dihubungkan dengan tim pelaksana lapangan LBH Kartini Tulungagung. Saya sangat merasakan manfaatnya dan berterimakasih sebesar-besarnya kepada Pemerintah Kabupaten Trenggalek dan LBH Kartini yang hadir untuk masyarakat dengan pelayanan bantuan hukum secara gratis.",
       attribution:
-        "Ibu Uyin Wulandari — Warga Pesisir Trenggalek, Ds. Ngembel, Kec. Watulimo, Trenggalek",
+        "Ibu Uyin Wulandari — Warga Desa Ngembel, Kec. Watulimo, Kabupaten Trenggalek",
     },
-    source: "Kisah Klien BKH Kartini · Watulimo, Kabupaten Trenggalek · 2024",
+    source:
+      "Bantuan Hukum Pemkab Trenggalek × LBH Kartini Tulungagung · Watulimo, 20 Februari 2024",
   },
   {
     year: "2024",
